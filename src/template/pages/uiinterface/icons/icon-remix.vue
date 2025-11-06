@@ -1,0 +1,205 @@
+<template>
+  <layouts-header></layouts-header>
+  <layouts-sidebar></layouts-sidebar>
+  <!-- Page Wrapper -->
+  <div class="page-wrapper ui-modals relative pt-[50px] ml-[240px]">
+
+    <div class="content p-5 pb-0">
+
+      <!-- Page Header -->
+      <div class="mb-7">
+        <h4 class="mb-1 text-xl font-bold flex items-center">
+          Remix Icons
+        </h4>
+        <nav aria-label="breadcrumb">
+          <ol class="flex flex-wrap space-x-1 text-sm text-gray-500">
+            <li>
+              <router-link to="/dashboard/" class="hover:underline text-gray-700">Home</router-link>
+              <span><i class="ti ti-chevron-right"></i></span>
+            </li>
+            <li>
+              <a href="javascript:void(0);" class="hover:underline text-gray-700">Icons</a>
+              <span><i class="ti ti-chevron-right"></i></span>
+            </li>
+            <li class="text-dark font-medium" aria-current="page">Remix Icons</li>
+          </ol>
+        </nav>
+      </div>
+      <!-- End Page Header -->
+
+      <div class="card border-borderColor rounded-[5px] shadow-sm bg-white mb-6">
+        <div class="card-header py-4 px-5 border-b border-borderColor">
+          <div class="card-title">Remix Icons</div>
+        </div>
+        <div class="card-body p-5">
+          <p class="mb-2"><code class="text-pink text-sm">&lt;i class="ri-ICON_NAME"&gt;&lt;/i&gt;</code>. For more
+            information <a href="https://remixicon.com/" target="_blank" class="text-primary">click here</a>.</p>
+          <div class="icons-items">
+            <div class="icons-list flex flex-wrap">
+              <div class="icons-list-item">
+                <i class="ri-home-line" data-bs-toggle="tooltip" title="ri-home-line"></i>
+              </div>
+
+              <div class="icons-list-item">
+                <i class="ri-dashboard-3-line" data-bs-toggle="tooltip" title="ri-dashboard-3-line"></i>
+              </div>
+
+              <div class="icons-list-item">
+                <i class="ri-map-pin-2-line" data-bs-toggle="tooltip" title="ri-map-pin-2-line"></i>
+              </div>
+
+              <div class="icons-list-item">
+                <i class="ri-message-2-line" data-bs-toggle="tooltip" title="ri-message-2-line"></i>
+              </div>
+
+              <div class="icons-list-item">
+                <i class="ri-group-line" data-bs-toggle="tooltip" title="ri-group-line"></i>
+              </div>
+
+              <div class="icons-list-item">
+                <i class="ri-image-line" data-bs-toggle="tooltip" title="ri-image-line"></i>
+              </div>
+
+              <div class="icons-list-item">
+                <i class="ri-file-line" data-bs-toggle="tooltip" title="ri-file-line"></i>
+              </div>
+
+              <div class="icons-list-item">
+                <i class="ri-line-chart-line" data-bs-toggle="tooltip" title="ri-line-chart-line"></i>
+              </div>
+
+              <div class="icons-list-item">
+                <i class="ri-exchange-line" data-bs-toggle="tooltip" title="ri-exchange-line"></i>
+              </div>
+
+              <div class="icons-list-item">
+                <i class="ri-menu-line" data-bs-toggle="tooltip" title="ri-menu-line"></i>
+              </div>
+
+              <div class="icons-list-item">
+                <i class="ri-settings-5-line" data-bs-toggle="tooltip" title="ri-settings-5-line"></i>
+              </div>
+
+              <div class="icons-list-item">
+                <i class="ri-building-4-line" data-bs-toggle="tooltip" title="ri-building-4-line"></i>
+              </div>
+
+              <div class="icons-list-item">
+                <i class="ri-shopping-cart-2-line" data-bs-toggle="tooltip" title="ri-shopping-cart-2-line"></i>
+              </div>
+
+              <div class="icons-list-item">
+                <i class="ri-video-chat-line" data-bs-toggle="tooltip" title="ri-video-chat-line"></i>
+              </div>
+
+              <div class="icons-list-item">
+                <i class="ri-notification-3-line" data-bs-toggle="tooltip" title="ri-notification-3-line"></i>
+              </div>
+
+              <div class="icons-list-item">
+                <i class="ri-mail-settings-line" data-bs-toggle="tooltip" title="ri-mail-settings-line"></i>
+              </div>
+
+              <div class="icons-list-item">
+                <i class="ri-map-pin-line" data-bs-toggle="tooltip" title="ri-map-pin-line"></i>
+              </div>
+
+              <div class="icons-list-item">
+                <i class="ri-pie-chart-line" data-bs-toggle="tooltip" title="ri-pie-chart-line"></i>
+              </div>
+
+              <div class="icons-list-item">
+                <i class="ri-checkbox-line" data-bs-toggle="tooltip" title="ri-checkbox-line"></i>
+              </div>
+
+              <div class="icons-list-item">
+                <i class="ri-check-double-line" data-bs-toggle="tooltip" title="ri-check-double-line"></i>
+              </div>
+
+              <div class="icons-list-item">
+                <i class="ri-archive-line" data-bs-toggle="tooltip" title="ri-archive-line"></i>
+              </div>
+
+              <div class="icons-list-item">
+                <i class="ri-arrow-down-s-line" data-bs-toggle="tooltip" title="ri-arrow-down-s-line"></i>
+              </div>
+
+              <div class="icons-list-item">
+                <i class="ri-arrow-right-double-fill" data-bs-toggle="tooltip" title="ri-arrow-right-double-fill"></i>
+              </div>
+
+              <div class="icons-list-item">
+                <i class="ri-download-cloud-line" data-bs-toggle="tooltip" title="ri-download-cloud-line"></i>
+              </div>
+
+              <div class="icons-list-item">
+                <i class="ri-database-2-line" data-bs-toggle="tooltip" title="ri-database-2-line"></i>
+              </div>
+
+              <div class="icons-list-item">
+                <i class="ri-computer-line" data-bs-toggle="tooltip" title="ri-computer-line"></i>
+              </div>
+
+              <div class="icons-list-item">
+                <i class="ri-discount-percent-line" data-bs-toggle="tooltip" title="ri-discount-percent-line"></i>
+              </div>
+
+              <div class="icons-list-item">
+                <i class="ri-more-2-fill" data-bs-toggle="tooltip" title="ri-more-2-fill"></i>
+              </div>
+
+              <div class="icons-list-item">
+                <i class="ri-download-2-line" data-bs-toggle="tooltip" title="ri-download-2-line"></i>
+              </div>
+
+              <div class="icons-list-item">
+                <i class="ri-delete-bin-line" data-bs-toggle="tooltip" title="ri-delete-bin-line"></i>
+              </div>
+
+              <div class="icons-list-item">
+                <i class="ri-folder-open-line" data-bs-toggle="tooltip" title="ri-folder-open-line"></i>
+              </div>
+
+              <div class="icons-list-item">
+                <i class="ri-calendar-2-line" data-bs-toggle="tooltip" title="ri-calendar-2-line"></i>
+              </div>
+
+              <div class="icons-list-item">
+                <i class="ri-calculator-line" data-bs-toggle="tooltip" title="ri-calculator-line"></i>
+              </div>
+
+              <div class="icons-list-item">
+                <i class="ri-time-line" data-bs-toggle="tooltip" title="ri-time-line"></i>
+              </div>
+
+              <div class="icons-list-item">
+                <i class="ri-phone-line" data-bs-toggle="tooltip" title="ri-phone-line"></i>
+              </div>
+
+              <div class="icons-list-item">
+                <i class="ri-video-on-line" data-bs-toggle="tooltip" title="ri-video-on-line"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Start Footer -->
+    <layouts-footer></layouts-footer>
+    <!-- End Footer -->
+
+  </div>
+  <!-- /Page Wrapper -->
+</template>
+<script>
+export default {
+  data() {
+    return {
+      title: "Home",
+      text: "Remix Icon",
+    };
+  },
+};
+</script>
