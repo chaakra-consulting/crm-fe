@@ -88,7 +88,7 @@ onUnmounted(() => {
               <h5 class="mb-0 text-[17px]">Tax Rate</h5>
               <a
                 href="javascript:void(0);"
-                class="inline-flex items-center gap-1 px-4 py-2 bg-primary hover:bg-secondary text-white rounded-md transition"
+                class="inline-flex items-center gap-1 px-4 py-2 bg-primary hover:bg-primary-900 text-white rounded-md transition"
                 data-modal-target="add_modal"
                 data-modal-toggle="add_modal"
               >
@@ -237,7 +237,7 @@ onUnmounted(() => {
               <h5 class="mb-0 text-[17px]">Tax Group</h5>
               <a
                 href="javascript:void(0);"
-                class="inline-flex items-center gap-1 px-4 py-2 bg-primary hover:bg-secondary text-white rounded-md transition"
+                class="inline-flex items-center gap-1 px-4 py-2 bg-primary hover:bg-primary-900 text-white rounded-md transition"
                 data-modal-target="add_modal_2"
                 data-modal-toggle="add_modal_2"
               >

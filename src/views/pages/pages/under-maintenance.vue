@@ -15,7 +15,7 @@
                 soon!</p>
               <div class="pb-4">
                 <router-link to="/dashboard/"
-                  class="inline-flex items-center px-4 py-2 bg-primary hover:bg-secondary text-white rounded-md transition">
+                  class="inline-flex items-center px-4 py-2 bg-primary hover:bg-primary-900 text-white rounded-md transition">
                   <i class="ti ti-chevron-left mr-2"></i>Back to Dashboard
               </router-link>
               </div>

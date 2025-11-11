@@ -300,7 +300,7 @@
           </div>
           <!-- Add New Button -->
           <a href="javascript:void(0);"
-            class="inline-flex items-center gap-1 px-4 py-2 bg-primary hover:bg-secondary text-white rounded-md transition"
+            class="inline-flex items-center gap-1 px-4 py-2 bg-primary hover:bg-primary-900 text-white rounded-md transition"
             data-drawer-target="offcanvas_add" data-drawer-show="offcanvas_add" aria-controls="offcanvas_add"
             data-drawer-placement="right">
             <i class="ti ti-square-rounded-plus-filled"></i>

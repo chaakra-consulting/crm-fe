@@ -15,7 +15,7 @@
               <h6 class="text-[18px] mb-0">Membership Addons</h6>
               <!-- Add New Button -->
               <router-link to="/membership/membership-plans"
-                class="inline-flex items-center gap-1 px-4 py-2 bg-primary hover:bg-secondary text-white rounded-md transition">
+                class="inline-flex items-center gap-1 px-4 py-2 bg-primary hover:bg-primary-900 text-white rounded-md transition">
                 Back <i class="ti ti-chevron-right ms-1"></i>
               </router-link>
             </div>

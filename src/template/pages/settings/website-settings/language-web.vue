@@ -49,7 +49,7 @@
               <h5 class="mb-0 text-[17px]">Language</h5>
               <div class="flex items-center flex-wrap gap-3">
                 <router-link to="/website-settings/language-settings"
-                  class="inline-flex items-center gap-1 px-4 py-2 bg-primary hover:bg-secondary text-white rounded-md transition">
+                  class="inline-flex items-center gap-1 px-4 py-2 bg-primary hover:bg-primary-900 text-white rounded-md transition">
                   <i class="ti ti-circle-arrow-left me-1"></i>Back to Translations
                 </router-link>
                 <!-- Dropdown -->

@@ -43,7 +43,7 @@
       <div class="bg-white border border-borderColor rounded p-4">
         <div class="border-b border-borderColor flex items-center justify-between mb-3 pb-3">
           <h5 class="mb-0 text-[17px]">Currencies</h5>
-          <a href="javascript:void(0);" class="inline-flex items-center gap-1 px-4 py-2 bg-primary hover:bg-secondary text-white rounded-md transition" data-modal-target="add_modal" data-modal-toggle="add_modal">
+          <a href="javascript:void(0);" class="inline-flex items-center gap-1 px-4 py-2 bg-primary hover:bg-primary-900 text-white rounded-md transition" data-modal-target="add_modal" data-modal-toggle="add_modal">
             <i class="ti ti-square-rounded-plus-filled me-1"></i>
             Add New Currency
           </a>

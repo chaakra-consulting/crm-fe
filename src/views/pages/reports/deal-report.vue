@@ -137,7 +137,7 @@
           </div>
           <!-- Add New Button -->
           <a href="javascript:void(0);"
-            class="inline-flex items-center gap-1 px-4 py-2 bg-primary hover:bg-secondary text-white rounded-md transition"
+            class="inline-flex items-center gap-1 px-4 py-2 bg-primary hover:bg-primary-900 text-white rounded-md transition"
             data-modal-target="download_report" data-modal-toggle="download_report">
             <i class="ti ti-file-download mr-1"></i>Download Report
           </a>

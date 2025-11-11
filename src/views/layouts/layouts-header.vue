@@ -252,7 +252,7 @@
                 <span class="block text-xs text-gray-600 dark:text-gray-400">Installer</span>
               </div>
             </div>
-            <div class="py-2">
+            <!-- <div class="py-2">
               <a class="flex items-center text-gray-500 p-2 px-3 rounded hover:bg-light" to="/settings/profile-settings">
                 <i class="ti ti-user-circle me-1"></i>Profile Setting
               </a>
@@ -271,9 +271,13 @@
               <router-link class="flex items-center text-gray-500 p-2 px-3 rounded hover:bg-light" to="/settings/profile-settings">
                 <i class="ti ti-settings me-1"></i>Settings
               </router-link>
-            </div>
+            </div> -->
             <div class="py-2 border-t border-borderColor">
-              <router-link class="flex items-center p-2 px-3 rounded text-primary hover:bg-light" to="/">
+              <router-link
+                class="flex items-center p-2 px-3 rounded text-primary hover:bg-light"
+                to="/"
+                @click.prevent="handleLogout"
+              >
                 <i class="ti ti-logout me-1 fs-17 align-middle"></i>Sign Out
               </router-link>
             </div>
@@ -299,91 +303,105 @@
   <theme-settings></theme-settings>
 </template>
 
-<script>
+<script setup>
 import { ref, onMounted, watch } from "vue";
-import { useRoute } from "vue-router";
+import { useRouter, useRoute } from "vue-router";
 import simplebar from "simplebar-vue";
 import "simplebar-vue/dist/simplebar.min.css";
 import { initFlowbite } from "flowbite";
-export default {
-  components: {
-    simplebar,
-  },
-  data() {
-    return {};
-  },
-  setup() {
-    const isDarkMode = ref(false);
-    const route = useRoute();
+import api from "@/api/api";
 
-    const setThemeAttribute = (enabled) => {
-      document.documentElement.setAttribute("data-bs-theme", enabled ? "dark" : "light");
-      document.documentElement.setAttribute("data-topbar", enabled ? "white" : "white");
-    };
+// === Router ===
+const router = useRouter();
+const route = useRoute();
 
-    const toggleDarkMode = () => {
-      isDarkMode.value = !isDarkMode.value;
-      localStorage.setItem("dark", isDarkMode.value ? "enabled" : "disabled");
-      setThemeAttribute(isDarkMode.value);
-    };
-
-    const initializeDarkMode = () => {
-      const darkMode = localStorage.getItem("dark");
-      isDarkMode.value = darkMode === "enabled";
-      setThemeAttribute(isDarkMode.value);
-    };
-
-    const removeSidebarClasses = () => {
-      document.querySelector(".main-wrapper")?.classList.remove("slide-nav");
-      document.querySelector(".sidebar-overlay")?.classList.remove("opened");
-      document.querySelector("html")?.classList.remove("menu-opened");
-    };
-
-    // Remove classes when route changes
-    watch(
-      () => route.path,
-      () => {
-        removeSidebarClasses();
-      }
-    );
-
-    onMounted(() => {
-      initializeDarkMode();
-      removeSidebarClasses();
-    });
-
-    return {
-      isDarkMode,
-      toggleDarkMode,
-    };
-  },
-  methods: {
-    toggleMobileBtn() {
-      document?.querySelector(".main-wrapper")?.classList?.toggle("slide-nav");
-      document?.querySelector(".sidebar-overlay")?.classList?.toggle("opened");
-      document?.querySelector("html")?.classList?.toggle("menu-opened");
-    },
-    toggleMobileBtnOne() {
-      document?.querySelector(".main-wrapper")?.classList?.toggle("slide-nav");
-      document?.querySelector(".sidebar-overlay")?.classList?.toggle("opened");
-      document?.querySelector("html")?.classList?.toggle("menu-opened");
-    },
-    handleFullscreen() {
-      this.toggleFullscreen();
-    },
-    toggleFullscreen() {
-      const elem = document.documentElement;
-      if (!document.fullscreenElement) {
-        elem.requestFullscreen().catch((err) => {
-          console.error(`Error trying to enable full-screen mode: ${err.message}`);
-        });
-      } else {
-        document.exitFullscreen();
-      }
-    },
-  },
-  mounted() {
-    initFlowbite();
-  },
+// === Logout Function ===
+const handleLogout = async () => {
+  try {
+    await api.post('/logout'); // endpoint API logout kamu
+  } catch (error) {
+    console.error('Logout error:', error);
+  } finally {
+    sessionStorage.removeItem('token');
+    sessionStorage.removeItem('user');
+    router.push('/');
+  }
 };
+
+// === Dark Mode Logic ===
+const isDarkMode = ref(false);
+
+const setThemeAttribute = (enabled) => {
+  // kalau pakai Tailwind darkMode: 'class'
+  if (enabled) {
+    document.documentElement.classList.add("dark");
+    document.documentElement.setAttribute("data-bs-theme", "dark");
+    document.documentElement.setAttribute("data-topbar", "dark");
+  } else {
+    document.documentElement.classList.remove("dark");
+    document.documentElement.setAttribute("data-bs-theme", "light");
+    document.documentElement.setAttribute("data-topbar", "white");
+  }
+};
+
+const toggleDarkMode = () => {
+  isDarkMode.value = !isDarkMode.value;
+  localStorage.setItem("dark", isDarkMode.value ? "enabled" : "disabled");
+  setThemeAttribute(isDarkMode.value);
+};
+
+const initializeDarkMode = () => {
+  const darkMode = localStorage.getItem("dark");
+  isDarkMode.value = darkMode === "enabled";
+  setThemeAttribute(isDarkMode.value);
+};
+
+// === Sidebar Toggle ===
+const toggleMobileBtn = () => {
+  document.querySelector(".main-wrapper")?.classList.toggle("slide-nav");
+  document.querySelector(".sidebar-overlay")?.classList.toggle("opened");
+  document.querySelector("html")?.classList.toggle("menu-opened");
+};
+
+const toggleMobileBtnOne = () => {
+  document.querySelector(".main-wrapper")?.classList.toggle("slide-nav");
+  document.querySelector(".sidebar-overlay")?.classList.toggle("opened");
+  document.querySelector("html")?.classList.toggle("menu-opened");
+};
+
+// === Fullscreen ===
+const handleFullscreen = () => {
+  toggleFullscreen();
+};
+
+const toggleFullscreen = () => {
+  const elem = document.documentElement;
+  if (!document.fullscreenElement) {
+    elem.requestFullscreen().catch((err) => {
+      console.error(`Error trying to enable full-screen mode: ${err.message}`);
+    });
+  } else {
+    document.exitFullscreen();
+  }
+};
+
+// === Cleanup Sidebar Classes on Route Change ===
+const removeSidebarClasses = () => {
+  document.querySelector(".main-wrapper")?.classList.remove("slide-nav");
+  document.querySelector(".sidebar-overlay")?.classList.remove("opened");
+  document.querySelector("html")?.classList.remove("menu-opened");
+};
+
+// === Watch route for changes (cleanup sidebar) ===
+watch(
+  () => route.path,
+  () => removeSidebarClasses()
+);
+
+// === Lifecycle ===
+onMounted(() => {
+  initializeDarkMode();
+  removeSidebarClasses();
+  initFlowbite();
+});
 </script>

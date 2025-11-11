@@ -80,7 +80,7 @@
                   </ul>
                 </div>
                 <a href="javascript:void(0);"
-                  class="inline-flex items-center gap-1 px-4 py-2 bg-primary hover:bg-secondary text-white rounded-md transition"
+                  class="inline-flex items-center gap-1 px-4 py-2 bg-primary hover:bg-primary-900 text-white rounded-md transition"
                   data-modal-target="add_lang" data-modal-toggle="add_lang">
                   <i class="ti ti-square-rounded-plus-filled"></i>
                   Add Language
