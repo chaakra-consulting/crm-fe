@@ -20,7 +20,7 @@
                         @click="OpenMenu(menu)"
                         :class="{
                             'active' : isActive(menu),
-                            'subdrop' : openMenuItem === menu || isActive(menu),                        
+                            'subdrop' : openMenuItem === menu || isActive(menu),
                         }"
                     >
                         <i :class="menu.icon"></i>
@@ -42,7 +42,7 @@
                         @click="OpenMenu(menu)"
                         :class="{
                             'active' : isActive(menu),
-                            'subdrop' : openMenuItem === menu || isActive(menu),                            
+                            'subdrop' : openMenuItem === menu || isActive(menu),
                         }"
                     >
                         <i :class="menu.icon"></i><span>{{ menu.menuValue }}</span>
@@ -68,7 +68,7 @@
                                     <a
                                         href="javascript:void(0);"
                                         @click="openSubmenuOne(subMenus)"
-                                        :class="{ 
+                                        :class="{
                                             'subdrop' : openSubmenuOneItem === subMenus || isSubActive(subMenus),
                                             'active' : isSubActive(subMenus),
                                         }"
@@ -211,10 +211,10 @@ export default {
         item.menu.forEach((subMenu) => {
           if (subMenu !== menu) {
             subMenu.showSubRoute = false;
-          }         
+          }
         });
       });
-      this.openMenuItem = this.openMenuItem === menu ? null : menu;      
+      this.openMenuItem = this.openMenuItem === menu ? null : menu;
     },
     openSubmenuOne(subMenus) {
       this.openSubmenuOneItem = this.openSubmenuOneItem === subMenus ? null : subMenus;

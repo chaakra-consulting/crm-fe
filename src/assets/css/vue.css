@@ -518,11 +518,11 @@ background-color: #fff;
     background: #0C0C20;
     font-size: 14px;
 }
-[data-bs-theme="dark"] .multiselect__tag-icon::after {  
+[data-bs-theme="dark"] .multiselect__tag-icon::after {
     color: #828997;
     font-size: 14px;
 }
-[data-bs-theme="dark"] .sidebar .sidebar-menu>ul>li ul li a i {  
+[data-bs-theme="dark"] .sidebar .sidebar-menu>ul>li ul li a i {
     background-color: #090C2A;
     color: #fff;
 }
@@ -545,10 +545,10 @@ background-color: #fff;
     color: white;
 }
 .daterangepicker .ranges li.active{
-  background-color: #e41f07 !important;
+  background-color: #0090B7 !important;
 }
 .daterangepicker td.active{
-  background-color: #e41f07 !important;
+  background-color: #0090B7 !important;
 }
 .input-group .input-group-text{
   display: none;

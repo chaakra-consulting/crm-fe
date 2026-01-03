@@ -9,7 +9,7 @@
       <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
         <div>
           <h4 class="mb-1 text-xl font-bold flex items-center">
-            Perusahaan
+            User
             <span
               class="ml-2 text-primary bg-primary-100 text-sm font-medium px-1.5 py-0.5 rounded border-b border-primary text-[12px]"
             >
@@ -24,7 +24,7 @@
                 >
                 <span><i class="ti ti-chevron-right"></i></span>
               </li>
-              <li class="text-dark font-medium" aria-current="page">Perusahaan</li>
+              <li class="text-dark font-medium" aria-current="page">User</li>
             </ol>
           </nav>
         </div>
@@ -60,10 +60,8 @@
           </div>
           <!-- Refresh Button -->
           <button
-            type="button"
             class="border border-borderColor w-9 h-9 rounded shadow bg-white hover:bg-light flex items-center justify-center"
             title="Refresh"
-            @click="handleRefresh"
           >
             <i class="ti ti-refresh"></i>
           </button>
@@ -113,7 +111,7 @@
             @click="openCreateModal"
           >
             <i class="ti ti-square-rounded-plus-filled"></i>
-            Tambah Perusahaan
+            Tambah User
           </a>
         </div>
         <div class="bg-white p-4">
@@ -134,176 +132,6 @@
                 </span>
               </div> -->
             </div>
-            <div class="flex items-center flex-wrap gap-y-3">
-              <div class="me-3">
-                <button
-                  class="border border-borderColor rounded p-2 shadow bg-white inline-flex items-center focus:bg-primary focus:border-primary focus:text-white text-gray-900"
-                  data-dropdown-toggle="filter-dropdown"
-                  data-popper="false"
-                  data-dropdown-placement="bottom-start"
-                >
-                  <i class="ti ti-filter me-1"></i>Filter<i class="ti ti-chevron-down ml-1"></i>
-                </button>
-                <div
-                  id="filter-dropdown"
-                  class="absolute hidden border z-[1] border-borderColor rounded bg-white shadow-lg min-w-[320px] translate-x-[40px] translate-y-[10px]"
-                  data-popper-placement="bottom-end"
-                >
-                  <div
-                    class="filter-header flex items-center justify-between border-b border-borderColor p-3"
-                  >
-                    <h6 class="mb-0"><i class="ti ti-filter me-1"></i>Filter</h6>
-                    <button
-                      data-dropdown-hide="filter-dropdown"
-                      class="text-dark filter-close w-6 h-6 border border-borderColor rounded-full focus:outline-none"
-                      @click="closeFilterDropdown"
-                    >
-                      <i class="ti ti-x"></i>
-                    </button>
-                  </div>
-                  <!-- <div id="accordionExample" data-accordion="collapse" class="p-4">
-                    <div class="mb-4">
-                      <h2 id="accordion-heading-1">
-                        <button
-                          type="button"
-                          class="flex items-center justify-between w-full text-dark text-[14px] bg-transparent mb-3"
-                          data-accordion-target="#accordion-body-1"
-                          aria-expanded="true"
-                          aria-controls="accordion-body-1"
-                        >
-                          <span class="text-dark"
-                            ><i class="ti ti-chevron-right me-2"></i>Name</span
-                          >
-                        </button>
-                      </h2>
-                      <div
-                        id="accordion-body-1"
-                        class="hidden p-4 bg-light border border-borderColor rounded"
-                        aria-labelledby="accordion-heading-1"
-                        data-accordion-body
-                      >
-                        <div class="relative mb-4">
-                          <span
-                            class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-500 pointer-events-none"
-                          >
-                            <i class="ti ti-search"></i>
-                          </span>
-                          <input
-                            type="text"
-                            placeholder="Search"
-                            class="pl-9 pr-4 py-1.5 border border-borderColor rounded-md focus:outline-none placeholder:text-sm"
-                            v-model="filters.ownersSearch"
-                          />
-                        </div>
-
-                        <ul class="space-y-3 max-h-64 overflow-y-auto">
-                          <li v-for="owner in visibleOwners" :key="owner.id">
-                            <label class="flex items-center space-x-2 text-gray-700 cursor-pointer">
-                              <input
-                                type="checkbox"
-                                class="size-4 bg-white border border-borderColor rounded text-primary"
-                                v-model="selectedFilterOwners"
-                                :value="owner.id"
-                              />
-                              <span>{{ owner.name }}</span>
-                            </label>
-                          </li>
-                        </ul>
-
-                        <div class="mt-4" v-if="visible.owners < owners.length">
-                          <button class="text-primary hover:underline" @click="loadMore('owners')">
-                            Load More
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="mb-4">
-                      <h2 id="accordion-heading-2">
-                        <button
-                          type="button"
-                          class="flex items-center text-dark justify-between w-full text-[14px] bg-transparent mb-3"
-                          data-accordion-target="#accordion-body-2"
-                          aria-expanded="true"
-                          aria-controls="accordion-body-2"
-                        >
-                          <span class="text-dark"
-                            ><i class="ti ti-chevron-right me-2"></i>Tags</span
-                          >
-                        </button>
-                      </h2>
-                      <div
-                        id="accordion-body-2"
-                        class="hidden p-4 bg-light border border-borderColor rounded"
-                        aria-labelledby="accordion-heading-2"
-                        data-accordion-body
-                      >
-                        <div class="relative mb-4">
-                          <span
-                            class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-500 pointer-events-none"
-                          >
-                            <i class="ti ti-search"></i>
-                          </span>
-                          <input
-                            type="text"
-                            placeholder="Search"
-                            class="pl-9 pr-4 py-1.5 border border-borderColor rounded-md focus:outline-none placeholder:text-sm"
-                            v-model="filters.tagsSearch"
-                          />
-                        </div>
-                        <ul class="space-y-3 max-h-64 overflow-y-auto">
-                          <li v-for="tag in visibleTags" :key="tag.id">
-                            <label class="flex items-center space-x-2 text-gray-700 cursor-pointer">
-                              <input
-                                type="checkbox"
-                                class="size-4 bg-white border border-borderColor rounded text-primary"
-                                v-model="selectedFilterTags"
-                                :value="tag.id"
-                              />
-                              <span class="inline-flex items-center" :class="tag.color">
-                                {{ tag.name }}
-                              </span>
-                            </label>
-                          </li>
-                        </ul>
-
-                        <div class="mt-4" v-if="visible.tags < tagsData.length">
-                          <button class="text-primary hover:underline" @click="loadMore('tags')">
-                            Load More
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="flex items-center gap-2">
-                      <a
-                        href="javascript:void(0);"
-                        class="btn border border-borderColor text-center w-full"
-                        >Reset</a
-                      >
-                      <a
-                        href="javascript:void(0);"
-                        class="btn btn-primary w-full"
-                        @click="applyFilter"
-                        >Filter</a
-                      >
-                    </div>
-                  </div> -->
-                </div>
-              </div>
-              <!-- <div
-                class="flex items-center border border-borderColor shadow bg-white rounded p-1 icon-list"
-              >
-                <router-link
-                  to="/crm/contacts-list"
-                  class="w-7 h-7 flex items-center justify-center rounded text-white bg-teal me-1"
-                  ><i class="ti ti-list-tree"></i
-                ></router-link>
-                <router-link
-                  to="/crm/contacts-grid"
-                  class="w-7 h-7 flex items-center justify-center rounded text-default"
-                  ><i class="ti ti-layout-grid"></i
-                ></router-link>
-              </div> -->
-            </div>
           </div>
           <!-- Contact List -->
           <div class="table-responsive custom-table">
@@ -313,11 +141,7 @@
               </div>
               <span>Memuat data...</span>
             </div>
-            <div
-              v-else
-              id="companieslist_wrapper"
-              class="dt-container dt-tailwindcss dt-empty-footer"
-            >
+            <div v-else id="userslist_wrapper" class="dt-container dt-tailwindcss dt-empty-footer">
               <div class="grid grid-cols-2 gap-4 mb-4">
                 <div class="justify-self-start"></div>
                 <div class="col-start-2 justify-self-end"></div>
@@ -328,40 +152,64 @@
                     class="table table-nowrap border border-borderColor dataTable text-sm align-middle whitespace-nowrap"
                     :columns="columns"
                     :data-source="paginatedData"
-                    @change="handleTableChange"
                     row-key="id"
                     :pagination="false"
                     :scroll="{ x: tableScrollX, y: 500 }"
-                    table-layout="fixed"
                   >
                     <template #bodyCell="{ column, record, index }">
                       <!-- Index -->
                       <template v-if="column.key === 'index'">
                         {{ (currentPage - 1) * pageSize + index + 1 }}
                       </template>
+
                       <!-- Name -->
                       <template v-if="column.key === 'name'">
-                        <span class="font-medium">{{ record.name }}</span>
+                        <h6 class="flex items-center text-[14px] font-medium mb-0">
+                          <!-- <div class="w-10 h-10 rounded-full me-2 mx-2 overflow-hidden flex items-center justify-center">
+                            <img
+                              class="w-full h-full object-cover"
+                              :src="record.photo_path"
+                              alt="User Image"
+                              loading="lazy"
+                            />
+                          </div> -->
+                          <router-link to="#" class="flex flex-col">
+                            {{ record.name }}
+                            <span class="text-default text-[13px] font-normal mt-1">
+                              {{ record.role_name }}
+                            </span>
+                          </router-link>
+                        </h6>
                       </template>
 
-                      <!-- Kode -->
-                      <template v-if="column.key === 'code'">
-                        <span>{{ record.code }}</span>
+                      <!-- Username -->
+                      <template v-if="column.key === 'username'">
+                        <span>{{ record.username }}</span>
                       </template>
 
-                      <!-- Jenis -->
-                      <template v-if="column.key === 'jenis'">
-                        <span>{{ record.jenis }}</span>
+                      <!-- Email -->
+                      <template v-if="column.key === 'email'">
+                        <span>{{ record.email }}</span>
                       </template>
 
-                      <!-- Address -->
-                      <template v-if="column.key === 'address'">
-                        <span>{{ record.address }}</span>
+                      <!-- Status -->
+                      <template v-if="column.key === 'is_active_text'">
+                        <span
+                          class="px-1.5 py-0.5 rounded text-[12px] text-white inline-flex"
+                          :class="{
+                            'bg-success text-primary border-primary text-sm font-medium':
+                              record.is_active_text === 'Aktif',
+                            'bg-danger text-primary border-primary text-sm font-medium':
+                              record.is_active_text === 'Tidak Aktif',
+                          }"
+                        >
+                          {{ record.is_active_text }}
+                        </span>
                       </template>
 
-                      <!-- Memo -->
-                      <template v-if="column.key === 'memo'">
-                        <span>{{ record.memo }}</span>
+                      <!-- Created At -->
+                      <template v-if="column.key === 'created_at_format'">
+                        <span>{{ record.created_at_format }}</span>
                       </template>
 
                       <template v-if="column.key === 'action'">
@@ -392,16 +240,17 @@
                             <a
                               class="dropdown-item rounded p-2 flex items-center hover:bg-primary-transparent hover:text-primary text-gray-900"
                               href="javascript:void(0);"
+                              @click="openPasswordModal(record)"
+                            >
+                              <i class="ti ti-key me-1"></i> Ubah Password
+                            </a>
+                            <a
+                              class="dropdown-item rounded p-2 flex items-center hover:bg-primary-transparent hover:text-primary text-gray-900"
+                              href="javascript:void(0);"
                               @click="deleteModal(record)"
                             >
                               <i class="ti ti-trash me-1"></i> Hapus
                             </a>
-                            <router-link
-                              class="dropdown-item rounded p-2 flex items-center hover:bg-primary-transparent hover:text-primary text-gray-900"
-                              to="/crm/contact-details"
-                            >
-                              <i class="ti ti-eye text-blue-light me-1"></i> Lihat
-                            </router-link>
                           </div>
                         </div>
                       </template>
@@ -436,25 +285,31 @@
   <!-- /Page Wrapper -->
 
   <component
-    v-if="CompaniesCreateModal && showCreateModal"
-    :is="CompaniesCreateModal"
+    v-if="UsersCreateModal && showCreateModal"
+    :is="UsersCreateModal"
     :isOpen="showCreateModal"
-    :picContacts="picContacts"
-    :provinces="provinces"
-    :provincesContact="provinces"
+    :roles="roles"
     @close="closeCreateModal"
-    @refresh-list="fetchCompanies"
+    @refresh-list="fetchUsers"
   />
 
   <component
-    v-if="CompaniesEditModal && showEditModal"
-    :is="CompaniesEditModal"
+    v-if="UsersEditModal && showEditModal"
+    :is="UsersEditModal"
     :isOpen="showEditModal"
-    :provinces="provinces"
-    :provincesContact="provinces"
-    :company="selectedCompany"
+    :user="selectedUser"
+    :roles="roles"
     @close="closeEditModal"
-    @refresh-list="fetchCompanies"
+    @refresh-list="fetchUsers"
+  />
+
+  <component
+    v-if="UsersPasswordModal && showPasswordModal"
+    :is="UsersPasswordModal"
+    :isOpen="showPasswordModal"
+    :user="selectedUser"
+    :roles="roles"
+    @close="closePasswordModal"
   />
 </template>
 
@@ -474,61 +329,53 @@ const columns = [
   },
   {
     title: 'Nama',
-    dataIndex: 'name',
     key: 'name',
+    dataIndex: 'name',
+    width: 100,
+    sorter: {
+      compare: (a, b) => (a.name.toLowerCase() > b.name.toLowerCase() ? -1 : 1),
+    },
+  },
+  {
+    title: 'Username',
+    key: 'username',
+    dataIndex: 'username',
     width: 150,
     sorter: {
-      compare: (a, b) => (a.name || '').toLowerCase().localeCompare((b.name || '').toLowerCase()),
+      compare: (a, b) => (a.username.toLowerCase() > b.username.toLowerCase() ? -1 : 1),
     },
   },
   {
-    title: 'Kode',
-    dataIndex: 'code',
-    key: 'code',
-    width: 70,
+    title: 'Email',
+    key: 'email',
+    dataIndex: 'email',
+    width: 120,
     sorter: {
-      compare: (a, b) => (a.code || '').toLowerCase().localeCompare((b.code || '').toLowerCase()),
+      compare: (a, b) => (a.email.toLowerCase() > b.email.toLowerCase() ? -1 : 1),
     },
   },
   {
-    title: 'Jenis',
-    dataIndex: 'jenis',
-    key: 'jenis',
-    width: 70,
+    title: 'Tanggal Dibuat',
+    key: 'created_at_format',
+    dataIndex: 'created_at_format',
+    width: 120,
     sorter: {
-      compare: (a, b) => (a.jenis || '').toLowerCase().localeCompare((b.jenis || '').toLowerCase()),
+      compare: (a, b) =>
+        a.created_at_format.toLowerCase() > b.created_at_format.toLowerCase() ? -1 : 1,
     },
   },
-  // {
-  //   title: 'Alamat',
-  //   dataIndex: 'address',
-  //   key: 'address',
-  //   width: 70,
-  //   sorter: {
-  //     compare: (a, b) => (a.address.toLowerCase() > b.address.toLowerCase() ? -1 : 1),
-  //   },
-  // },
-  // {
-  //   title: 'Memo',
-  //   dataIndex: 'memo',
-  //   key: 'memo',
-  //   width: 100,
-  //   sorter: {
-  //     compare: (a, b) => (a.memo.toLowerCase() > b.memo.toLowerCase() ? -1 : 1),
-  //   },
-  // },
-  // {
-  //   title: "Status",
-  //   dataIndex: "Status",
-  //   key: "Status",
-  //   sorter: {
-  //     compare: (a, b) => (a.Status.toLowerCase() > b.Status.toLowerCase() ? -1 : 1),
-  //   },
-  // },
+  {
+    title: 'Status',
+    key: 'is_active_text',
+    dataIndex: 'is_active_text',
+    width: 70,
+    sorter: {
+      compare: (a, b) => (a.is_active_text.toLowerCase() > b.is_active_text.toLowerCase() ? -1 : 1),
+    },
+  },
   {
     title: 'Aksi',
     key: 'action',
-    sorter: false,
     width: 80,
   },
 ]
@@ -551,11 +398,7 @@ export default {
   },
   data() {
     return {
-      companies: [],
-      contacts: [],
-      provinces: [],
-      picContacts: [],
-      // owners: [],
+      roles: [],
       searchQuery: '',
       data: [],
       isLoading: false,
@@ -565,14 +408,14 @@ export default {
       pageSize: 10,
       pageSizeOptions: [5, 10, 20, 50],
       showEditModal: false,
-      selectedCompany: null,
-      CompaniesEditModal: null,
+      selectedUser: null,
+      UsersEditModal: null,
       showCreateModal: false,
-      CompaniesCreateModal: null,
+      UsersCreateModal: null,
+      showPasswordModal: false,
+      UsersPasswordModal: null,
       filters: {
         dateRange: '',
-        ownersSearch: '',
-        tagsSearch: '',
       },
       selectedFilterOwners: [],
       selectedFilterTags: [],
@@ -580,65 +423,33 @@ export default {
         owners: 10,
         tags: 10,
       },
-      sort: {
-        key: null,
-        order: null,
-      },
     }
   },
   computed: {
     filteredPages() {
       const query = this.searchQuery.toLowerCase()
+
       return this.data.filter((record) => {
         return (
           (record.name && record.name.toLowerCase().includes(query)) ||
-          (record.code && record.code.toLowerCase().includes(query)) ||
-          (record.jenis && record.jenis.toLowerCase().includes(query)) ||
-          (record.address && record.address.toLowerCase().includes(query))
+          (record.username && record.username.toLowerCase().includes(query)) ||
+          (record.email && record.email.toLowerCase().includes(query)) ||
+          (record.role_name && record.role_name.toLowerCase().includes(query))
         )
       })
     },
-
-    // sorted version of filteredPages
-    sortedFiltered() {
-      const list = [...this.filteredPages] // clone
-
-      if (!this.sort.key || !this.sort.order) return list
-
-      const key = this.sort.key
-      const order = this.sort.order // 'ascend' or 'descend'
-
-      list.sort((a, b) => {
-        const va = (a[key] ?? '').toString().toLowerCase()
-        const vb = (b[key] ?? '').toString().toLowerCase()
-
-        if (va === vb) return 0
-        if (va > vb) return order === 'ascend' ? 1 : -1
-        return order === 'ascend' ? -1 : 1
-      })
-
-      return list
-    },
-
     paginatedData() {
       const start = (this.currentPage - 1) * this.pageSize
-      return this.sortedFiltered.slice(start, start + this.pageSize)
+      return this.filteredPages.slice(start, start + this.pageSize)
     },
-
     totalPages() {
       return Math.ceil(this.filteredPages.length / this.pageSize) || 1
     },
-
     tableScrollX() {
       return this.data.length === 0 ? false : 'max-content'
     },
   },
   methods: {
-    handleRefresh() {
-      this.fetchCompanies()
-      this.fetchContacts()
-      this.fetchProvince()
-    },
     updateUrlParams() {
       const params = new URLSearchParams()
 
@@ -653,82 +464,60 @@ export default {
     },
     applyFilter() {
       this.updateUrlParams()
-      this.fetchCompanies()
+      this.fetchUsers()
     },
-    async fetchCompanies() {
-      this.isLoading = true
+    async fetchUsers() {
+      this.isLoading = true // mulai loading
       try {
-        const params = {
-          daterange: this.filters.dateRange || '',
-          // owners: this.selectedFilterOwners.join(',') || '',
-          // tags: this.selectedFilterTags.join(',') || '',
-        }
+        // const params = {
+        //   daterange: this.filters.dateRange || '',
+        // }
+        const response = await api.get('/users', {
+          params: {
+            roles: ['superadmin', 'direktur', 'manager', 'admin', 'marketing', 'pic-project'],
+            daterange: this.filters.dateRange || '',
+          },
+        })
+        const users = response.data
 
-        const response = await api.get('/companies', { params })
-        const companies = response.data
-
-        this.data = companies.map((item) => ({
+        this.data = users.map((item) => ({
           id: item.id,
           name: item.name || '',
-          code: item.code || '',
-          jenis: item.jenis || '',
-          bentuk: item.bentuk || '',
-          npwp: item.npwp || '',
-          address: item.address || '',
+          role_id: item.role_id || '',
+          role_slug: item.role_slug || '',
+          role_name: item.role_name || '',
+          username: item.username || '',
           email: item.email || '',
-          memo: item.memo || '',
-          pic_contact_id: item.pic_contact_id || '',
-          province_id: item.province_id || '',
-          city_id: item.city_id || '',
+          is_active: item.is_active || false,
+          is_active_text: item.is_active_text || false,
+          photo_path: item.photo_path || '',
+          photo_url: item.photo_url || '',
           created_at: item.created_at || '',
-          deleted: item.deleted || '',
+          created_at_format: item.created_at_format || '',
         }))
       } catch (error) {
-        console.error('Gagal memuat data companies:', error)
+        console.error('Gagal memuat data users:', error)
       } finally {
         this.isLoading = false
       }
     },
-    async fetchContacts() {
+    async fetchRoles() {
       try {
-        const response = await api.get('/contacts', {
-          params: { no_company: true },
-        })
+        const response = await api.get('/roles')
+        const role = Array.isArray(response.data) ? response.data : response.data.data || []
 
-        this.picContacts = (response.data || []).map((item) => ({
-          label: item.name,
-          value: item.id,
-        }))
-      } catch (error) {
-        console.error('Gagal memuat data Kontak:', error)
-      }
-    },
-    async fetchProvince() {
-      try {
-        const response = await api.get('/provinces')
-        const province = Array.isArray(response.data) ? response.data : response.data.data || []
-
-        this.provinces = province
-          // .filter((item) => item.deleted === 0)
+        this.roles = role
+          .filter((item) => item.slug != 'pic-customer')
           .map((item) => ({
             label: item.name,
             value: item.id,
           }))
       } catch (error) {
-        console.error('Gagal memuat data provinsi:', error)
+        console.error('Gagal memuat data roles:', error)
       }
     },
-    handleTableChange(pagination, filters, sorter) {
-      // sorter bisa object atau array (multiSort). Kita tangani single-sort.
-      if (sorter && sorter.columnKey) {
-        this.sort.key = sorter.columnKey
-        this.sort.order = sorter.order || null // 'ascend' / 'descend' / undefined
-      } else {
-        this.sort.key = null
-        this.sort.order = null
-      }
-      // reset ke halaman 1 agar UX bagus
-      this.currentPage = 1
+    handleTableChange() {
+      // Optional: implement sorting/filtering if needed, or leave empty to suppress warning
     },
     toggleHeader() {
       document.getElementById('collapse-header').classList.toggle('active')
@@ -748,9 +537,9 @@ export default {
       }
     },
     async openCreateModal() {
-      if (!this.CompaniesCreateModal) {
-        const module = await import('./components/companies-create-modal.vue')
-        this.CompaniesCreateModal = module.default
+      if (!this.UsersCreateModal) {
+        const module = await import('./components/users-create-modal.vue')
+        this.UsersCreateModal = module.default
       }
 
       document.body.classList.add('overflow-hidden')
@@ -761,11 +550,11 @@ export default {
       this.showCreateModal = false
     },
     async openEditModal(record) {
-      this.selectedCompany = record
+      this.selectedUser = record
 
-      if (!this.CompaniesEditModal) {
-        const module = await import('./components/companies-edit-modal.vue')
-        this.CompaniesEditModal = module.default
+      if (!this.UsersEditModal) {
+        const module = await import('./components/users-edit-modal.vue')
+        this.UsersEditModal = module.default
       }
 
       document.body.classList.add('overflow-hidden')
@@ -774,6 +563,21 @@ export default {
     closeEditModal() {
       document.body.classList.remove('overflow-hidden')
       this.showEditModal = false
+    },
+    async openPasswordModal(record) {
+      this.selectedUser = record
+
+      if (!this.UsersPasswordModal) {
+        const module = await import('./components/users-password-modal.vue')
+        this.UsersPasswordModal = module.default
+      }
+
+      document.body.classList.add('overflow-hidden')
+      this.showPasswordModal = true
+    },
+    closePasswordModal() {
+      document.body.classList.remove('overflow-hidden')
+      this.showPasswordModal = false
     },
     deleteModal(record) {
       this.$swal({
@@ -790,27 +594,27 @@ export default {
         if (!result.isConfirmed) return
 
         api
-          .delete(`/companies/delete/${record.id}`)
+          .delete(`/users/delete/${record.id}`)
           .then(() => {
-            this.$swal('Terhapus!', 'Kontak Berhasil Terhapus.', 'success')
+            this.$swal('Terhapus!', 'User Berhasil Terhapus.', 'success')
 
             if (Array.isArray(this.data)) {
               this.data = this.data.filter((item) => item.id !== record.id)
               return
             }
 
-            if (this.$props && this.$props.companies) {
-              this.$emit('remove-contact', record.id)
+            if (this.$props && this.$props.users) {
+              this.$emit('remove-users', record.id)
               return
             }
 
-            if (Array.isArray(this.companies)) {
-              const idx = this.companies.findIndex((i) => i.id === record.id)
-              if (idx !== -1) this.companies.splice(idx, 1)
+            if (Array.isArray(this.users)) {
+              const idx = this.users.findIndex((i) => i.id === record.id)
+              if (idx !== -1) this.users.splice(idx, 1)
             }
           })
           .catch(() => {
-            this.$swal('Error', 'Gagal Menghapus Kontak', 'error')
+            this.$swal('Error', 'Gagal Menghapus User', 'error')
           })
       })
     },
@@ -832,7 +636,7 @@ export default {
         this.filters.dateRange = rangeText
 
         this.updateUrlParams()
-        this.fetchCompanies()
+        this.fetchUsers()
       }
 
       const picker = new DateRangePicker(
@@ -872,9 +676,8 @@ export default {
       }
     }
 
-    this.fetchCompanies()
-    this.fetchContacts()
-    this.fetchProvince()
+    this.fetchUsers()
+    this.fetchRoles()
   },
   setup() {
     const openDropdown = ref(null)

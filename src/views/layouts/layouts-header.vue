@@ -49,77 +49,7 @@
           @click="handleFullscreen">
           <i class="ti ti-maximize"></i>
         </button>
-        <!-- Dark Mode Toggle -->
-        <button id="light-dark-mode"
-          class="hidden sm:inline-flex z-[1] flex items-center justify-center cursor-pointer w-[38px] h-[38px] rounded-[0.3125rem] text-gray-900 border border-borderColor shadow hover:bg-light hover:border-light p-[5px] relative"
-          @click="toggleDarkMode">
-          <i class="ti ti-moon text-lg"></i>
-        </button>
-        <!-- Pages Dropdown -->
-        <div class="relative hidden sm:inline-flex">
-          <button
-            class="z-[1] flex items-center justify-center cursor-pointer w-[38px] h-[38px] rounded-[0.3125rem] text-[#0E9384] bg-[#cfe9e6] hover:bg-[#0E9384] hover:text-white duration-300 ease-in-out shadow p-[5px] relative"
-            data-dropdown-toggle="pages-dropdown">
-            <i class="ti ti-layout-grid-add"></i>
-          </button>
-          <div id="pages-dropdown"
-            class="hidden absolute right-0 mt-2 bg-white dark:bg-gray-700 shadow rounded p-2 w-64">
-            <router-link to="/crm/contacts-grid" class="block rounded p-2 hover:bg-light dark:hover:bg-gray-600">
-              <div class="flex justify-between items-center">
-                <div>
-                  <p class="text-sm font-semibold text-gray-900 dark:text-gray-200">Contacts</p>
-                  <span class="text-xs">View All the Contacts</span>
-                </div>
-                <i class="ti ti-chevron-right-pipe"></i>
-              </div>
-            </router-link>
-            <router-link to="/crm/pipeline-list" class="block rounded p-2 hover:bg-light dark:hover:bg-gray-600">
-              <div class="flex justify-between items-center">
-                <div>
-                  <p class="text-sm font-semibold text-gray-900 dark:text-gray-200">Pipeline</p>
-                  <span class="text-xs">View All the Pipeline</span>
-                </div>
-                <i class="ti ti-chevron-right-pipe"></i>
-              </div>
-            </router-link>
-            <router-link to="/crm/activities-list" class="block rounded p-2 hover:bg-light dark:hover:bg-gray-600">
-              <div class="flex justify-between items-center">
-                <div>
-                  <p class="text-sm font-semibold text-gray-900 dark:text-gray-200">Activities</p>
-                  <span class="text-xs">Activities</span>
-                </div>
-                <i class="ti ti-chevron-right-pipe"></i>
-              </div>
-            </router-link>
-            <router-link to="/crm/analytics" class="block rounded p-2 hover:bg-light dark:hover:bg-gray-600">
-              <div class="flex justify-between items-center">
-                <div>
-                  <p class="text-sm font-semibold text-gray-900 dark:text-gray-200">Analytics</p>
-                  <span class="text-xs">Analytics</span>
-                </div>
-                <i class="ti ti-chevron-right-pipe"></i>
-              </div>
-            </router-link>
-          </div>
-        </div>
-        <!-- FAQ -->
-        <router-link to="/content/faq"
-          class="hidden sm:inline-flex z-[1] flex items-center justify-center cursor-pointer w-[38px] h-[38px] rounded-[0.3125rem] text-[#3538CD] bg-[#d7d7f5] hover:bg-[#3538CD] hover:text-white duration-300 ease-in-out shadow p-[5px] relative">
-          <i class="ti ti-help-hexagon"></i>
-        </router-link>
-        <!-- Reports -->
-        <router-link to="/report/lead-reports"
-          class="hidden sm:inline-flex z-[1] flex items-center justify-center cursor-pointer w-[38px] h-[38px] rounded-[0.3125rem] text-[#f9b801] bg-[#fef8e6] hover:bg-[#f9b801] hover:text-white duration-300 ease-in-out shadow p-[5px] relative">
-          <i class="ti ti-chart-pie"></i>
-        </router-link>
         <div class="w-[1px] h-[20px] bg-gray-100"></div>
-        <!-- Message -->
-        <router-link to="/application/chat"
-          class="relative z-[1] flex items-center justify-center cursor-pointer w-[38px] h-[38px] rounded-[0.3125rem] text-gray-900 border border-borderColor shadow hover:bg-light hover:border-light p-[5px] relative">
-          <i class="ti ti-message-circle-exclamation"></i>
-          <span
-            class="absolute top-[6px] right-[6px] bg-danger text-white font-normal w-[12px] h-[12px] text-[6px] p-0 flex items-center justify-center rounded-full">14</span>
-      </router-link>
         <!-- Notifications (simplified) -->
         <div class="relative">
           <button
@@ -240,38 +170,38 @@
         <div>
           <button data-dropdown-toggle="profile-dropdown" class="flex items-center justify-center" type="button">
             <span class="relative">
-              <img src="@/assets/img/users/user-40.jpg" alt="Img" class="w-[38px] rounded">
-              <span class="right-0 bottom-0 absolute  w-3 h-3 bg-success border-2 border-white rounded-full"></span>
+              <img
+                :src="user.photo"
+                alt="Img"
+                class="w-[38px] h-[38px] rounded object-cover object-center"
+              >
+              <span class="right-0 bottom-0 absolute w-3 h-3 bg-success border-2 border-white rounded-full"></span>
             </span>
           </button>
           <div id="profile-dropdown" class="z-10 hidden bg-white rounded-[5px] shadow w-[250px] p-2 pb-0">
-            <div class="flex items-center bg-light dark:bg-gray-800 p-2 rounded">
-              <img src="@/assets/img/users/user-40.jpg" alt="Img" class="w-[42px] h-[42px] rounded-full">
+            <div class="flex items-center bg-primary-600 p-2 rounded">
+              <img
+                v-if="user.photo"
+                :src="user.photo"
+                alt="User"
+                class="w-[42px] h-[42px] rounded-full object-cover"
+              >
+              <img
+                v-else
+                src="@/assets/img/users/user-40.jpg"
+                alt="Default"
+                class="w-[42px] h-[42px] rounded-full object-cover"
+              >
+
               <div class="ml-2">
-                <p class="font-medium text-gray-800 dark:text-white mb-0">Katherine Brooks</p>
-                <span class="block text-xs text-gray-600 dark:text-gray-400">Installer</span>
+                <p class="font-medium text-gray-800 dark:text-white mb-0">
+                  {{ user.name }}
+                </p>
+                <span class="block text-xs text-gray-600 dark:text-white">
+                  {{ user.title }}
+                </span>
               </div>
             </div>
-            <!-- <div class="py-2">
-              <a class="flex items-center text-gray-500 p-2 px-3 rounded hover:bg-light" to="/settings/profile-settings">
-                <i class="ti ti-user-circle me-1"></i>Profile Setting
-              </a>
-              <div class="flex items-center justify-between p-2 px-3 rounded w-full cursor-pointer hover:bg-light">
-                <i class="ti ti-bell"></i>
-                <label class="flex items-center justify-between w-full cursor-pointer">
-                  <input type="checkbox" value="" class="sr-only peer">
-                  <span class="ms-1">Notifications</span>
-                  <span
-                    class="relative w-8 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-0 peer-focus:ring-primary rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] peer-checked:after:start-[-2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></span>
-                </label>
-              </div>
-              <a class="flex items-center text-gray-500 p-2 px-3 rounded hover:bg-light" href="javascript:void(0);">
-                <i class="ti ti-help-circle me-1"></i>Help & Support
-              </a>
-              <router-link class="flex items-center text-gray-500 p-2 px-3 rounded hover:bg-light" to="/settings/profile-settings">
-                <i class="ti ti-settings me-1"></i>Settings
-              </router-link>
-            </div> -->
             <div class="py-2 border-t border-borderColor">
               <router-link
                 class="flex items-center p-2 px-3 rounded text-primary hover:bg-light"
@@ -311,6 +241,12 @@ import "simplebar-vue/dist/simplebar.min.css";
 import { initFlowbite } from "flowbite";
 import api from "@/api/api";
 
+const user = ref({
+  name: '',
+  title: '',
+  photo: null,
+})
+
 // === Router ===
 const router = useRouter();
 const route = useRoute();
@@ -322,8 +258,8 @@ const handleLogout = async () => {
   } catch (error) {
     console.error('Logout error:', error);
   } finally {
-    sessionStorage.removeItem('token');
-    sessionStorage.removeItem('user');
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
     router.push('/');
   }
 };
@@ -403,5 +339,11 @@ onMounted(() => {
   initializeDarkMode();
   removeSidebarClasses();
   initFlowbite();
+
+  const storedUser = JSON.parse(localStorage.getItem('user') || '{}')
+
+  user.value.name  = storedUser.name  || '-'
+  user.value.title = storedUser.title || '-'
+  user.value.photo = storedUser.photo ?? null
 });
 </script>

@@ -228,40 +228,43 @@
 <script>
 import sideBarData from "@/assets/json/sidebar-data.json";
 import { initFlowbite } from "flowbite";
+
 export default {
   data() {
     return {
-      sideBarData: sideBarData,
+      sideBarData: [], // akan diisi setelah filter role
       openMenuItem: null,
       openSubmenuOneItem: null,
       route_array: [],
       multilevel: [false, false, false],
+      userRole: null,
     };
   },
   computed: {
     isMenuActive() {
       return (menu) => {
-        return (
-          this.$route.path === menu.route ||
-          this.$route.path === menu.active_link ||
-          this.$route.path === menu.active_link1 ||
-          this.$route.path === menu.active_link2 ||
-          this.$route.path === menu.active_link3 ||
-          this.$route.path === menu.active_link4 ||
-          this.$route.path === menu.active_link5
+        const current = this.$route.path;
+
+        const links = [
+          menu.route,
+          menu.active_link,
+          menu.active_link1,
+          menu.active_link2,
+          menu.active_link3,
+          menu.active_link4,
+          menu.active_link5
+        ].filter(Boolean);
+
+        return links.some(link =>
+          current === link || current.startsWith(link + "/")
         );
       };
     },
     isActive() {
       return (menu) => {
         const currentPath = this.$route.path;
+        if (menu.route && (currentPath === menu.route || currentPath.startsWith(menu.route + '/'))) return true;
 
-        // Check if current path matches menu route exactly or starts with menu route + '/'
-        if (menu.route && (currentPath === menu.route || currentPath.startsWith(menu.route + '/'))) {
-          return true;
-        }
-
-        // Check active_link properties with more specific matching
         const activeLinks = [
           menu.active_link,
           menu.active_link1,
@@ -272,9 +275,7 @@ export default {
         ].filter(link => link);
 
         return activeLinks.some(link =>
-          currentPath === link ||
-          currentPath.startsWith(link + '/') ||
-          link === currentPath.split('/')[1] // Check second level for nested matches
+          currentPath === link || currentPath.startsWith(link + '/') || link === currentPath.split('/')[1]
         );
       };
     },
@@ -282,35 +283,24 @@ export default {
       return (subMenu) => {
         const currentPath = this.$route.path;
 
-        // Check if current path matches submenu route exactly or starts with submenu route + '/'
-        if (subMenu.route && (currentPath === subMenu.route || currentPath.startsWith(subMenu.route + '/'))) {
-          return true;
-        }
+        if (subMenu.route && (currentPath === subMenu.route || currentPath.startsWith(subMenu.route + '/'))) return true;
 
-        // Check active_link property with more specific matching
         if (subMenu.active_link) {
           return currentPath === subMenu.active_link ||
                  currentPath.startsWith(subMenu.active_link + '/') ||
-                 subMenu.active_link === currentPath.split('/')[1] || // Check second level for nested matches
-                 subMenu.active_link === currentPath.split('/').slice(0, 2).join('/'); // Check first two levels
+                 subMenu.active_link === currentPath.split('/')[1] ||
+                 subMenu.active_link === currentPath.split('/').slice(0, 2).join('/');
         }
 
-        // For third level submenus (submenu-two), check if any child routes match
         if (subMenu.subMenusTwo && subMenu.subMenusTwo.length > 0) {
           return subMenu.subMenusTwo.some(childSubMenu => {
-            // Check if current path matches child submenu route
-            if (childSubMenu.route && (currentPath === childSubMenu.route || currentPath.startsWith(childSubMenu.route + '/'))) {
-              return true;
-            }
-
-            // Check if child submenu has active_link that matches
+            if (childSubMenu.route && (currentPath === childSubMenu.route || currentPath.startsWith(childSubMenu.route + '/'))) return true;
             if (childSubMenu.active_link) {
               return currentPath === childSubMenu.active_link ||
                      currentPath.startsWith(childSubMenu.active_link + '/') ||
-                     childSubMenu.active_link === currentPath.split('/')[1] || // Check second level
-                     childSubMenu.active_link === currentPath.split('/').slice(0, 2).join('/'); // Check first two levels
+                     childSubMenu.active_link === currentPath.split('/')[1] ||
+                     childSubMenu.active_link === currentPath.split('/').slice(0, 2).join('/');
             }
-
             return false;
           });
         }
@@ -323,27 +313,51 @@ export default {
     expandSubMenus(menu) {
       this.sideBarData.forEach((item) => {
         item.menu.forEach((subMenu) => {
-          if (subMenu !== menu) {
-            subMenu.showSubRoute = false;
-          }
+          if (subMenu !== menu) subMenu.showSubRoute = false;
         });
       });
       menu.showSubRoute = !menu.showSubRoute;
     },
     OpenMenu(menu) {
       this.sideBarData.forEach((item) => {
-        item.menu.forEach((subMenu) => {
-          subMenu.showSubRoute = false;
-        });
+        item.menu.forEach((subMenu) => subMenu.showSubRoute = false);
       });
       this.openMenuItem = this.openMenuItem === menu ? null : menu;
     },
     openSubmenuOne(subMenus) {
       this.openSubmenuOneItem = this.openSubmenuOneItem === subMenus ? null : subMenus;
     },
+
+    // --- Filter sidebar berdasarkan role ---
+    filterSidebarByRole(data, role) {
+      return data.map(group => {
+        const newGroup = { ...group };
+        if (newGroup.menu && newGroup.menu.length) {
+          newGroup.menu = newGroup.menu
+            .filter(menu => !menu.roles || menu.roles.includes(role))
+            .map(menu => {
+              if (menu.subMenus && menu.subMenus.length) {
+                menu.subMenus = menu.subMenus.filter(sub => !sub.roles || sub.roles.includes(role));
+              }
+              if (menu.subMenusTwo && menu.subMenusTwo.length) {
+                menu.subMenusTwo = menu.subMenusTwo.filter(sub2 => !sub2.roles || sub2.roles.includes(role));
+              }
+              return menu;
+            });
+        }
+        return newGroup;
+      }).filter(group => group.menu.length > 0);
+    },
   },
   mounted() {
     initFlowbite();
+
+    // Ambil role user
+    const user = JSON.parse(localStorage.getItem("user")) || {};
+    this.userRole = user.role_slug || null;
+
+    // Filter sidebar
+    this.sideBarData = this.filterSidebarByRole(sideBarData, this.userRole);
   },
 };
 </script>

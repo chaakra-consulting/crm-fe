@@ -1222,7 +1222,7 @@ table thead tr{
 }
 
 div[drawer-backdrop]{
-  z-index: 9998;
+  z-index: 4000;
 }
 
 ::-webkit-scrollbar {
@@ -1377,9 +1377,9 @@ html[data-bs-theme=dark] #light-dark-mode .ti-moon::before {
 
 .header-collapse #collapse-header{
   --tw-border-opacity: 1;
-  border-color: rgb(228 31 7 / var(--tw-border-opacity, 1));
+  border-color: rgb(0 144 183 / var(--tw-border-opacity, 1));
   --tw-bg-opacity: 1;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1));
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
@@ -2068,7 +2068,7 @@ html[data-bs-theme=dark] #light-dark-mode .ti-moon::before {
     line-height: 2rem;
     line-height: 50px;
     --tw-text-opacity: 1;
-    color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+    color: rgb(0 144 183 / var(--tw-text-opacity, 1));
   }
 }
 
@@ -2140,7 +2140,7 @@ html[data-bs-theme=dark] #light-dark-mode .ti-moon::before {
   width: 31px;
   border-radius: 2px;
   --tw-bg-opacity: 1;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1));
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1));
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 500ms;
@@ -2205,7 +2205,7 @@ html[data-bs-theme=dark] #light-dark-mode .ti-moon::before {
   line-height: 1.25rem;
   line-height: 50px;
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 @media (max-width: 991.98px){
@@ -2294,9 +2294,9 @@ html[data-bs-theme=dark] #light-dark-mode .ti-moon::before {
 .btn-primary{
   border-width: 1px;
   --tw-border-opacity: 1;
-  border-color: rgb(228 31 7 / var(--tw-border-opacity, 1));
+  border-color: rgb(0 144 183 / var(--tw-border-opacity, 1));
   --tw-bg-opacity: 1;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1));
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1));
   text-align: center;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
@@ -2304,7 +2304,7 @@ html[data-bs-theme=dark] #light-dark-mode .ti-moon::before {
 
 .btn-primary:hover{
   --tw-bg-opacity: 1;
-  background-color: rgb(243 116 56 / var(--tw-bg-opacity, 1));
+  background-color: rgb(87 183 231 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
@@ -2530,11 +2530,11 @@ html[data-bs-theme=dark] #light-dark-mode .ti-moon::before {
 .btn-outline-primary{
   border-width: 1px;
   --tw-border-opacity: 1;
-  border-color: rgb(228 31 7 / var(--tw-border-opacity, 1));
+  border-color: rgb(0 144 183 / var(--tw-border-opacity, 1));
   background-color: transparent;
   text-align: center;
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 [data-bs-theme=dark] .btn-outline-primary:hover{
@@ -2583,7 +2583,7 @@ html[data-bs-theme=dark] #light-dark-mode .ti-moon::before {
 
 .btn-outline-primary:hover{
   --tw-bg-opacity: 1;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1));
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
@@ -2775,7 +2775,7 @@ html[data-bs-theme=dark] #light-dark-mode .ti-moon::before {
   background-color: rgb(251 209 189 / var(--tw-bg-opacity, 1));
   text-align: center;
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 [data-color=secondary] .btn-soft-primary:hover{
@@ -2810,7 +2810,7 @@ html[data-bs-theme=dark] #light-dark-mode .ti-moon::before {
 
 .btn-soft-primary:hover{
   --tw-border-opacity: 1;
-  border-color: rgb(228 31 7 / var(--tw-border-opacity, 1));
+  border-color: rgb(0 144 183 / var(--tw-border-opacity, 1));
 }
 
 [data-bs-theme=dark] .btn-soft-secondary{
@@ -3001,11 +3001,11 @@ html[data-bs-theme=dark] #light-dark-mode .ti-moon::before {
 .btn-primary-light{
   border-width: 1px;
   --tw-border-opacity: 1;
-  border-color: rgb(228 31 7 / var(--tw-border-opacity, 1));
-  background-color: rgb(228 31 7 / 0.1);
+  border-color: rgb(0 144 183 / var(--tw-border-opacity, 1));
+  background-color: rgb(0 144 183 / 0.1);
   text-align: center;
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 [data-bs-theme=dark] .btn-primary-light:hover{
@@ -3066,9 +3066,9 @@ html[data-bs-theme=dark] #light-dark-mode .ti-moon::before {
 
 .btn-primary-light:hover{
   --tw-border-opacity: 1;
-  border-color: rgb(228 31 7 / var(--tw-border-opacity, 1));
+  border-color: rgb(0 144 183 / var(--tw-border-opacity, 1));
   --tw-bg-opacity: 1;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1));
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
@@ -3121,7 +3121,7 @@ html[data-bs-theme=dark] #light-dark-mode .ti-moon::before {
 
 .btn-link:hover{
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 button:disabled{
@@ -3278,7 +3278,7 @@ button:disabled{
 
 .sidebar .sidebar-menu > ul li .submenu > ul li a:hover .menu-arrow::before{
   --tw-border-opacity: 1;
-  border-color: rgb(228 31 7 / var(--tw-border-opacity, 1));
+  border-color: rgb(0 144 183 / var(--tw-border-opacity, 1));
 }
 
 .sidebar .sidebar-menu > ul li .submenu > ul li a.active::before{
@@ -3346,9 +3346,9 @@ button:disabled{
 .sidebar .sidebar-menu > ul > li ul > li.active a{
   border-radius: 5px;
   --tw-bg-opacity: 1;
-  background-color: rgb(253 233 233 / var(--tw-bg-opacity, 1));
+  background-color: rgb(157 234 255 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 [data-color=secondary] .sidebar .sidebar-menu > ul > li ul > li.\!active a{
@@ -3389,9 +3389,9 @@ button:disabled{
 .sidebar .sidebar-menu > ul > li ul > li.\!active a{
   border-radius: 5px;
   --tw-bg-opacity: 1;
-  background-color: rgb(253 233 233 / var(--tw-bg-opacity, 1));
+  background-color: rgb(157 234 255 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 [data-color=secondary] .sidebar .sidebar-menu > ul > li > ul > li a:hover{
@@ -3432,10 +3432,10 @@ button:disabled{
 .sidebar .sidebar-menu > ul > li > ul > li a:hover{
   border-radius: 5px;
   --tw-bg-opacity: 1;
-  background-color: rgb(253 233 233 / var(--tw-bg-opacity, 1));
+  background-color: rgb(227 247 252 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
-  background-color: transparent;
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
+  /* background-color: transparent; */
 }
 
 [data-bs-theme=dark] .sidebar .sidebar-menu > ul > li > ul > li a:hover i{
@@ -3484,7 +3484,7 @@ button:disabled{
 
 .sidebar .sidebar-menu > ul > li > ul > li a:hover i{
   --tw-bg-opacity: 1;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1));
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
@@ -3535,7 +3535,7 @@ button:disabled{
 
 .sidebar .sidebar-menu > ul > li ul > li.active a i{
   --tw-bg-opacity: 1;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1));
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
@@ -3586,7 +3586,7 @@ button:disabled{
 
 .sidebar .sidebar-menu > ul > li ul > li.\!active a i{
   --tw-bg-opacity: 1;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1));
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
@@ -3637,7 +3637,7 @@ button:disabled{
 
 .sidebar .sidebar-menu > ul li .submenu > a.subdrop i, .sidebar .sidebar-menu > ul li .submenu > a.active i{
   --tw-bg-opacity: 1;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1));
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
@@ -3688,7 +3688,7 @@ button:disabled{
 
  .sidebar .sidebar-menu > ul li .submenu > a.\!active i{
   --tw-bg-opacity: 1;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1));
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
@@ -3725,7 +3725,7 @@ button:disabled{
 
 .sidebar .sidebar-menu > ul li .submenu > a.subdrop .menu-arrow::before, .sidebar .sidebar-menu > ul li .submenu > a.active .menu-arrow::before{
   --tw-border-opacity: 1;
-  border-color: rgb(228 31 7 / var(--tw-border-opacity, 1));
+  border-color: rgb(0 144 183 / var(--tw-border-opacity, 1));
 }
 
 [data-color=secondary]  .sidebar .sidebar-menu > ul li .submenu > a.\!active .menu-arrow::before{
@@ -3760,7 +3760,7 @@ button:disabled{
 
  .sidebar .sidebar-menu > ul li .submenu > a.\!active .menu-arrow::before{
   --tw-border-opacity: 1;
-  border-color: rgb(228 31 7 / var(--tw-border-opacity, 1));
+  border-color: rgb(0 144 183 / var(--tw-border-opacity, 1));
 }
 
 [data-bs-theme=dark] .sidebar .sidebar-menu > ul li .submenu > ul li a.active::after{
@@ -3809,7 +3809,7 @@ button:disabled{
 
 .sidebar .sidebar-menu > ul li .submenu > ul li a.active::after{
   --tw-bg-opacity: 1;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1));
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1));
 }
 
 [data-bs-theme=dark] .sidebar .sidebar-menu > ul li .submenu > ul li a.\!active::after{
@@ -3858,7 +3858,7 @@ button:disabled{
 
 .sidebar .sidebar-menu > ul li .submenu > ul li a.\!active::after{
   --tw-bg-opacity: 1;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1));
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1));
 }
 
 [data-color=secondary] .sidebar .sidebar-menu > ul li .submenu > a.active{
@@ -3898,9 +3898,9 @@ button:disabled{
 
 .sidebar .sidebar-menu > ul li .submenu > a.active{
   --tw-bg-opacity: 1;
-  background-color: rgb(253 233 233 / var(--tw-bg-opacity, 1));
+  background-color: rgb(157 234 255 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 [data-color=secondary] .sidebar .sidebar-menu > ul li .submenu > a.\!active{
@@ -3940,9 +3940,9 @@ button:disabled{
 
 .sidebar .sidebar-menu > ul li .submenu > a.\!active{
   --tw-bg-opacity: 1;
-  background-color: rgb(253 233 233 / var(--tw-bg-opacity, 1));
+  background-color: rgb(157 234 255 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 [data-color=secondary] .sidebar .sidebar-menu > ul li .submenu > ul li a.active{
@@ -3982,7 +3982,7 @@ button:disabled{
 
 .sidebar .sidebar-menu > ul li .submenu > ul li a.active{
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 [data-color=secondary] .sidebar .sidebar-menu > ul li .submenu > ul li a.\!active{
@@ -4022,7 +4022,7 @@ button:disabled{
 
 .sidebar .sidebar-menu > ul li .submenu > ul li a.\!active{
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 .\!active.subdrop ~ ul{
@@ -4435,19 +4435,19 @@ div[drawer-backdrop] ~ .fixed.sidebar-overlay.z-40{
   color: rgb(112 112 112 / var(--tw-text-opacity, 1));
 }
 
-[data-bs-theme=dark] .custom-datatable-filter .dt-paging nav .pagination a:active,[data-bs-theme=dark]  .custom-datatable-filter .dt-paging nav .pagination a:hover,[data-bs-theme=dark] 
+[data-bs-theme=dark] .custom-datatable-filter .dt-paging nav .pagination a:active,[data-bs-theme=dark]  .custom-datatable-filter .dt-paging nav .pagination a:hover,[data-bs-theme=dark]
 	.custom-datatable-filter .dt-paging nav .pagination a[aria-current="page"]{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
- [data-bs-theme=dark] [data-color=secondary] .custom-datatable-filter .dt-paging nav .pagination a:active, [data-bs-theme=dark] [data-color=secondary]  .custom-datatable-filter .dt-paging nav .pagination a:hover, [data-bs-theme=dark] [data-color=secondary] 
+ [data-bs-theme=dark] [data-color=secondary] .custom-datatable-filter .dt-paging nav .pagination a:active, [data-bs-theme=dark] [data-color=secondary]  .custom-datatable-filter .dt-paging nav .pagination a:hover, [data-bs-theme=dark] [data-color=secondary]
 	.custom-datatable-filter .dt-paging nav .pagination a[aria-current="page"]{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
-[data-color=secondary] .custom-datatable-filter .dt-paging nav .pagination a:active,[data-color=secondary]  .custom-datatable-filter .dt-paging nav .pagination a:hover,[data-color=secondary] 
+[data-color=secondary] .custom-datatable-filter .dt-paging nav .pagination a:active,[data-color=secondary]  .custom-datatable-filter .dt-paging nav .pagination a:hover,[data-color=secondary]
 	.custom-datatable-filter .dt-paging nav .pagination a[aria-current="page"]{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(255 162 1 / var(--tw-bg-opacity, 1)) !important;
@@ -4455,7 +4455,7 @@ div[drawer-backdrop] ~ .fixed.sidebar-overlay.z-40{
   border-color: rgb(255 162 1 / var(--tw-border-opacity, 1)) !important;
 }
 
-[data-color=orange] .custom-datatable-filter .dt-paging nav .pagination a:active,[data-color=orange]  .custom-datatable-filter .dt-paging nav .pagination a:hover,[data-color=orange] 
+[data-color=orange] .custom-datatable-filter .dt-paging nav .pagination a:active,[data-color=orange]  .custom-datatable-filter .dt-paging nav .pagination a:hover,[data-color=orange]
 	.custom-datatable-filter .dt-paging nav .pagination a[aria-current="page"]{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(239 94 37 / var(--tw-bg-opacity, 1)) !important;
@@ -4463,7 +4463,7 @@ div[drawer-backdrop] ~ .fixed.sidebar-overlay.z-40{
   border-color: rgb(239 94 37 / var(--tw-border-opacity, 1)) !important;
 }
 
-[data-color=teal] .custom-datatable-filter .dt-paging nav .pagination a:active,[data-color=teal]  .custom-datatable-filter .dt-paging nav .pagination a:hover,[data-color=teal] 
+[data-color=teal] .custom-datatable-filter .dt-paging nav .pagination a:active,[data-color=teal]  .custom-datatable-filter .dt-paging nav .pagination a:hover,[data-color=teal]
 	.custom-datatable-filter .dt-paging nav .pagination a[aria-current="page"]{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(14 147 132 / var(--tw-bg-opacity, 1)) !important;
@@ -4471,7 +4471,7 @@ div[drawer-backdrop] ~ .fixed.sidebar-overlay.z-40{
   border-color: rgb(14 147 132 / var(--tw-border-opacity, 1)) !important;
 }
 
-[data-color=purple] .custom-datatable-filter .dt-paging nav .pagination a:active,[data-color=purple]  .custom-datatable-filter .dt-paging nav .pagination a:hover,[data-color=purple] 
+[data-color=purple] .custom-datatable-filter .dt-paging nav .pagination a:active,[data-color=purple]  .custom-datatable-filter .dt-paging nav .pagination a:hover,[data-color=purple]
 	.custom-datatable-filter .dt-paging nav .pagination a[aria-current="page"]{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(128 0 128 / var(--tw-bg-opacity, 1)) !important;
@@ -4479,7 +4479,7 @@ div[drawer-backdrop] ~ .fixed.sidebar-overlay.z-40{
   border-color: rgb(128 0 128 / var(--tw-border-opacity, 1)) !important;
 }
 
-[data-color=indigo] .custom-datatable-filter .dt-paging nav .pagination a:active,[data-color=indigo]  .custom-datatable-filter .dt-paging nav .pagination a:hover,[data-color=indigo] 
+[data-color=indigo] .custom-datatable-filter .dt-paging nav .pagination a:active,[data-color=indigo]  .custom-datatable-filter .dt-paging nav .pagination a:hover,[data-color=indigo]
 	.custom-datatable-filter .dt-paging nav .pagination a[aria-current="page"]{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(53 56 205 / var(--tw-bg-opacity, 1)) !important;
@@ -4487,7 +4487,7 @@ div[drawer-backdrop] ~ .fixed.sidebar-overlay.z-40{
   border-color: rgb(53 56 205 / var(--tw-border-opacity, 1)) !important;
 }
 
-[data-color=info] .custom-datatable-filter .dt-paging nav .pagination a:active,[data-color=info]  .custom-datatable-filter .dt-paging nav .pagination a:hover,[data-color=info] 
+[data-color=info] .custom-datatable-filter .dt-paging nav .pagination a:active,[data-color=info]  .custom-datatable-filter .dt-paging nav .pagination a:hover,[data-color=info]
 	.custom-datatable-filter .dt-paging nav .pagination a[aria-current="page"]{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(27 132 255 / var(--tw-bg-opacity, 1)) !important;
@@ -4495,12 +4495,12 @@ div[drawer-backdrop] ~ .fixed.sidebar-overlay.z-40{
   border-color: rgb(27 132 255 / var(--tw-border-opacity, 1)) !important;
 }
 
-[data-color=secondary] .sidebar-themesettings .custom-datatable-filter .dt-paging nav .pagination a:active, [data-color=orange] .sidebar-themesettings .custom-datatable-filter .dt-paging nav .pagination a:active, [data-color=teal] .sidebar-themesettings .custom-datatable-filter .dt-paging nav .pagination a:active, [data-color=purple] .sidebar-themesettings .custom-datatable-filter .dt-paging nav .pagination a:active, [data-color=indigo] .sidebar-themesettings .custom-datatable-filter .dt-paging nav .pagination a:active, [data-color=info] .sidebar-themesettings .custom-datatable-filter .dt-paging nav .pagination a:active,[data-color=secondary] .sidebar-themesettings  .custom-datatable-filter .dt-paging nav .pagination a:hover, [data-color=orange] .sidebar-themesettings  .custom-datatable-filter .dt-paging nav .pagination a:hover, [data-color=teal] .sidebar-themesettings  .custom-datatable-filter .dt-paging nav .pagination a:hover, [data-color=purple] .sidebar-themesettings  .custom-datatable-filter .dt-paging nav .pagination a:hover, [data-color=indigo] .sidebar-themesettings  .custom-datatable-filter .dt-paging nav .pagination a:hover, [data-color=info] .sidebar-themesettings  .custom-datatable-filter .dt-paging nav .pagination a:hover,[data-color=secondary] .sidebar-themesettings 
-	.custom-datatable-filter .dt-paging nav .pagination a[aria-current="page"], [data-color=orange] .sidebar-themesettings 
-	.custom-datatable-filter .dt-paging nav .pagination a[aria-current="page"], [data-color=teal] .sidebar-themesettings 
-	.custom-datatable-filter .dt-paging nav .pagination a[aria-current="page"], [data-color=purple] .sidebar-themesettings 
-	.custom-datatable-filter .dt-paging nav .pagination a[aria-current="page"], [data-color=indigo] .sidebar-themesettings 
-	.custom-datatable-filter .dt-paging nav .pagination a[aria-current="page"], [data-color=info] .sidebar-themesettings 
+[data-color=secondary] .sidebar-themesettings .custom-datatable-filter .dt-paging nav .pagination a:active, [data-color=orange] .sidebar-themesettings .custom-datatable-filter .dt-paging nav .pagination a:active, [data-color=teal] .sidebar-themesettings .custom-datatable-filter .dt-paging nav .pagination a:active, [data-color=purple] .sidebar-themesettings .custom-datatable-filter .dt-paging nav .pagination a:active, [data-color=indigo] .sidebar-themesettings .custom-datatable-filter .dt-paging nav .pagination a:active, [data-color=info] .sidebar-themesettings .custom-datatable-filter .dt-paging nav .pagination a:active,[data-color=secondary] .sidebar-themesettings  .custom-datatable-filter .dt-paging nav .pagination a:hover, [data-color=orange] .sidebar-themesettings  .custom-datatable-filter .dt-paging nav .pagination a:hover, [data-color=teal] .sidebar-themesettings  .custom-datatable-filter .dt-paging nav .pagination a:hover, [data-color=purple] .sidebar-themesettings  .custom-datatable-filter .dt-paging nav .pagination a:hover, [data-color=indigo] .sidebar-themesettings  .custom-datatable-filter .dt-paging nav .pagination a:hover, [data-color=info] .sidebar-themesettings  .custom-datatable-filter .dt-paging nav .pagination a:hover,[data-color=secondary] .sidebar-themesettings
+	.custom-datatable-filter .dt-paging nav .pagination a[aria-current="page"], [data-color=orange] .sidebar-themesettings
+	.custom-datatable-filter .dt-paging nav .pagination a[aria-current="page"], [data-color=teal] .sidebar-themesettings
+	.custom-datatable-filter .dt-paging nav .pagination a[aria-current="page"], [data-color=purple] .sidebar-themesettings
+	.custom-datatable-filter .dt-paging nav .pagination a[aria-current="page"], [data-color=indigo] .sidebar-themesettings
+	.custom-datatable-filter .dt-paging nav .pagination a[aria-current="page"], [data-color=info] .sidebar-themesettings
 	.custom-datatable-filter .dt-paging nav .pagination a[aria-current="page"]{
   background: #e41f07;
 }
@@ -4508,9 +4508,9 @@ div[drawer-backdrop] ~ .fixed.sidebar-overlay.z-40{
 .custom-datatable-filter .dt-paging nav .pagination a:active, .custom-datatable-filter .dt-paging nav .pagination a:hover,
 	.custom-datatable-filter .dt-paging nav .pagination a[aria-current="page"]{
   --tw-border-opacity: 1;
-  border-color: rgb(228 31 7 / var(--tw-border-opacity, 1));
+  border-color: rgb(0 144 183 / var(--tw-border-opacity, 1));
   --tw-bg-opacity: 1;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1));
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
@@ -4663,7 +4663,7 @@ table.dataTable thead > tr > th.dt-orderable-asc:hover, table.dataTable thead > 
 
 .select2-container--default.select2-container--open.select2-container--below .select2-selection--single{
   --tw-border-opacity: 1;
-  border-color: rgb(228 31 7 / var(--tw-border-opacity, 1));
+  border-color: rgb(0 144 183 / var(--tw-border-opacity, 1));
 }
 
 .select2-container--default .select2-selection--single .select2-selection__arrow{
@@ -4757,7 +4757,7 @@ table.dataTable thead > tr > th.dt-orderable-asc:hover, table.dataTable thead > 
 
 .select2-container--default .select2-results__option--highlighted[aria-selected]{
   --tw-bg-opacity: 1;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1));
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
@@ -5318,7 +5318,7 @@ div[drawer-backdrop] ~ .sidebar-contact.inset-0.z-40{
 .icons-items .icons-list li:hover{
   font-size: 24px;
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 .modal.icons-items .icons-list .icons-list-item{
@@ -5395,7 +5395,7 @@ div[drawer-backdrop] ~ .sidebar-contact.inset-0.z-40{
   --tw-bg-opacity: 1;
   background-color: rgb(205 205 205 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 .accordion-header .collapsed i{
@@ -5852,7 +5852,8 @@ div[drawer-backdrop] ~ .sidebar-horizontal.sidebar.inset-0.z-40{
   padding-top: 96px;
 }
 
-[data-layout=horizontal] .content{
+[data-layout=horizontal]
+{
   padding-left: 0px;
   padding-right: 0px;
 }
@@ -6057,7 +6058,7 @@ div[drawer-backdrop] ~ .sidebar-horizontal.sidebar.inset-0.z-40{
 
 .theme-layout input[type=radio]:checked ~ label .layout-img img{
   --tw-border-opacity: 1;
-  border-color: rgb(228 31 7 / var(--tw-border-opacity, 1));
+  border-color: rgb(0 144 183 / var(--tw-border-opacity, 1));
 }
 
 .modal.theme-layout input[type=radio]{
@@ -6142,9 +6143,9 @@ div[drawer-backdrop] ~ .sidebar-horizontal.sidebar.inset-0.z-40{
 
 .theme-mode input[type=radio]:checked ~ label .avatar{
   --tw-bg-opacity: 1;
-  background-color: rgb(254 240 233 / var(--tw-bg-opacity, 1));
+  background-color: rgb(227 247 252 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 [data-bs-theme=dark] [data-bs-theme=dark] .theme-mode input[type=radio]:checked ~ label .avatar{
@@ -6154,11 +6155,11 @@ div[drawer-backdrop] ~ .sidebar-horizontal.sidebar.inset-0.z-40{
 [data-bs-theme=dark] .theme-mode input[type=radio]:checked ~ label .avatar{
   border-bottom-width: 1px;
   --tw-border-opacity: 1;
-  border-color: rgb(228 31 7 / var(--tw-border-opacity, 1));
+  border-color: rgb(0 144 183 / var(--tw-border-opacity, 1));
   --tw-bg-opacity: 1;
   background-color: rgb(252.9 193.4 186.1 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 .modal.theme-colorsset input[type=radio]{
@@ -6233,7 +6234,7 @@ div[drawer-backdrop] ~ .sidebar-horizontal.sidebar.inset-0.z-40{
 
 .theme-colorsset label.primary-clr::before{
   --tw-bg-opacity: 1;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1));
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1));
 }
 
 .theme-colorsset label::before {
@@ -6320,7 +6321,7 @@ div[drawer-backdrop] ~ .sidebar-horizontal.sidebar.inset-0.z-40{
   font-size: 8px;
   font-weight: 700;
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 [data-bs-theme=dark] .theme-colorsset .pickr-container-primary{
@@ -6406,7 +6407,7 @@ div[drawer-backdrop] ~ .sidebar-horizontal.sidebar.inset-0.z-40{
 
 [data-sidebar=sidebar3] .sidebar .sidebar-menu > ul > li ul li.active a{
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 [data-color=secondary] [data-sidebar=sidebar3] .sidebar .sidebar-menu > ul > li ul li.\!active a{
@@ -6446,7 +6447,7 @@ div[drawer-backdrop] ~ .sidebar-horizontal.sidebar.inset-0.z-40{
 
 [data-sidebar=sidebar3] .sidebar .sidebar-menu > ul > li ul li.\!active a{
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 [data-bs-theme=dark] [data-sidebar=sidebar3] .sidebar .sidebar-menu > ul > li ul li.active a i{
@@ -6495,7 +6496,7 @@ div[drawer-backdrop] ~ .sidebar-horizontal.sidebar.inset-0.z-40{
 
 [data-sidebar=sidebar3] .sidebar .sidebar-menu > ul > li ul li.active a i{
   --tw-bg-opacity: 1;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1));
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1));
 }
 
 [data-bs-theme=dark] [data-sidebar=sidebar3] .sidebar .sidebar-menu > ul > li ul li.\!active a i{
@@ -6544,7 +6545,7 @@ div[drawer-backdrop] ~ .sidebar-horizontal.sidebar.inset-0.z-40{
 
 [data-sidebar=sidebar3] .sidebar .sidebar-menu > ul > li ul li.\!active a i{
   --tw-bg-opacity: 1;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1));
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1));
 }
 
 [data-sidebar=sidebar3] .sidebar .sidebar-logo #toggle_btn{
@@ -6558,7 +6559,7 @@ div[drawer-backdrop] ~ .sidebar-horizontal.sidebar.inset-0.z-40{
 
 [data-sidebar=sidebar4] .sidebar{
   --tw-bg-opacity: 1;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1));
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1));
 }
 
 [data-sidebar=sidebar5] .sidebar{
@@ -6756,7 +6757,7 @@ div[drawer-backdrop] ~ .sidebar-horizontal.sidebar.inset-0.z-40{
 
 [data-color=secondary] #theme-setting .theme-colorsset label.primary-clr::before{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
 }
 
 [data-bs-theme=dark] [data-color=orange] #theme-setting .theme-colorsset label.primary-clr::before{
@@ -6805,7 +6806,7 @@ div[drawer-backdrop] ~ .sidebar-horizontal.sidebar.inset-0.z-40{
 
 [data-color=orange] #theme-setting .theme-colorsset label.primary-clr::before{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
 }
 
 [data-bs-theme=dark] [data-color=teal] #theme-setting .theme-colorsset label.primary-clr::before{
@@ -6854,7 +6855,7 @@ div[drawer-backdrop] ~ .sidebar-horizontal.sidebar.inset-0.z-40{
 
 [data-color=teal] #theme-setting .theme-colorsset label.primary-clr::before{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
 }
 
 [data-bs-theme=dark] [data-color=purple] #theme-setting .theme-colorsset label.primary-clr::before{
@@ -6903,7 +6904,7 @@ div[drawer-backdrop] ~ .sidebar-horizontal.sidebar.inset-0.z-40{
 
 [data-color=purple] #theme-setting .theme-colorsset label.primary-clr::before{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
 }
 
 [data-bs-theme=dark] [data-color=indigo] #theme-setting .theme-colorsset label.primary-clr::before{
@@ -6952,7 +6953,7 @@ div[drawer-backdrop] ~ .sidebar-horizontal.sidebar.inset-0.z-40{
 
 [data-color=indigo] #theme-setting .theme-colorsset label.primary-clr::before{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
 }
 
 [data-bs-theme=dark] [data-color=info] #theme-setting .theme-colorsset label.primary-clr::before{
@@ -7001,7 +7002,7 @@ div[drawer-backdrop] ~ .sidebar-horizontal.sidebar.inset-0.z-40{
 
 [data-color=info] #theme-setting .theme-colorsset label.primary-clr::before{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
 }
 
 .modal[data-layout=default] .header-collapse .header,.modal [data-layout=twocolumn] .header-collapse .header,.modal [data-layout=stacked] .header-collapse .header{
@@ -9327,11 +9328,11 @@ div[drawer-backdrop] ~ .sidebar-horizontal.sidebar.inset-0.z-40{
 
 .border-primary{
   --tw-border-opacity: 1;
-  border-color: rgb(228 31 7 / var(--tw-border-opacity, 1));
+  border-color: rgb(0 144 183 / var(--tw-border-opacity, 1));
 }
 
 .border-primary\/10{
-  border-color: rgb(228 31 7 / 0.1);
+  border-color: rgb(0 144 183 / 0.1);
 }
 
 .border-purple{
@@ -9616,31 +9617,41 @@ div[drawer-backdrop] ~ .sidebar-horizontal.sidebar.inset-0.z-40{
 
 .bg-primary{
   --tw-bg-opacity: 1;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1));
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1));
 }
 
 .bg-primary-100{
   --tw-bg-opacity: 1;
-  background-color: rgb(254 240 233 / var(--tw-bg-opacity, 1));
+  background-color: rgb(227 247 252 / var(--tw-bg-opacity, 1));
 }
 
 .bg-primary-200{
   --tw-bg-opacity: 1;
-  background-color: rgb(252 224 211 / var(--tw-bg-opacity, 1));
+  background-color: rgb(179 232 247 / var(--tw-bg-opacity, 1));
 }
 
 .bg-primary-400{
   --tw-bg-opacity: 1;
-  background-color: rgb(250 193 167 / var(--tw-bg-opacity, 1));
+  background-color: rgb(77 190 222 / var(--tw-bg-opacity, 1));
+}
+
+.bg-primary-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 118 150 / var(--tw-bg-opacity, 1)); /* agak gelap */
+}
+
+.bg-primary-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(1 58 74 / var(--tw-bg-opacity, 1)); /* gelap */
 }
 
 .bg-primary-transparent{
   --tw-bg-opacity: 1;
-  background-color: rgb(254 241 235 / var(--tw-bg-opacity, 1));
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity));
 }
 
 .bg-primary\/10{
-  background-color: rgb(228 31 7 / 0.1);
+  background-color: rgb(0 144 183 / 0.1);
 }
 
 .bg-purple{
@@ -10535,7 +10546,7 @@ div[drawer-backdrop] ~ .sidebar-horizontal.sidebar.inset-0.z-40{
 
 .text-primary{
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 .text-primary-600{
@@ -10545,11 +10556,11 @@ div[drawer-backdrop] ~ .sidebar-horizontal.sidebar.inset-0.z-40{
 
 .text-primary-700{
   --tw-text-opacity: 1;
-  color: rgb(246 147 100 / var(--tw-text-opacity, 1));
+  color: rgb(1 58 74 / var(--tw-bg-opacity, 1));
 }
 
 .text-primary\/50{
-  color: rgb(228 31 7 / 0.5);
+  color: rgb(0 144 183 / 0.5);
 }
 
 .text-purple{
@@ -10930,7 +10941,7 @@ div[drawer-backdrop] ~ .sidebar-horizontal.sidebar.inset-0.z-40{
 .add-details-wizard li.active{
   border-bottom-width: 1px;
   --tw-border-opacity: 1;
-  border-color: rgb(228 31 7 / var(--tw-border-opacity, 1));
+  border-color: rgb(0 144 183 / var(--tw-border-opacity, 1));
 }
 
 [data-color=secondary] .add-details-wizard li.\!active{
@@ -10970,7 +10981,7 @@ div[drawer-backdrop] ~ .sidebar-horizontal.sidebar.inset-0.z-40{
 .add-details-wizard li.\!active{
   border-bottom-width: 1px;
   --tw-border-opacity: 1;
-  border-color: rgb(228 31 7 / var(--tw-border-opacity, 1));
+  border-color: rgb(0 144 183 / var(--tw-border-opacity, 1));
 }
 
 .modal.add-info-fieldset fieldset{
@@ -11429,7 +11440,7 @@ div[drawer-backdrop] ~ #compose-view.inset-0.z-40{
 
 .single-video .join-video .call-overlay-bottom .guest-off.activate{
   --tw-bg-opacity: 1;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1));
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
@@ -14977,7 +14988,7 @@ textarea.form-control{
 
 datatable-paginate a[aria-current="page"], .datatable-paginate a[aria-current="page"]:hover{
   --tw-bg-opacity: 1;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
@@ -15162,7 +15173,7 @@ datatable-paginate a[aria-current="page"], .datatable-paginate a[aria-current="p
 
 [data-sidebar=sidebar4] .sidebar .sidebar-menu > ul > li ul li a:hover{
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 [data-sidebar=sidebar4] .sidebar .sidebar-logo #toggle_btn{
@@ -15226,7 +15237,7 @@ datatable-paginate a[aria-current="page"], .datatable-paginate a[aria-current="p
 
 [data-sidebar=sidebar5] .sidebar .sidebar-menu > ul li .submenu > ul li a:hover{
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 [data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li a{
@@ -15271,7 +15282,7 @@ datatable-paginate a[aria-current="page"], .datatable-paginate a[aria-current="p
 
 [data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li a:hover{
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 [data-sidebar=sidebar5] .sidebar .sidebar-logo #toggle_btn{
@@ -15335,7 +15346,7 @@ datatable-paginate a[aria-current="page"], .datatable-paginate a[aria-current="p
 
 [data-sidebar=sidebar6] .sidebar .sidebar-menu > ul li .submenu > ul li a:hover{
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 [data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li a{
@@ -15380,7 +15391,7 @@ datatable-paginate a[aria-current="page"], .datatable-paginate a[aria-current="p
 
 [data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li a:hover{
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 [data-sidebar=sidebar6] .sidebar .sidebar-logo #toggle_btn{
@@ -15444,7 +15455,7 @@ datatable-paginate a[aria-current="page"], .datatable-paginate a[aria-current="p
 
 [data-sidebar=sidebar7] .sidebar .sidebar-menu > ul li .submenu > ul li a:hover{
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 [data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li a{
@@ -15489,7 +15500,7 @@ datatable-paginate a[aria-current="page"], .datatable-paginate a[aria-current="p
 
 [data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li a:hover{
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 [data-sidebar=sidebar7] .sidebar .sidebar-logo #toggle_btn{
@@ -15557,7 +15568,7 @@ datatable-paginate a[aria-current="page"], .datatable-paginate a[aria-current="p
 
 [data-sidebar=gradientsidebar1] .sidebar .sidebar-menu > ul li .submenu > ul li a:hover{
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 [data-sidebar=gradientsidebar1] .sidebar .sidebar-menu > ul > li ul li a{
@@ -15602,7 +15613,7 @@ datatable-paginate a[aria-current="page"], .datatable-paginate a[aria-current="p
 
 [data-sidebar=gradientsidebar1] .sidebar .sidebar-menu > ul > li ul li a:hover{
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 [data-sidebar=gradientsidebar1] .sidebar .sidebar-logo #toggle_btn{
@@ -15670,7 +15681,7 @@ datatable-paginate a[aria-current="page"], .datatable-paginate a[aria-current="p
 
 [data-sidebar=gradientsidebar2] .sidebar .sidebar-menu > ul li .submenu > ul li a:hover{
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 [data-sidebar=gradientsidebar2] .sidebar .sidebar-menu > ul > li ul li a{
@@ -15715,7 +15726,7 @@ datatable-paginate a[aria-current="page"], .datatable-paginate a[aria-current="p
 
 [data-sidebar=gradientsidebar2] .sidebar .sidebar-menu > ul > li ul li a:hover{
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 [data-sidebar=gradientsidebar2] .sidebar .sidebar-logo #toggle_btn{
@@ -15783,7 +15794,7 @@ datatable-paginate a[aria-current="page"], .datatable-paginate a[aria-current="p
 
 [data-sidebar=gradientsidebar3] .sidebar .sidebar-menu > ul li .submenu > ul li a:hover{
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 [data-sidebar=gradientsidebar3] .sidebar .sidebar-menu > ul > li ul li a{
@@ -15828,7 +15839,7 @@ datatable-paginate a[aria-current="page"], .datatable-paginate a[aria-current="p
 
 [data-sidebar=gradientsidebar3] .sidebar .sidebar-menu > ul > li ul li a:hover{
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 [data-sidebar=gradientsidebar3] .sidebar .sidebar-logo #toggle_btn{
@@ -15896,7 +15907,7 @@ datatable-paginate a[aria-current="page"], .datatable-paginate a[aria-current="p
 
 [data-sidebar=gradientsidebar4] .sidebar .sidebar-menu > ul li .submenu > ul li a:hover{
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 [data-sidebar=gradientsidebar4] .sidebar .sidebar-menu > ul > li ul li a{
@@ -15941,7 +15952,7 @@ datatable-paginate a[aria-current="page"], .datatable-paginate a[aria-current="p
 
 [data-sidebar=gradientsidebar4] .sidebar .sidebar-menu > ul > li ul li a:hover{
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 [data-sidebar=gradientsidebar4] .sidebar .sidebar-logo #toggle_btn{
@@ -16009,7 +16020,7 @@ datatable-paginate a[aria-current="page"], .datatable-paginate a[aria-current="p
 
 [data-sidebar=gradientsidebar5] .sidebar .sidebar-menu > ul li .submenu > ul li a:hover{
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 [data-sidebar=gradientsidebar5] .sidebar .sidebar-menu > ul > li ul li a{
@@ -16054,7 +16065,7 @@ datatable-paginate a[aria-current="page"], .datatable-paginate a[aria-current="p
 
 [data-sidebar=gradientsidebar5] .sidebar .sidebar-menu > ul > li ul li a:hover{
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 [data-sidebar=gradientsidebar5] .sidebar .sidebar-logo #toggle_btn{
@@ -16122,7 +16133,7 @@ datatable-paginate a[aria-current="page"], .datatable-paginate a[aria-current="p
 
 [data-sidebar=gradientsidebar6] .sidebar .sidebar-menu > ul li .submenu > ul li a:hover{
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 [data-sidebar=gradientsidebar6] .sidebar .sidebar-menu > ul > li ul li a{
@@ -16167,7 +16178,7 @@ datatable-paginate a[aria-current="page"], .datatable-paginate a[aria-current="p
 
 [data-sidebar=gradientsidebar6] .sidebar .sidebar-menu > ul > li ul li a:hover{
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 [data-sidebar=gradientsidebar6] .sidebar .sidebar-logo #toggle_btn{
@@ -16235,7 +16246,7 @@ datatable-paginate a[aria-current="page"], .datatable-paginate a[aria-current="p
 
 [data-sidebar=gradientsidebar7] .sidebar .sidebar-menu > ul li .submenu > ul li a:hover{
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 [data-sidebar=gradientsidebar7] .sidebar .sidebar-menu > ul > li ul li a{
@@ -16280,7 +16291,7 @@ datatable-paginate a[aria-current="page"], .datatable-paginate a[aria-current="p
 
 [data-sidebar=gradientsidebar7] .sidebar .sidebar-menu > ul > li ul li a:hover{
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 [data-sidebar=gradientsidebar7] .sidebar .sidebar-logo #toggle_btn{
@@ -16321,7 +16332,7 @@ datatable-paginate a[aria-current="page"], .datatable-paginate a[aria-current="p
 
 [data-topbar=topbar3] .navbar-header{
   --tw-bg-opacity: 1;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1));
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1));
 }
 
 [data-bs-theme=dark] [data-topbar=topbar3] .navbar-header button,[data-bs-theme=dark]  [data-topbar=topbar3] .navbar-header a{
@@ -16371,7 +16382,7 @@ datatable-paginate a[aria-current="page"], .datatable-paginate a[aria-current="p
 [data-topbar=topbar3] .navbar-header button, [data-topbar=topbar3] .navbar-header a{
   border-color: #ffffff1a;
   --tw-bg-opacity: 1;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1));
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
   color: rgb(219 224 230 / var(--tw-text-opacity, 1));
 }
@@ -16875,11 +16886,11 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
 [data-bs-theme=dark] .bg-primary-100{
   border-bottom-width: 1px;
   --tw-border-opacity: 1;
-  border-color: rgb(228 31 7 / var(--tw-border-opacity, 1));
+  border-color: rgb(0 144 183 / var(--tw-border-opacity, 1));
   --tw-bg-opacity: 1;
   background-color: rgb(252.9 193.4 186.1 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 [data-bs-theme=dark] [data-bs-theme=dark] .bg-secondary-100{
@@ -16976,7 +16987,7 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
 
 [data-bs-theme=dark] .flatpickr-current-month{
   --tw-text-opacity: 1 !important;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1)) !important;
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1)) !important;
 }
 
 [data-bs-theme=dark] .flatpickr-day:hover{
@@ -17233,7 +17244,7 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
 
 [data-bs-theme=dark][data-sidebar=sidebar4] .sidebar{
   --tw-bg-opacity: 1;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1));
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1));
 }
 
 [data-bs-theme=dark][data-sidebar=sidebar4] .sidebar .sidebar-menu > ul > li ul li a i{
@@ -17257,8 +17268,8 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
   color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
 }
 
-[data-bs-theme=dark] [data-bs-theme=dark][data-sidebar=sidebar4] .sidebar .sidebar-menu > ul li .submenu > ul li a.active::after,[data-bs-theme=dark] 
-	[data-bs-theme=dark][data-sidebar=sidebar4] .sidebar .sidebar-menu > ul li .submenu > ul li a:hover::after,[data-bs-theme=dark] 
+[data-bs-theme=dark] [data-bs-theme=dark][data-sidebar=sidebar4] .sidebar .sidebar-menu > ul li .submenu > ul li a.active::after,[data-bs-theme=dark]
+	[data-bs-theme=dark][data-sidebar=sidebar4] .sidebar .sidebar-menu > ul li .submenu > ul li a:hover::after,[data-bs-theme=dark]
 	[data-bs-theme=dark][data-sidebar=sidebar4] .sidebar .sidebar-menu > ul li .submenu > a.subdrop.active::after{
   --tw-bg-opacity: 1;
   background-color: rgb(3 3 24 / var(--tw-bg-opacity, 1));
@@ -17271,7 +17282,7 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1)) !important;
 }
 
-[data-bs-theme=dark] [data-bs-theme=dark][data-sidebar=sidebar4] .sidebar .sidebar-menu > ul li .submenu > ul li a.\!active::after,[data-bs-theme=dark] 
+[data-bs-theme=dark] [data-bs-theme=dark][data-sidebar=sidebar4] .sidebar .sidebar-menu > ul li .submenu > ul li a.\!active::after,[data-bs-theme=dark]
 	[data-bs-theme=dark][data-sidebar=sidebar4] .sidebar .sidebar-menu > ul li .submenu > a.subdrop.\!active::after{
   --tw-bg-opacity: 1;
   background-color: rgb(3 3 24 / var(--tw-bg-opacity, 1));
@@ -17283,7 +17294,7 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1)) !important;
 }
 
-[data-bs-theme=dark] [data-bs-theme=dark][data-sidebar=sidebar4] .sidebar .sidebar-menu > ul li .submenu > ul li a.\!active::after,[data-bs-theme=dark] 
+[data-bs-theme=dark] [data-bs-theme=dark][data-sidebar=sidebar4] .sidebar .sidebar-menu > ul li .submenu > ul li a.\!active::after,[data-bs-theme=dark]
 	[data-bs-theme=dark][data-sidebar=sidebar4] .sidebar .sidebar-menu > ul li .submenu > a.subdrop.\!active::after{
   --tw-bg-opacity: 1;
   background-color: rgb(3 3 24 / var(--tw-bg-opacity, 1));
@@ -17305,7 +17316,7 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
   --tw-bg-opacity: 1;
   background-color: rgb(255 162 1 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 [data-bs-theme=dark][data-sidebar=sidebar4] .sidebar .sidebar-menu > ul li .submenu > a.\!active,
@@ -17313,7 +17324,7 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
   --tw-bg-opacity: 1;
   background-color: rgb(255 162 1 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 [data-bs-theme=dark][data-sidebar=sidebar4] .sidebar .sidebar-menu > ul li .submenu-two > a.active{
@@ -17329,13 +17340,13 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
   --tw-bg-opacity: 1;
   background-color: rgb(255 162 1 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 [data-bs-theme=dark][data-sidebar=sidebar4] .sidebar .sidebar-menu > ul li .submenu > a.active i,
 	[data-bs-theme=dark][data-sidebar=sidebar4] .sidebar .sidebar-menu > ul > li ul > li.active a i{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
 }
@@ -17343,7 +17354,7 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
 [data-bs-theme=dark][data-sidebar=sidebar4] .sidebar .sidebar-menu > ul li .submenu > a.\!active i,
 	[data-bs-theme=dark][data-sidebar=sidebar4] .sidebar .sidebar-menu > ul > li ul > li.\!active a i{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
 }
@@ -17351,7 +17362,7 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
 [data-bs-theme=dark][data-sidebar=sidebar4] .sidebar .sidebar-menu > ul li .submenu > a:hover i,
 	[data-bs-theme=dark][data-sidebar=sidebar4] .sidebar .sidebar-menu > ul > li > ul > li a:hover i{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
 }
@@ -17377,7 +17388,7 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
 [data-bs-theme=dark][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul li .submenu > a:hover i,
 	[data-bs-theme=dark][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li > ul > li a:hover i{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
 }
@@ -17385,7 +17396,7 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
 [data-bs-theme=dark][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul li .submenu > a.active i,
 	[data-bs-theme=dark][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul > li.active a i{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
 }
@@ -17393,7 +17404,7 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
 [data-bs-theme=dark][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul li .submenu > a.\!active i,
 	[data-bs-theme=dark][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul > li.\!active a i{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
 }
@@ -17405,12 +17416,12 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
 
 [data-bs-theme=dark][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul li .submenu > ul li a.active{
   --tw-text-opacity: 1 !important;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1)) !important;
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1)) !important;
 }
 
 [data-bs-theme=dark][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul li .submenu > ul li a.\!active{
   --tw-text-opacity: 1 !important;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1)) !important;
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1)) !important;
 }
 
 [data-bs-theme=dark][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul li .submenu > ul li a::after{
@@ -17421,16 +17432,16 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
 [data-bs-theme=dark][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul li .submenu > ul li a.active::after,
 	[data-bs-theme=dark][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul li .submenu > ul li a:hover::after{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
 }
 
 [data-bs-theme=dark][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul li .submenu > ul li a.\!active::after{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
 }
 
-[data-bs-theme=dark] [data-bs-theme=dark][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li > ul > li > a:hover,[data-bs-theme=dark] 
-	[data-bs-theme=dark][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li > ul > li > a.active,[data-bs-theme=dark] 
+[data-bs-theme=dark] [data-bs-theme=dark][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li > ul > li > a:hover,[data-bs-theme=dark]
+	[data-bs-theme=dark][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li > ul > li > a.active,[data-bs-theme=dark]
 	[data-bs-theme=dark][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul > li.active a{
   --tw-bg-opacity: 1;
   background-color: rgb(3 3 24 / var(--tw-bg-opacity, 1));
@@ -17442,11 +17453,11 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1)) !important;
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1)) !important;
 }
 
-[data-bs-theme=dark] 
-	[data-bs-theme=dark][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li > ul > li > a.\!active,[data-bs-theme=dark] 
+[data-bs-theme=dark]
+	[data-bs-theme=dark][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li > ul > li > a.\!active,[data-bs-theme=dark]
 	[data-bs-theme=dark][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul > li.\!active a{
   --tw-bg-opacity: 1;
   background-color: rgb(3 3 24 / var(--tw-bg-opacity, 1));
@@ -17458,11 +17469,11 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1)) !important;
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1)) !important;
 }
 
-[data-bs-theme=dark] 
-	[data-bs-theme=dark][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li > ul > li > a.\!active,[data-bs-theme=dark] 
+[data-bs-theme=dark]
+	[data-bs-theme=dark][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li > ul > li > a.\!active,[data-bs-theme=dark]
 	[data-bs-theme=dark][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul > li.\!active a{
   --tw-bg-opacity: 1;
   background-color: rgb(3 3 24 / var(--tw-bg-opacity, 1));
@@ -17474,7 +17485,7 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1)) !important;
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1)) !important;
 }
 
 /* ===== Sidebar 6 Darkmode ===== */
@@ -17487,7 +17498,7 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
 [data-bs-theme=dark][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul li .submenu > a:hover i,
 	[data-bs-theme=dark][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li > ul > li a:hover i{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
 }
@@ -17501,7 +17512,7 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
 [data-bs-theme=dark][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul li .submenu > a.active i,
 	[data-bs-theme=dark][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul > li.active a i{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
 }
@@ -17509,7 +17520,7 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
 [data-bs-theme=dark][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul li .submenu > a.\!active i,
 	[data-bs-theme=dark][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul > li.\!active a i{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
 }
@@ -17522,16 +17533,16 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
 [data-bs-theme=dark][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul li .submenu > ul li a.active::after,
 	[data-bs-theme=dark][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul li .submenu > ul li a:hover::after{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
 }
 
 [data-bs-theme=dark][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul li .submenu > ul li a.\!active::after{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
 }
 
-[data-bs-theme=dark] [data-bs-theme=dark][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li > ul > li > a:hover,[data-bs-theme=dark] 
-	[data-bs-theme=dark][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li > ul > li > a.active,[data-bs-theme=dark] 
+[data-bs-theme=dark] [data-bs-theme=dark][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li > ul > li > a:hover,[data-bs-theme=dark]
+	[data-bs-theme=dark][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li > ul > li > a.active,[data-bs-theme=dark]
 	[data-bs-theme=dark][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul > li.active a{
   --tw-bg-opacity: 1;
   background-color: rgb(3 3 24 / var(--tw-bg-opacity, 1));
@@ -17543,11 +17554,11 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1)) !important;
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1)) !important;
 }
 
-[data-bs-theme=dark] 
-	[data-bs-theme=dark][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li > ul > li > a.\!active,[data-bs-theme=dark] 
+[data-bs-theme=dark]
+	[data-bs-theme=dark][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li > ul > li > a.\!active,[data-bs-theme=dark]
 	[data-bs-theme=dark][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul > li.\!active a{
   --tw-bg-opacity: 1;
   background-color: rgb(3 3 24 / var(--tw-bg-opacity, 1));
@@ -17559,11 +17570,11 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1)) !important;
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1)) !important;
 }
 
-[data-bs-theme=dark] 
-	[data-bs-theme=dark][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li > ul > li > a.\!active,[data-bs-theme=dark] 
+[data-bs-theme=dark]
+	[data-bs-theme=dark][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li > ul > li > a.\!active,[data-bs-theme=dark]
 	[data-bs-theme=dark][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul > li.\!active a{
   --tw-bg-opacity: 1;
   background-color: rgb(3 3 24 / var(--tw-bg-opacity, 1));
@@ -17575,7 +17586,7 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1)) !important;
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1)) !important;
 }
 
 /* ===== Sidebar 7 Darkmode ===== */
@@ -17594,7 +17605,7 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
 [data-bs-theme=dark][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul li .submenu > a:hover i,
 	[data-bs-theme=dark][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li > ul > li a:hover i{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
 }
@@ -17602,7 +17613,7 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
 [data-bs-theme=dark][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul li .submenu > a.active i,
 	[data-bs-theme=dark][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul > li.active a i{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
 }
@@ -17610,7 +17621,7 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
 [data-bs-theme=dark][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul li .submenu > a.\!active i,
 	[data-bs-theme=dark][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul > li.\!active a i{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
 }
@@ -17623,16 +17634,16 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
 [data-bs-theme=dark][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul li .submenu > ul li a.active::after,
 	[data-bs-theme=dark][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul li .submenu > ul li a:hover::after{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
 }
 
 [data-bs-theme=dark][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul li .submenu > ul li a.\!active::after{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
 }
 
-[data-bs-theme=dark] [data-bs-theme=dark][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li > ul > li > a:hover,[data-bs-theme=dark] 
-	[data-bs-theme=dark][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li > ul > li > a.active,[data-bs-theme=dark] 
+[data-bs-theme=dark] [data-bs-theme=dark][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li > ul > li > a:hover,[data-bs-theme=dark]
+	[data-bs-theme=dark][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li > ul > li > a.active,[data-bs-theme=dark]
 	[data-bs-theme=dark][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul > li.active a{
   --tw-bg-opacity: 1;
   background-color: rgb(3 3 24 / var(--tw-bg-opacity, 1));
@@ -17644,11 +17655,11 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1)) !important;
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1)) !important;
 }
 
-[data-bs-theme=dark] 
-	[data-bs-theme=dark][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li > ul > li > a.\!active,[data-bs-theme=dark] 
+[data-bs-theme=dark]
+	[data-bs-theme=dark][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li > ul > li > a.\!active,[data-bs-theme=dark]
 	[data-bs-theme=dark][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul > li.\!active a{
   --tw-bg-opacity: 1;
   background-color: rgb(3 3 24 / var(--tw-bg-opacity, 1));
@@ -17660,11 +17671,11 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1)) !important;
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1)) !important;
 }
 
-[data-bs-theme=dark] 
-	[data-bs-theme=dark][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li > ul > li > a.\!active,[data-bs-theme=dark] 
+[data-bs-theme=dark]
+	[data-bs-theme=dark][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li > ul > li > a.\!active,[data-bs-theme=dark]
 	[data-bs-theme=dark][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul > li.\!active a{
   --tw-bg-opacity: 1;
   background-color: rgb(3 3 24 / var(--tw-bg-opacity, 1));
@@ -17676,7 +17687,7 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1)) !important;
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1)) !important;
 }
 
 [data-bs-theme=dark][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul li .submenu-two > a.active{
@@ -17695,123 +17706,123 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
   color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
 }
 
-[data-bs-theme=dark][data-sidebar^="gradientsidebar"] 
+[data-bs-theme=dark][data-sidebar^="gradientsidebar"]
 	.sidebar .sidebar-menu > ul li .submenu > a:hover i,
-	[data-bs-theme=dark][data-sidebar^="gradientsidebar"] 
+	[data-bs-theme=dark][data-sidebar^="gradientsidebar"]
 	.sidebar .sidebar-menu > ul > li > ul > li a:hover i{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
 }
 
-[data-bs-theme=dark][data-sidebar^="gradientsidebar"] 
+[data-bs-theme=dark][data-sidebar^="gradientsidebar"]
 	.sidebar .sidebar-menu > ul li .submenu > a.active i,
-	[data-bs-theme=dark][data-sidebar^="gradientsidebar"] 
+	[data-bs-theme=dark][data-sidebar^="gradientsidebar"]
 	.sidebar .sidebar-menu > ul > li ul > li.active a i{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
 }
 
-[data-bs-theme=dark][data-sidebar^="gradientsidebar"] 
+[data-bs-theme=dark][data-sidebar^="gradientsidebar"]
 	.sidebar .sidebar-menu > ul li .submenu > a.\!active i,
-	[data-bs-theme=dark][data-sidebar^="gradientsidebar"] 
+	[data-bs-theme=dark][data-sidebar^="gradientsidebar"]
 	.sidebar .sidebar-menu > ul > li ul > li.\!active a i{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
 }
 
-[data-bs-theme=dark][data-sidebar^="gradientsidebar"] 
+[data-bs-theme=dark][data-sidebar^="gradientsidebar"]
 	.sidebar .sidebar-menu > ul li .submenu > ul li a::after{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(224 224 224 / var(--tw-bg-opacity, 1)) !important;
 }
 
-[data-bs-theme=dark][data-sidebar^="gradientsidebar"] 
+[data-bs-theme=dark][data-sidebar^="gradientsidebar"]
 	.sidebar .sidebar-menu > ul li .submenu > ul li a.active::after,
-	[data-bs-theme=dark][data-sidebar^="gradientsidebar"] 
+	[data-bs-theme=dark][data-sidebar^="gradientsidebar"]
 	.sidebar .sidebar-menu > ul li .submenu > ul li a:hover::after{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
 }
 
-[data-bs-theme=dark][data-sidebar^="gradientsidebar"] 
+[data-bs-theme=dark][data-sidebar^="gradientsidebar"]
 	.sidebar .sidebar-menu > ul li .submenu > ul li a.\!active::after{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
 }
 
-[data-bs-theme=dark] [data-bs-theme=dark][data-sidebar^="gradientsidebar"] 
-	.sidebar .sidebar-menu > ul > li > ul > li > a:hover,[data-bs-theme=dark] 
-	[data-bs-theme=dark][data-sidebar^="gradientsidebar"] 
-	.sidebar .sidebar-menu > ul > li > ul > li > a.active,[data-bs-theme=dark] 
-	[data-bs-theme=dark][data-sidebar^="gradientsidebar"] 
+[data-bs-theme=dark] [data-bs-theme=dark][data-sidebar^="gradientsidebar"]
+	.sidebar .sidebar-menu > ul > li > ul > li > a:hover,[data-bs-theme=dark]
+	[data-bs-theme=dark][data-sidebar^="gradientsidebar"]
+	.sidebar .sidebar-menu > ul > li > ul > li > a.active,[data-bs-theme=dark]
+	[data-bs-theme=dark][data-sidebar^="gradientsidebar"]
 	.sidebar .sidebar-menu > ul > li ul > li.active a{
   --tw-bg-opacity: 1;
   background-color: rgb(3 3 24 / var(--tw-bg-opacity, 1));
 }
 
-[data-bs-theme=dark][data-sidebar^="gradientsidebar"] 
+[data-bs-theme=dark][data-sidebar^="gradientsidebar"]
 	.sidebar .sidebar-menu > ul > li > ul > li > a:hover,
-	[data-bs-theme=dark][data-sidebar^="gradientsidebar"] 
+	[data-bs-theme=dark][data-sidebar^="gradientsidebar"]
 	.sidebar .sidebar-menu > ul > li > ul > li > a.active,
-	[data-bs-theme=dark][data-sidebar^="gradientsidebar"] 
+	[data-bs-theme=dark][data-sidebar^="gradientsidebar"]
 	.sidebar .sidebar-menu > ul > li ul > li.active a{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1)) !important;
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1)) !important;
 }
 
-[data-bs-theme=dark] 
-	[data-bs-theme=dark][data-sidebar^="gradientsidebar"] 
-	.sidebar .sidebar-menu > ul > li > ul > li > a.\!active,[data-bs-theme=dark] 
-	[data-bs-theme=dark][data-sidebar^="gradientsidebar"] 
+[data-bs-theme=dark]
+	[data-bs-theme=dark][data-sidebar^="gradientsidebar"]
+	.sidebar .sidebar-menu > ul > li > ul > li > a.\!active,[data-bs-theme=dark]
+	[data-bs-theme=dark][data-sidebar^="gradientsidebar"]
 	.sidebar .sidebar-menu > ul > li ul > li.\!active a{
   --tw-bg-opacity: 1;
   background-color: rgb(3 3 24 / var(--tw-bg-opacity, 1));
 }
 
 
-	[data-bs-theme=dark][data-sidebar^="gradientsidebar"] 
+	[data-bs-theme=dark][data-sidebar^="gradientsidebar"]
 	.sidebar .sidebar-menu > ul > li > ul > li > a.\!active,
-	[data-bs-theme=dark][data-sidebar^="gradientsidebar"] 
+	[data-bs-theme=dark][data-sidebar^="gradientsidebar"]
 	.sidebar .sidebar-menu > ul > li ul > li.\!active a{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1)) !important;
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1)) !important;
 }
 
-[data-bs-theme=dark] 
-	[data-bs-theme=dark][data-sidebar^="gradientsidebar"] 
-	.sidebar .sidebar-menu > ul > li > ul > li > a.\!active,[data-bs-theme=dark] 
-	[data-bs-theme=dark][data-sidebar^="gradientsidebar"] 
+[data-bs-theme=dark]
+	[data-bs-theme=dark][data-sidebar^="gradientsidebar"]
+	.sidebar .sidebar-menu > ul > li > ul > li > a.\!active,[data-bs-theme=dark]
+	[data-bs-theme=dark][data-sidebar^="gradientsidebar"]
 	.sidebar .sidebar-menu > ul > li ul > li.\!active a{
   --tw-bg-opacity: 1;
   background-color: rgb(3 3 24 / var(--tw-bg-opacity, 1));
 }
 
 
-	[data-bs-theme=dark][data-sidebar^="gradientsidebar"] 
+	[data-bs-theme=dark][data-sidebar^="gradientsidebar"]
 	.sidebar .sidebar-menu > ul > li > ul > li > a.\!active,
-	[data-bs-theme=dark][data-sidebar^="gradientsidebar"] 
+	[data-bs-theme=dark][data-sidebar^="gradientsidebar"]
 	.sidebar .sidebar-menu > ul > li ul > li.\!active a{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1)) !important;
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1)) !important;
 }
 
 /********** Sidebar 4 Light ***********/
 
 [data-bs-theme=light][data-sidebar=sidebar4] .sidebar{
   --tw-bg-opacity: 1;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1));
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1));
 }
 
 [data-bs-theme=light][data-sidebar=sidebar4] .sidebar .sidebar-menu > ul > li ul li a i{
@@ -17840,7 +17851,7 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
   --tw-bg-opacity: 1;
   background-color: rgb(255 162 1 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 [data-bs-theme=light][data-sidebar=sidebar4] .sidebar .sidebar-menu > ul > li ul > li.\!active a,
@@ -17848,14 +17859,14 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
   --tw-bg-opacity: 1;
   background-color: rgb(255 162 1 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 [data-bs-theme=light][data-sidebar=sidebar4] .sidebar .sidebar-menu > ul > li > ul > li > a:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(255 162 1 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 [data-bs-theme=light][data-sidebar=sidebar4] .sidebar .sidebar-menu > ul li .submenu > a.active i,
@@ -17863,7 +17874,7 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
 	[data-bs-theme=light][data-sidebar=sidebar4] .sidebar .sidebar-menu > ul li .submenu > a:hover i,
 	[data-bs-theme=light][data-sidebar=sidebar4] .sidebar .sidebar-menu > ul > li > ul > li a:hover i{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
 }
@@ -17871,7 +17882,7 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
 [data-bs-theme=light][data-sidebar=sidebar4] .sidebar .sidebar-menu > ul li .submenu > a.\!active i,
 	[data-bs-theme=light][data-sidebar=sidebar4] .sidebar .sidebar-menu > ul > li ul > li.\!active a i{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
 }
@@ -17921,59 +17932,59 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
   color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
 }
 
-[data-bs-theme=dark] [data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-bs-theme=dark] 
+[data-bs-theme=dark] [data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-bs-theme=dark]
 	[data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li:hover a i{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
- [data-bs-theme=dark] [data-color=secondary] [data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li.active a i, [data-bs-theme=dark] [data-color=secondary] 
+ [data-bs-theme=dark] [data-color=secondary] [data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li.active a i, [data-bs-theme=dark] [data-color=secondary]
 	[data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li:hover a i{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
-[data-color=secondary] [data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-color=secondary] 
+[data-color=secondary] [data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-color=secondary]
 	[data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li:hover a i{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(255 162 1 / var(--tw-bg-opacity, 1)) !important;
 }
-[data-color=orange] [data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-color=orange] 
+[data-color=orange] [data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-color=orange]
 	[data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li:hover a i{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(239 94 37 / var(--tw-bg-opacity, 1)) !important;
 }
-[data-color=teal] [data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-color=teal] 
+[data-color=teal] [data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-color=teal]
 	[data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li:hover a i{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(14 147 132 / var(--tw-bg-opacity, 1)) !important;
 }
-[data-color=purple] [data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-color=purple] 
+[data-color=purple] [data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-color=purple]
 	[data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li:hover a i{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(128 0 128 / var(--tw-bg-opacity, 1)) !important;
 }
-[data-color=indigo] [data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-color=indigo] 
+[data-color=indigo] [data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-color=indigo]
 	[data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li:hover a i{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(53 56 205 / var(--tw-bg-opacity, 1)) !important;
 }
-[data-color=info] [data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-color=info] 
+[data-color=info] [data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-color=info]
 	[data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li:hover a i{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(27 132 255 / var(--tw-bg-opacity, 1)) !important;
 }
-[data-color=secondary] .sidebar-themesettings [data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li.active a i, [data-color=orange] .sidebar-themesettings [data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li.active a i, [data-color=teal] .sidebar-themesettings [data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li.active a i, [data-color=purple] .sidebar-themesettings [data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li.active a i, [data-color=indigo] .sidebar-themesettings [data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li.active a i, [data-color=info] .sidebar-themesettings [data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-color=secondary] .sidebar-themesettings 
-	[data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li:hover a i, [data-color=orange] .sidebar-themesettings 
-	[data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li:hover a i, [data-color=teal] .sidebar-themesettings 
-	[data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li:hover a i, [data-color=purple] .sidebar-themesettings 
-	[data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li:hover a i, [data-color=indigo] .sidebar-themesettings 
-	[data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li:hover a i, [data-color=info] .sidebar-themesettings 
+[data-color=secondary] .sidebar-themesettings [data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li.active a i, [data-color=orange] .sidebar-themesettings [data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li.active a i, [data-color=teal] .sidebar-themesettings [data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li.active a i, [data-color=purple] .sidebar-themesettings [data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li.active a i, [data-color=indigo] .sidebar-themesettings [data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li.active a i, [data-color=info] .sidebar-themesettings [data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-color=secondary] .sidebar-themesettings
+	[data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li:hover a i, [data-color=orange] .sidebar-themesettings
+	[data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li:hover a i, [data-color=teal] .sidebar-themesettings
+	[data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li:hover a i, [data-color=purple] .sidebar-themesettings
+	[data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li:hover a i, [data-color=indigo] .sidebar-themesettings
+	[data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li:hover a i, [data-color=info] .sidebar-themesettings
 	[data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li:hover a i{
   background: #e41f07 !important;
 }
 [data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li.active a i,
 	[data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li:hover a i{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
 }
@@ -18014,7 +18025,7 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
 }
 [data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul li.\!active a i{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
 }
@@ -18044,7 +18055,7 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
 }
 [data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu a:hover .menu-arrow::before{
   --tw-border-opacity: 1 !important;
-  border-color: rgb(228 31 7 / var(--tw-border-opacity, 1)) !important;
+  border-color: rgb(0 144 183 / var(--tw-border-opacity, 1)) !important;
 }
 
 
@@ -18055,16 +18066,16 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
 
 [data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul li .submenu > ul li a.active{
   --tw-text-opacity: 1 !important;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1)) !important;
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1)) !important;
 }
 
 [data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul li .submenu > ul li a.\!active{
   --tw-text-opacity: 1 !important;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1)) !important;
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1)) !important;
 }
 
-[data-bs-theme=dark] [data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li > ul > li > a:hover,[data-bs-theme=dark] 
-	[data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li > ul > li > a.active,[data-bs-theme=dark] 
+[data-bs-theme=dark] [data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li > ul > li > a:hover,[data-bs-theme=dark]
+	[data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li > ul > li > a.active,[data-bs-theme=dark]
 	[data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul > li.active a{
   --tw-bg-opacity: 1;
   background-color: rgb(3 3 24 / var(--tw-bg-opacity, 1));
@@ -18076,11 +18087,11 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1)) !important;
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1)) !important;
 }
 
-[data-bs-theme=dark] 
-	[data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li > ul > li > a.\!active,[data-bs-theme=dark] 
+[data-bs-theme=dark]
+	[data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li > ul > li > a.\!active,[data-bs-theme=dark]
 	[data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul > li.\!active a{
   --tw-bg-opacity: 1;
   background-color: rgb(3 3 24 / var(--tw-bg-opacity, 1));
@@ -18092,11 +18103,11 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1)) !important;
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1)) !important;
 }
 
-[data-bs-theme=dark] 
-	[data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li > ul > li > a.\!active,[data-bs-theme=dark] 
+[data-bs-theme=dark]
+	[data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li > ul > li > a.\!active,[data-bs-theme=dark]
 	[data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul > li ul > li.\!active a{
   --tw-bg-opacity: 1;
   background-color: rgb(3 3 24 / var(--tw-bg-opacity, 1));
@@ -18108,19 +18119,19 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1)) !important;
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1)) !important;
 }
 
 [data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul li .submenu > a.active i{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
 }
 
 [data-bs-theme=light][data-sidebar=sidebar5] .sidebar .sidebar-menu > ul li .submenu > a.\!active i{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
 }
@@ -18138,59 +18149,59 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
   color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
 }
 
-[data-bs-theme=dark] [data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-bs-theme=dark] 
+[data-bs-theme=dark] [data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-bs-theme=dark]
 	[data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li:hover a i{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
- [data-bs-theme=dark] [data-color=secondary] [data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li.active a i, [data-bs-theme=dark] [data-color=secondary] 
+ [data-bs-theme=dark] [data-color=secondary] [data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li.active a i, [data-bs-theme=dark] [data-color=secondary]
 	[data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li:hover a i{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
-[data-color=secondary] [data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-color=secondary] 
+[data-color=secondary] [data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-color=secondary]
 	[data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li:hover a i{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(255 162 1 / var(--tw-bg-opacity, 1)) !important;
 }
-[data-color=orange] [data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-color=orange] 
+[data-color=orange] [data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-color=orange]
 	[data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li:hover a i{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(239 94 37 / var(--tw-bg-opacity, 1)) !important;
 }
-[data-color=teal] [data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-color=teal] 
+[data-color=teal] [data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-color=teal]
 	[data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li:hover a i{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(14 147 132 / var(--tw-bg-opacity, 1)) !important;
 }
-[data-color=purple] [data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-color=purple] 
+[data-color=purple] [data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-color=purple]
 	[data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li:hover a i{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(128 0 128 / var(--tw-bg-opacity, 1)) !important;
 }
-[data-color=indigo] [data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-color=indigo] 
+[data-color=indigo] [data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-color=indigo]
 	[data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li:hover a i{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(53 56 205 / var(--tw-bg-opacity, 1)) !important;
 }
-[data-color=info] [data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-color=info] 
+[data-color=info] [data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-color=info]
 	[data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li:hover a i{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(27 132 255 / var(--tw-bg-opacity, 1)) !important;
 }
-[data-color=secondary] .sidebar-themesettings [data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li.active a i, [data-color=orange] .sidebar-themesettings [data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li.active a i, [data-color=teal] .sidebar-themesettings [data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li.active a i, [data-color=purple] .sidebar-themesettings [data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li.active a i, [data-color=indigo] .sidebar-themesettings [data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li.active a i, [data-color=info] .sidebar-themesettings [data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-color=secondary] .sidebar-themesettings 
-	[data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li:hover a i, [data-color=orange] .sidebar-themesettings 
-	[data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li:hover a i, [data-color=teal] .sidebar-themesettings 
-	[data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li:hover a i, [data-color=purple] .sidebar-themesettings 
-	[data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li:hover a i, [data-color=indigo] .sidebar-themesettings 
-	[data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li:hover a i, [data-color=info] .sidebar-themesettings 
+[data-color=secondary] .sidebar-themesettings [data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li.active a i, [data-color=orange] .sidebar-themesettings [data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li.active a i, [data-color=teal] .sidebar-themesettings [data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li.active a i, [data-color=purple] .sidebar-themesettings [data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li.active a i, [data-color=indigo] .sidebar-themesettings [data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li.active a i, [data-color=info] .sidebar-themesettings [data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-color=secondary] .sidebar-themesettings
+	[data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li:hover a i, [data-color=orange] .sidebar-themesettings
+	[data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li:hover a i, [data-color=teal] .sidebar-themesettings
+	[data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li:hover a i, [data-color=purple] .sidebar-themesettings
+	[data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li:hover a i, [data-color=indigo] .sidebar-themesettings
+	[data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li:hover a i, [data-color=info] .sidebar-themesettings
 	[data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li:hover a i{
   background: #e41f07 !important;
 }
 [data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li.active a i,
 	[data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li:hover a i{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
 }
@@ -18231,7 +18242,7 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
 }
 [data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul li.\!active a i{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
 }
@@ -18261,7 +18272,7 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
 }
 [data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu a:hover .menu-arrow::before{
   --tw-border-opacity: 1 !important;
-  border-color: rgb(228 31 7 / var(--tw-border-opacity, 1)) !important;
+  border-color: rgb(0 144 183 / var(--tw-border-opacity, 1)) !important;
 }
 
 [data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul li .submenu > ul li a{
@@ -18271,16 +18282,16 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
 
 [data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul li .submenu > ul li a.active{
   --tw-text-opacity: 1 !important;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1)) !important;
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1)) !important;
 }
 
 [data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul li .submenu > ul li a.\!active{
   --tw-text-opacity: 1 !important;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1)) !important;
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1)) !important;
 }
 
-[data-bs-theme=dark] [data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li > ul > li > a:hover,[data-bs-theme=dark] 
-	[data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li > ul > li > a.active,[data-bs-theme=dark] 
+[data-bs-theme=dark] [data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li > ul > li > a:hover,[data-bs-theme=dark]
+	[data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li > ul > li > a.active,[data-bs-theme=dark]
 	[data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul > li.active a{
   --tw-bg-opacity: 1;
   background-color: rgb(3 3 24 / var(--tw-bg-opacity, 1));
@@ -18292,11 +18303,11 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1)) !important;
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1)) !important;
 }
 
-[data-bs-theme=dark] 
-	[data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li > ul > li > a.\!active,[data-bs-theme=dark] 
+[data-bs-theme=dark]
+	[data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li > ul > li > a.\!active,[data-bs-theme=dark]
 	[data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul > li.\!active a{
   --tw-bg-opacity: 1;
   background-color: rgb(3 3 24 / var(--tw-bg-opacity, 1));
@@ -18308,11 +18319,11 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1)) !important;
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1)) !important;
 }
 
-[data-bs-theme=dark] 
-	[data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li > ul > li > a.\!active,[data-bs-theme=dark] 
+[data-bs-theme=dark]
+	[data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li > ul > li > a.\!active,[data-bs-theme=dark]
 	[data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul > li ul > li.\!active a{
   --tw-bg-opacity: 1;
   background-color: rgb(3 3 24 / var(--tw-bg-opacity, 1));
@@ -18324,19 +18335,19 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1)) !important;
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1)) !important;
 }
 
 [data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul li .submenu > a.active i{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
 }
 
 [data-bs-theme=light][data-sidebar=sidebar6] .sidebar .sidebar-menu > ul li .submenu > a.\!active i{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
 }
@@ -18354,59 +18365,59 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
   color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
 }
 
-[data-bs-theme=dark] [data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-bs-theme=dark] 
+[data-bs-theme=dark] [data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-bs-theme=dark]
 	[data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li:hover a i{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
- [data-bs-theme=dark] [data-color=secondary] [data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li.active a i, [data-bs-theme=dark] [data-color=secondary] 
+ [data-bs-theme=dark] [data-color=secondary] [data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li.active a i, [data-bs-theme=dark] [data-color=secondary]
 	[data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li:hover a i{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
-[data-color=secondary] [data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-color=secondary] 
+[data-color=secondary] [data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-color=secondary]
 	[data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li:hover a i{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(255 162 1 / var(--tw-bg-opacity, 1)) !important;
 }
-[data-color=orange] [data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-color=orange] 
+[data-color=orange] [data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-color=orange]
 	[data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li:hover a i{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(239 94 37 / var(--tw-bg-opacity, 1)) !important;
 }
-[data-color=teal] [data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-color=teal] 
+[data-color=teal] [data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-color=teal]
 	[data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li:hover a i{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(14 147 132 / var(--tw-bg-opacity, 1)) !important;
 }
-[data-color=purple] [data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-color=purple] 
+[data-color=purple] [data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-color=purple]
 	[data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li:hover a i{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(128 0 128 / var(--tw-bg-opacity, 1)) !important;
 }
-[data-color=indigo] [data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-color=indigo] 
+[data-color=indigo] [data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-color=indigo]
 	[data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li:hover a i{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(53 56 205 / var(--tw-bg-opacity, 1)) !important;
 }
-[data-color=info] [data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-color=info] 
+[data-color=info] [data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-color=info]
 	[data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li:hover a i{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(27 132 255 / var(--tw-bg-opacity, 1)) !important;
 }
-[data-color=secondary] .sidebar-themesettings [data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li.active a i, [data-color=orange] .sidebar-themesettings [data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li.active a i, [data-color=teal] .sidebar-themesettings [data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li.active a i, [data-color=purple] .sidebar-themesettings [data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li.active a i, [data-color=indigo] .sidebar-themesettings [data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li.active a i, [data-color=info] .sidebar-themesettings [data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-color=secondary] .sidebar-themesettings 
-	[data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li:hover a i, [data-color=orange] .sidebar-themesettings 
-	[data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li:hover a i, [data-color=teal] .sidebar-themesettings 
-	[data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li:hover a i, [data-color=purple] .sidebar-themesettings 
-	[data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li:hover a i, [data-color=indigo] .sidebar-themesettings 
-	[data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li:hover a i, [data-color=info] .sidebar-themesettings 
+[data-color=secondary] .sidebar-themesettings [data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li.active a i, [data-color=orange] .sidebar-themesettings [data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li.active a i, [data-color=teal] .sidebar-themesettings [data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li.active a i, [data-color=purple] .sidebar-themesettings [data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li.active a i, [data-color=indigo] .sidebar-themesettings [data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li.active a i, [data-color=info] .sidebar-themesettings [data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li.active a i,[data-color=secondary] .sidebar-themesettings
+	[data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li:hover a i, [data-color=orange] .sidebar-themesettings
+	[data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li:hover a i, [data-color=teal] .sidebar-themesettings
+	[data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li:hover a i, [data-color=purple] .sidebar-themesettings
+	[data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li:hover a i, [data-color=indigo] .sidebar-themesettings
+	[data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li:hover a i, [data-color=info] .sidebar-themesettings
 	[data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li:hover a i{
   background: #e41f07 !important;
 }
 [data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li.active a i,
 	[data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li:hover a i{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
 }
@@ -18447,7 +18458,7 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
 }
 [data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul li.\!active a i{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
 }
@@ -18464,16 +18475,16 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
 
 [data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul li .submenu > ul li a.active{
   --tw-text-opacity: 1 !important;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1)) !important;
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1)) !important;
 }
 
 [data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul li .submenu > ul li a.\!active{
   --tw-text-opacity: 1 !important;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1)) !important;
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1)) !important;
 }
 
-[data-bs-theme=dark] [data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li > ul > li > a:hover,[data-bs-theme=dark] 
-	[data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li > ul > li > a.active,[data-bs-theme=dark] 
+[data-bs-theme=dark] [data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li > ul > li > a:hover,[data-bs-theme=dark]
+	[data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li > ul > li > a.active,[data-bs-theme=dark]
 	[data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul > li.active a{
   --tw-bg-opacity: 1;
   background-color: rgb(3 3 24 / var(--tw-bg-opacity, 1));
@@ -18485,11 +18496,11 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1)) !important;
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1)) !important;
 }
 
-[data-bs-theme=dark] 
-	[data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li > ul > li > a.\!active,[data-bs-theme=dark] 
+[data-bs-theme=dark]
+	[data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li > ul > li > a.\!active,[data-bs-theme=dark]
 	[data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul > li.\!active a{
   --tw-bg-opacity: 1;
   background-color: rgb(3 3 24 / var(--tw-bg-opacity, 1));
@@ -18501,11 +18512,11 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1)) !important;
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1)) !important;
 }
 
-[data-bs-theme=dark] 
-	[data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li > ul > li > a.\!active,[data-bs-theme=dark] 
+[data-bs-theme=dark]
+	[data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li > ul > li > a.\!active,[data-bs-theme=dark]
 	[data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul > li ul > li.\!active a{
   --tw-bg-opacity: 1;
   background-color: rgb(3 3 24 / var(--tw-bg-opacity, 1));
@@ -18517,19 +18528,19 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1)) !important;
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1)) !important;
 }
 
 [data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul li .submenu > a.active i{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
 }
 
 [data-bs-theme=light][data-sidebar=sidebar7] .sidebar .sidebar-menu > ul li .submenu > a.\!active i{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
 }
@@ -18547,7 +18558,7 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
 	[data-bs-theme=light][data-sidebar^="gradientsidebar"] .sidebar .sidebar-menu > ul li .submenu > a.active i,
 	[data-bs-theme=light][data-sidebar^="gradientsidebar"] .sidebar .sidebar-menu > ul > li ul > li.active a i{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
 }
@@ -18556,7 +18567,7 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
 	[data-bs-theme=light][data-sidebar^="gradientsidebar"] .sidebar .sidebar-menu > ul li .submenu > a.\!active i,
 	[data-bs-theme=light][data-sidebar^="gradientsidebar"] .sidebar .sidebar-menu > ul > li ul > li.\!active a i{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
 }
@@ -18568,27 +18579,27 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
 
 [data-bs-theme=light][data-sidebar^="gradientsidebar"] .sidebar .sidebar-menu > ul li .submenu > ul li a.active{
   --tw-text-opacity: 1 !important;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1)) !important;
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1)) !important;
 }
 
 [data-bs-theme=light][data-sidebar^="gradientsidebar"] .sidebar .sidebar-menu > ul li .submenu > ul li a.\!active{
   --tw-text-opacity: 1 !important;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1)) !important;
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1)) !important;
 }
 
 [data-bs-theme=light][data-sidebar^="gradientsidebar"] .sidebar .sidebar-menu > ul li .submenu > ul li a.active::after,
 	[data-bs-theme=light][data-sidebar^="gradientsidebar"] .sidebar .sidebar-menu > ul li .submenu > ul li a:hover::after{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
 }
 
 [data-bs-theme=light][data-sidebar^="gradientsidebar"] .sidebar .sidebar-menu > ul li .submenu > ul li a.\!active::after{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1)) !important;
 }
 
-[data-bs-theme=dark] [data-bs-theme=light][data-sidebar^="gradientsidebar"] .sidebar .sidebar-menu > ul > li > ul > li > a:hover,[data-bs-theme=dark] 
-	[data-bs-theme=light][data-sidebar^="gradientsidebar"] .sidebar .sidebar-menu > ul > li > ul > li > a.active,[data-bs-theme=dark] 
+[data-bs-theme=dark] [data-bs-theme=light][data-sidebar^="gradientsidebar"] .sidebar .sidebar-menu > ul > li > ul > li > a:hover,[data-bs-theme=dark]
+	[data-bs-theme=light][data-sidebar^="gradientsidebar"] .sidebar .sidebar-menu > ul > li > ul > li > a.active,[data-bs-theme=dark]
 	[data-bs-theme=light][data-sidebar^="gradientsidebar"] .sidebar .sidebar-menu > ul > li ul > li.active a{
   --tw-bg-opacity: 1;
   background-color: rgb(3 3 24 / var(--tw-bg-opacity, 1));
@@ -18600,11 +18611,11 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1)) !important;
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1)) !important;
 }
 
-[data-bs-theme=dark] 
-	[data-bs-theme=light][data-sidebar^="gradientsidebar"] .sidebar .sidebar-menu > ul > li > ul > li > a.\!active,[data-bs-theme=dark] 
+[data-bs-theme=dark]
+	[data-bs-theme=light][data-sidebar^="gradientsidebar"] .sidebar .sidebar-menu > ul > li > ul > li > a.\!active,[data-bs-theme=dark]
 	[data-bs-theme=light][data-sidebar^="gradientsidebar"] .sidebar .sidebar-menu > ul > li ul > li.\!active a{
   --tw-bg-opacity: 1;
   background-color: rgb(3 3 24 / var(--tw-bg-opacity, 1));
@@ -18616,11 +18627,11 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1)) !important;
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1)) !important;
 }
 
-[data-bs-theme=dark] 
-	[data-bs-theme=light][data-sidebar^="gradientsidebar"] .sidebar .sidebar-menu > ul > li > ul > li > a.\!active,[data-bs-theme=dark] 
+[data-bs-theme=dark]
+	[data-bs-theme=light][data-sidebar^="gradientsidebar"] .sidebar .sidebar-menu > ul > li > ul > li > a.\!active,[data-bs-theme=dark]
 	[data-bs-theme=light][data-sidebar^="gradientsidebar"] .sidebar .sidebar-menu > ul > li ul > li.\!active a{
   --tw-bg-opacity: 1;
   background-color: rgb(3 3 24 / var(--tw-bg-opacity, 1));
@@ -18632,14 +18643,14 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1)) !important;
   --tw-text-opacity: 1 !important;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1)) !important;
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1)) !important;
 }
 
 /********** Topbar2 & Topbar6 buttons/links  ***********/
 
-[data-bs-theme=dark] [data-topbar=topbar2] .navbar-header button,[data-bs-theme=dark] 
-	[data-topbar=topbar2] .navbar-header a,[data-bs-theme=dark] 
-	[data-topbar=topbar6] .navbar-header button,[data-bs-theme=dark] 
+[data-bs-theme=dark] [data-topbar=topbar2] .navbar-header button,[data-bs-theme=dark]
+	[data-topbar=topbar2] .navbar-header a,[data-bs-theme=dark]
+	[data-topbar=topbar6] .navbar-header button,[data-bs-theme=dark]
 	[data-topbar=topbar6] .navbar-header a{
   border-color: #ffffff1a;
 }
@@ -18656,7 +18667,7 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
 
 /********** Gradient Topbars (1–7) buttons/links ***********/
 
-[data-bs-theme=dark] [data-topbar^="gradienttopbar"] .navbar-header button,[data-bs-theme=dark] 
+[data-bs-theme=dark] [data-topbar^="gradienttopbar"] .navbar-header button,[data-bs-theme=dark]
 	[data-topbar^="gradienttopbar"] .navbar-header a{
   border-color: #ffffff1a;
 }
@@ -18678,7 +18689,7 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
   color: rgb(0 0 0 / var(--tw-text-opacity, 1));
 }
 
-[data-bs-theme=dark] [data-bs-theme=dark][data-topbar=topbar1] .navbar-header button,[data-bs-theme=dark] 
+[data-bs-theme=dark] [data-bs-theme=dark][data-topbar=topbar1] .navbar-header button,[data-bs-theme=dark]
 	[data-bs-theme=dark][data-topbar=topbar1] .navbar-header a{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
@@ -19668,7 +19679,7 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
 
 .hover\:border-primary:hover{
   --tw-border-opacity: 1;
-  border-color: rgb(228 31 7 / var(--tw-border-opacity, 1));
+  border-color: rgb(0 144 183 / var(--tw-border-opacity, 1));
 }
 
 .hover\:border-secondary:hover{
@@ -19778,31 +19789,31 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
 
 .hover\:bg-primary:hover{
   --tw-bg-opacity: 1;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1));
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:bg-primary-100:hover{
   --tw-bg-opacity: 1;
-  background-color: rgb(254 240 233 / var(--tw-bg-opacity, 1));
+  background-color: rgb(227 247 252 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:bg-primary-200:hover{
   --tw-bg-opacity: 1;
-  background-color: rgb(252 224 211 / var(--tw-bg-opacity, 1));
+  background-color: rgb(179 232 247 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:bg-primary-900:hover{
   --tw-bg-opacity: 1;
-  background-color: rgb(243 116 56 / var(--tw-bg-opacity, 1));
+  background-color: rgb(87 183 231 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:bg-primary-transparent:hover{
   --tw-bg-opacity: 1;
-  background-color: rgb(254 241 235 / var(--tw-bg-opacity, 1));
+  background-color: rgb(227 247 252 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:bg-primary\/90:hover{
-  background-color: rgb(228 31 7 / 0.9);
+  background-color: rgb(0 144 183 / 0.9);
 }
 
 .hover\:bg-red-50:hover{
@@ -19882,7 +19893,7 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
 
 .hover\:text-primary:hover{
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 .hover\:text-primary-700:hover{
@@ -19953,11 +19964,11 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
 [data-bs-theme=dark] .hover\:bg-primary-100:hover{
   border-bottom-width: 1px;
   --tw-border-opacity: 1;
-  border-color: rgb(228 31 7 / var(--tw-border-opacity, 1));
+  border-color: rgb(0 144 183 / var(--tw-border-opacity, 1));
   --tw-bg-opacity: 1;
   background-color: rgb(252.9 193.4 186.1 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 [data-bs-theme=dark] .hover\:bg-primary-transparent:hover{
@@ -19994,17 +20005,17 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
 
 .focus\:border-primary:focus{
   --tw-border-opacity: 1;
-  border-color: rgb(228 31 7 / var(--tw-border-opacity, 1));
+  border-color: rgb(0 144 183 / var(--tw-border-opacity, 1));
 }
 
 .focus\:bg-primary:focus{
   --tw-bg-opacity: 1;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1));
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1));
 }
 
 .focus\:text-primary:focus{
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 .focus\:text-white:focus{
@@ -20068,7 +20079,7 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
 
 .focus\:ring-primary:focus{
   --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(228 31 7 / var(--tw-ring-opacity, 1));
+  --tw-ring-color: rgb(0 144 183 / var(--tw-ring-opacity, 1));
 }
 
 .focus\:ring-opacity-25:focus{
@@ -20090,7 +20101,7 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
 
 .active\:bg-primary:active{
   --tw-bg-opacity: 1;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1));
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1));
 }
 
 .active\:text-white:active{
@@ -20126,7 +20137,7 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
 
 .peer:checked ~ .peer-checked\:border-primary{
   --tw-border-opacity: 1;
-  border-color: rgb(228 31 7 / var(--tw-border-opacity, 1));
+  border-color: rgb(0 144 183 / var(--tw-border-opacity, 1));
 }
 
 .peer:checked ~ .peer-checked\:border-success{
@@ -20141,12 +20152,12 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
 
 .peer:checked ~ .peer-checked\:bg-primary{
   --tw-bg-opacity: 1;
-  background-color: rgb(228 31 7 / var(--tw-bg-opacity, 1));
+  background-color: rgb(0 144 183 / var(--tw-bg-opacity, 1));
 }
 
 .peer:checked ~ .peer-checked\:bg-primary-100{
   --tw-bg-opacity: 1;
-  background-color: rgb(254 240 233 / var(--tw-bg-opacity, 1));
+  background-color: rgb(227 247 252 / var(--tw-bg-opacity, 1));
 }
 
 .peer:checked ~ .peer-checked\:bg-secondary-100{
@@ -20175,7 +20186,7 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
 
 .peer:checked ~ .peer-checked\:text-primary{
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 .peer:checked ~ .peer-checked\:opacity-100{
@@ -20215,11 +20226,11 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
 [data-bs-theme=dark] .peer:checked ~ .peer-checked\:bg-primary-100{
   border-bottom-width: 1px;
   --tw-border-opacity: 1;
-  border-color: rgb(228 31 7 / var(--tw-border-opacity, 1));
+  border-color: rgb(0 144 183 / var(--tw-border-opacity, 1));
   --tw-bg-opacity: 1;
   background-color: rgb(252.9 193.4 186.1 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 [data-bs-theme=dark] [data-bs-theme=dark] .peer:checked ~ .peer-checked\:bg-secondary-100{
@@ -20325,7 +20336,7 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
 
 .peer:focus ~ .peer-focus\:text-primary{
   --tw-text-opacity: 1;
-  color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+  color: rgb(0 144 183 / var(--tw-text-opacity, 1));
 }
 
 .peer:focus ~ .peer-focus\:text-secondary{
@@ -20356,7 +20367,7 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
 
 .peer:focus ~ .peer-focus\:ring-primary{
   --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(228 31 7 / var(--tw-ring-opacity, 1));
+  --tw-ring-color: rgb(0 144 183 / var(--tw-ring-opacity, 1));
 }
 
 @media (min-width: 576px){
@@ -21062,7 +21073,7 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
 
   .peer:focus ~ .peer-focus\:dark\:text-primary{
     --tw-text-opacity: 1;
-    color: rgb(228 31 7 / var(--tw-text-opacity, 1));
+    color: rgb(0 144 183 / var(--tw-text-opacity, 1));
   }
 
   .peer:focus ~ .peer-focus\:dark\:text-secondary{
@@ -21091,11 +21102,113 @@ div[drawer-backdrop] ~ .fixed.inset-0.z-40{
   text-wrap: auto;
 }
 .ant-table-wrapper .ant-table-column-title{
- z-index: 0 !important; 
+ z-index: 0 !important;
 }
 table.table-nowrap.dataTable.min-w-full.whitespace-nowrap{
   border: 1px solid #e1e5e8;
 }
 [data-bs-theme="dark"] .table.table-nowrap.dataTable.min-w-full.whitespace-nowrap{
   border: 1px solid #ffffff1a;
+}
+
+.multiselect__option--highlight {
+  background-color: #0090B7 !important;
+  color: #fff !important;
+}
+
+.multiselect__option:hover {
+  background-color: #0090B7 !important;
+  color: #fff !important;
+}
+
+.swal2-container {
+  z-index: 99999 !important;
+}
+
+/* Styling aman untuk ant-design datepicker agar tidak bentrok dengan .form-control */
+.date-picker-fix {
+  width: 100% !important;
+  height: 38px !important;
+  border-radius: 5px !important;
+  border: 1px solid #e8e8e8 !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.date-picker-fix .ant-picker-input > input {
+  height: 100% !important;
+  padding: 0 8px !important;
+  font-size: 0.875rem !important;
+  line-height: 1.25 !important;
+}
+
+/* Agar ikon dalam input-group tidak merusak row tinggi */
+.input-group .input-group-text {
+  display: flex;
+  align-items: center;
+}
+
+.swal2-icon {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.dropdown-left {
+  position: absolute;
+  left: -90px; /* Adjust value as needed */
+  top: 100%;   /* Position below the button */
+}
+
+.custom-date {
+  border: 1px solid #d1d5db; /* abu Tailwind */
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.custom-date:focus {
+  outline: none;
+  border-color: #3b82f6; /* biru */
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+[data-accordion-target][aria-expanded="true"] {
+  background-color: transparent !important;
+  color: inherit !important;
+}
+
+.quill-editor-custom .ql-editor {
+  min-height: 150px; /* ubah sesuai kebutuhan */
+}
+
+.quill-editor-custom .ql-container {
+  height: auto;
+}
+
+.quill-editor-custom .ql-editor {
+  color: #000 !important;
+}
+
+.quill-content ol {
+  list-style-type: decimal !important;
+  padding-left: 1.5rem;
+}
+
+.quill-content ul {
+  list-style-type: disc !important;
+  padding-left: 1.5rem;
+}
+
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  display: none;
+}
+
+/* aktif hanya saat mobile sidebar terbuka */
+.slide-nav .sidebar-overlay {
+  display: block;
 }

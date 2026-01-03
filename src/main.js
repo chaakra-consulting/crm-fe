@@ -1,26 +1,27 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import { createPinia } from 'pinia'
 import { router } from './router';
 import Vue3Select from 'vue3-select-component'
 import Antd from 'ant-design-vue';
 import { IconHome } from '@tabler/icons-vue';
 import 'flowbite';
 import Vue3TagsInput from 'vue3-tags-input';
-import { 
-  FwbInput, 
-  FwbButton, 
-  FwbCard, 
-  FwbModal, 
+import {
+  FwbInput,
+  FwbButton,
+  FwbCard,
+  FwbModal,
   FwbAlert,
   FwbDropdown,
   FwbBadge,
   FwbNavbar,
-  FwbSidebar 
+  FwbSidebar
 } from 'flowbite-vue';
 import DatePicker from 'vue3-datepicker'
 import Multiselect from 'vue-multiselect'
 import 'vue-multiselect/dist/vue-multiselect.css'
-import VueApexCharts from "vue3-apexcharts"; 
+import VueApexCharts from "vue3-apexcharts";
 import VueFeather from 'vue-feather';
 import FlagIcon from 'vue-flag-icon';
 import StarRating from "vue3-star-ratings";
@@ -74,16 +75,16 @@ import ThemeSettings from '@/views/layouts/theme-settings.vue';
 // import FormValidationOne from  "@//views/pages/uiinterface/form/form-validation-one.vue"
 
 // import SocialCarousel from '@/views/pages/applications/social-carousel.vue';
-import allKanban from '@/views/pages/applications/kanban/all-kanban.vue'
-import General_Sidebar from '@/views/pages/settings/general-settings/general-sidebar.vue'
-import Website_Sidebar from '@/views/pages/settings/website-settings/website-sidebar.vue'
-import App_Sidebar from '@/views/pages/settings/app-settings/app-sidebar.vue'
-import System_Sidebar from '@/views/pages/settings/system-settings/system-sidebar.vue'
-import Financial_Sidebar from '@/views/pages/settings/financial-settings/financial-sidebar.vue'
-import Other_Sidebar from '@/views/pages/settings/other-settings/other-sidebar.vue'
-import Settings_Tab from '@/views/pages/settings/settings-tabs.vue'
-import leadsKanban from '@/views/pages/crm/leads/leads-kanban.vue';
-import dealsKanban from '@/views/pages/crm/deals/deals-kanban.vue';
+// import allKanban from '@/views/pages/applications/kanban/all-kanban.vue'
+// import General_Sidebar from '@/views/pages/settings/general-settings/general-sidebar.vue'
+// import Website_Sidebar from '@/views/pages/settings/website-settings/website-sidebar.vue'
+// import App_Sidebar from '@/views/pages/settings/app-settings/app-sidebar.vue'
+// import System_Sidebar from '@/views/pages/settings/system-settings/system-sidebar.vue'
+// import Financial_Sidebar from '@/views/pages/settings/financial-settings/financial-sidebar.vue'
+// import Other_Sidebar from '@/views/pages/settings/other-settings/other-sidebar.vue'
+// import Settings_Tab from '@/views/pages/settings/settings-tabs.vue'
+// import leadsKanban from '@/views/pages/crm/leads/leads-kanban.vue';
+// import dealsKanban from '@/views/pages/crm/deals/deals-kanban.vue';
 
 // ************** Modal ************** //
 
@@ -92,21 +93,21 @@ import dealsKanban from '@/views/pages/crm/deals/deals-kanban.vue';
 // import PaymentgatewaysModal from '@/components/modal/payment-gateways-modal.vue';
 // import taxRatesModal from '@/components/modal/tax-rates-modal.vue';
 // import currenciesModal from '@/components/modal/currencies-modal.vue';
-import ProjectDashboardModal from '@/components/modal/project-dashboard-modal.vue';
+// import ProjectDashboardModal from '@/components/modal/project-dashboard-modal.vue';
 import ticketModal from '@/components/modal/ticket-modal.vue';
-import invoicesModal from '@/components/modal/invoices-modal.vue';
-import projectsModal from '@/components/modal/projects-modal.vue';
-import compaignModal from '@/components/modal/compaign-modal.vue';
-import pipelineModal from '@/components/modal/pipeline-modal.vue';
-import leadsModal from '@/components/modal/leads-modal.vue';
+// import invoicesModal from '@/components/modal/invoices-modal.vue';
+// import projectsModal from '@/components/modal/projects-modal.vue';
+// import compaignModal from '@/components/modal/compaign-modal.vue';
+// import pipelineModal from '@/components/modal/pipeline-modal.vue';
+// import leadsModal from '@/components/modal/leads-modal.vue';
 // import projectsdetailsModal from '@/components/modal/projects-details-modal.vue';
-import ContactMessageModal from '@/components/modal/contact-message-modal.vue';
-import ContactsModal from '@/components/modal/contacts-modal.vue';
-import ContactDetailsModal from '@/components/modal/contacts-details-modal.vue';
-import CompaniesModal from '@/components/modal/companies-modal.vue';
-import dealslistModal from '@/components/modal/deals-list-modal.vue';
-import packagesModal from '@/components/modal/packages-modal.vue';
-// import estimationsModal from '@/components/modal/estimations-modal.vue';    
+// import ContactMessageModal from '@/components/modal/contact-message-modal.vue';
+// import ContactsModal from '@/components/modal/contacts-modal.vue';
+// import ContactDetailsModal from '@/components/modal/contacts-details-modal.vue';
+// import CompaniesModal from '@/components/modal/companies-modal.vue';
+// import dealslistModal from '@/components/modal/deals-list-modal.vue';
+// import packagesModal from '@/components/modal/packages-modal.vue';
+// import estimationsModal from '@/components/modal/estimations-modal.vue';
 
 
 // import swal from 'sweetalert2';
@@ -115,6 +116,7 @@ import packagesModal from '@/components/modal/packages-modal.vue';
 // window.Swal = swal;
 
 const app = createApp(App)
+const pinia = createPinia()
 
 
 // *************** Components ***************
@@ -139,16 +141,16 @@ app.component('theme-settings', ThemeSettings)
 // app.component("form-validation-one", FormValidationOne);
 
 // app.component('social-carousel', SocialCarousel)
-app.component('all-kanban', allKanban)
-app.component('general-sidebar',General_Sidebar)
-app.component('website-sidebar',Website_Sidebar)
-app.component('app-sidebar',App_Sidebar)
-app.component('system-sidebar',System_Sidebar)
-app.component('financial-sidebar',Financial_Sidebar)
-app.component('other-sidebar',Other_Sidebar)
-app.component('settings-tabs',Settings_Tab)
-app.component('leads-kanban',leadsKanban)
-app.component('deals-kanban',dealsKanban)
+// app.component('all-kanban', allKanban)
+// app.component('general-sidebar',General_Sidebar)
+// app.component('website-sidebar',Website_Sidebar)
+// app.component('app-sidebar',App_Sidebar)
+// app.component('system-sidebar',System_Sidebar)
+// app.component('financial-sidebar',Financial_Sidebar)
+// app.component('other-sidebar',Other_Sidebar)
+// app.component('settings-tabs',Settings_Tab)
+// app.component('leads-kanban',leadsKanban)
+// app.component('deals-kanban',dealsKanban)
 
 
 
@@ -158,20 +160,20 @@ app.component('deals-kanban',dealsKanban)
 // app.component('payment-gateways-modal',PaymentgatewaysModal)
 // app.component('tax-rates-modal',taxRatesModal)
 // app.component('currencies-modal',currenciesModal)
-app.component('project-dashboard-modal',ProjectDashboardModal)
-app.component('ticket-modal',ticketModal)
-app.component('invoices-modal',invoicesModal)
-app.component('projects-modal',projectsModal)
-app.component('compaign-modal',compaignModal)
-app.component('leads-modal',leadsModal)
-app.component('pipeline-modal',pipelineModal)
+// app.component('project-dashboard-modal',ProjectDashboardModal)
+// app.component('ticket-modal',ticketModal)
+// app.component('invoices-modal',invoicesModal)
+// app.component('projects-modal',projectsModal)
+// app.component('compaign-modal',compaignModal)
+// app.component('leads-modal',leadsModal)
+// app.component('pipeline-modal',pipelineModal)
 // app.component('projects-details-modal',projectsdetailsModal)
-app.component('contact-message-modal',ContactMessageModal)
-app.component('contacts-modal', ContactsModal)
-app.component('contact-details-modal', ContactDetailsModal)
-app.component('companies-modal', CompaniesModal)
-app.component('deals-list-modal', dealslistModal)
-app.component('packages-modal', packagesModal)
+// app.component('contact-message-modal',ContactMessageModal)
+// app.component('contacts-modal', ContactsModal)
+// app.component('contact-details-modal', ContactDetailsModal)
+// app.component('companies-modal', CompaniesModal)
+// app.component('deals-list-modal', dealslistModal)
+// app.component('packages-modal', packagesModal)
 // app.component('estimations-modal', estimationsModal)
 
 app.component('vue3-select', Vue3Select);
@@ -187,4 +189,6 @@ app.use(VueSweetalert2);
 app.use(VueApexCharts)
 app.use(FlagIcon)
 app.use(Antd)
-app.use(router).mount('#app'); 
+app.use(pinia)
+app.use(router)
+app.mount('#app');

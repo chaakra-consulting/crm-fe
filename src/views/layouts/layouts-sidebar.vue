@@ -43,6 +43,11 @@
       </simplebar>
     </div>
   </div>
+  <!-- Overlay (mobile only) -->
+  <div
+    class="sidebar-overlay"
+    @click="closeSidebar"
+  ></div>
   <!-- /Sidebar -->
 </template>
 
@@ -65,18 +70,20 @@ export default {
   },
   methods: {
     toggleSidebar() {
-      const body = document.body;
-      body.classList.toggle("mini-sidebar");
-    },
+  const wrapper = document.querySelector(".main-wrapper");
+
+  if (window.innerWidth <= 991) {
+    wrapper.classList.toggle("slide-nav");
+  } else {
+    document.body.classList.toggle("mini-sidebar");
+  }
+},
+
     closeSidebar() {
-      const wrapper = document.querySelector(".main-wrapper");
-      if (wrapper && wrapper.classList.contains("slide-nav")) {
-        wrapper.classList.remove("slide-nav");
-        console.log("");
-      } else {
-        console.log("");
-      }
-    },
+      document.querySelector(".main-wrapper")?.classList.remove("slide-nav");
+  document.querySelector(".sidebar-overlay")?.classList.remove("opened");
+  document.querySelector("html")?.classList.remove("menu-opened");
+},
 
     initMouseoverListener() {
       document.addEventListener("mouseover", this.handleMouseover);
