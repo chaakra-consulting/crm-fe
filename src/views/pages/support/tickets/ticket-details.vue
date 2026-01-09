@@ -39,7 +39,7 @@
                   class="p-3 bg-light flex items-center justify-between flex-wrap gap-3 rounded-lg"
                 >
                   <h6>{{ ticket.ticket_number }}</h6>
-                  <div v-if="canApproveTickets">
+                  <!-- <div v-if="canApproveTickets">
                     <button
                       type="button"
                       class="btn btn-info disabled:opacity-50 disabled:cursor-not-allowed"
@@ -56,7 +56,7 @@
                       <i class="ti ti-x"></i>
                       Selesaikan?
                     </button>
-                  </div>
+                  </div> -->
                 </div>
                 <div class="p-3">
                   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
@@ -138,9 +138,10 @@
                 </div>
               </div>
               <div class="mb-3">
-                <h6 class="mb-2">Projek</h6>
-                <p class="text-gray-800 mb-2">{{ ticket.project_name }}</p>
-                <h6 class="mb-2">Subjek</h6>
+                  <h6 class="mb-2">Projek</h6>
+                  <p v-if="ticket.project_name" class="text-gray-800 mb-2">{{ ticket.project_name }}</p>
+                  <p v-else class="text-gray-800 mb-2">Non-Projek</p>
+                  <h6 class="mb-2">Subjek</h6>
                 <p class="text-gray-800 mb-2">{{ ticket.title }}</p>
                 <h6 class="mb-2">Deskripsi</h6>
                 <div class="quill-content text-gray-800" v-html="ticket.description"></div>

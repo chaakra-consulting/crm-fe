@@ -56,7 +56,7 @@
                 <label class="form-label">Projek <span class="text-danger">*</span></label>
                 <vue3-select
                   v-model="form.project_id"
-                  :options="projects"
+                  :options="filteredProjects"
                   placeholder="Select"
                 />
               </div>
@@ -164,7 +164,7 @@ export default {
   },
   data() {
     return {
-      projects: [],
+      // projects: [],
       form: {
         title: '',
         project_id: '',
@@ -229,14 +229,31 @@ export default {
         return
       }
 
+      if (
+        this.form.type === 'complaint' &&
+        (this.form.project_id === null || this.form.project_id === '')
+      ) {
+        this.$swal({
+          icon: 'warning',
+          title: 'Project Wajib Dipilih',
+          text: 'Tipe complaint wajib memilih project!',
+          timer: 2500,
+        })
+        return
+      }
+
       const formData = new FormData()
 
       // ==========================
       // APPEND FIELD BIASA (KECUALI ATTACHMENTS)
       // ==========================
       Object.keys(this.form).forEach((key) => {
-        if (key !== 'attachments') {
-          formData.append(key, this.form[key] ?? '')
+        if (key === 'attachments') return
+
+        const value = this.form[key]
+
+        if (value !== null && value !== undefined) {
+          formData.append(key, value)
         }
       })
 
@@ -294,7 +311,26 @@ export default {
       type: Boolean,
       default: false,
     },
-    projects: Array,
+    projects: {
+      type: Array,
+      default: () => [],
+    },
+  },
+  computed: {
+    filteredProjects() {
+      if (this.form.type === 'complaint') {
+        return this.projects.filter(p => p.value !== null)
+      }
+
+      return this.projects
+    },
+  },
+  watch: {
+    'form.type'(newVal) {
+      if (newVal === 'complaint') {
+        this.form.project_id = null
+      }
+    },
   },
   setup() {
     // Move the function declaration outside of the onMounted callback

@@ -11,6 +11,14 @@ const routes = [
     meta: { title: 'Login | CRM Chaakra Consulting' },
   },
   {
+    path: '/contact/account-activation/:token',
+    component: () => import('@/views/pages/pages/authentication/account-activation.vue'),
+    meta: {
+      title: 'Aktivasi Akun | CRM Chaakra Consulting',
+      public: true, // ✅ PENTING
+    },
+  },
+  {
     path: '/dashboard',
     component: () => import('@/views/pages/dashboard/dashboard-index.vue'),
     // beforeEnter: requireAuth,
@@ -572,15 +580,23 @@ export function addRoutesByRole(userRole) {
 }
 
 router.beforeEach(async (to, from, next) => {
+  document.title = to.meta.title || 'CRM Chaakra Consulting'
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+
+  // ✅ LEWATI AUTH CHECK UNTUK ROUTE PUBLIC
+  if (to.meta?.public) {
+    return next()
+  }
+
+  // login page
   if (to.path === '/') {
-    // halaman login → lewati semua check
     return next()
   }
 
   const token = localStorage.getItem('token')
 
   if (!token) {
-    return next({ path: '/' }) // redirect ke login
+    return next({ path: '/' })
   }
 
   const expiresAt = localStorage.getItem('token_expired_at')
@@ -606,10 +622,9 @@ router.beforeEach(async (to, from, next) => {
   addRoutesByRole(role)
 
   if (to.meta?.roles && !to.meta.roles.includes(role)) {
-    const redirectPath = '/dashboard'
-    if (to.path !== redirectPath) return next({ path: redirectPath })
-    return next(false)
+    return next({ path: '/dashboard' })
   }
 
   next()
 })
+

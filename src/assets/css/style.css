@@ -21212,3 +21212,23 @@ table.table-nowrap.dataTable.min-w-full.whitespace-nowrap{
 .slide-nav .sidebar-overlay {
   display: block;
 }
+
+/* paksa container tombol sejajar */
+.swal-actions-equal {
+  align-items: stretch !important;
+}
+
+/* paksa SEMUA tombol sama persis */
+.swal-actions-equal .swal2-confirm,
+.swal-actions-equal .swal2-deny {
+  height: 40px !important;
+  min-height: 40px !important;
+  padding: 0 18px !important;
+
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  line-height: 1 !important;
+  box-sizing: border-box !important;
+}

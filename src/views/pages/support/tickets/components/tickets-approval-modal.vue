@@ -38,14 +38,27 @@
                   <p class="font-medium text-gray-800 mb-1">
                     {{ form.title }}
                   </p>
-
                   <h6 class="text-sm text-gray-800 mb-1">Deskripsi</h6>
-
-                  <!-- RENDER HTML DARI QUILL -->
                   <div
-                    class="prose max-w-none quill-content text-gray-800"
+                    class="prose max-w-none quill-content text-gray-800 mb-1"
                     v-html="form.description"
                   ></div>
+                  <div v-if="form.project_name">
+                    <h6 class="text-sm text-gray-800 mb-1">Projek</h6>
+                    <p class="font-medium text-gray-800 mb-1">
+                      {{ form.project_name }}
+                    </p>
+                  </div>
+                  <div v-else>
+                    <h6 class="text-sm text-gray-800 mb-1">Projek</h6>
+                    <p class="font-medium text-gray-800 mb-1">
+                      Non-Projek
+                    </p>
+                  </div>
+                  <h6 class="text-sm text-gray-800 mb-1">Tipe</h6>
+                  <p class="font-medium text-gray-800 mb-1">
+                    {{ ticketTypeText }}
+                  </p>
                 </div>
               </div>
 
@@ -58,7 +71,7 @@
 
               <!-- TAMPIL JIKA APPROVED -->
               <template v-if="form.approval === 'approved'">
-                <div class="lg:col-span-6">
+                <div class="lg:col-span-12">
                   <div class="mb-3">
                     <label class="form-label">Prioritas <span class="text-danger">*</span></label>
                     <vue3-select
@@ -69,12 +82,12 @@
                   </div>
                 </div>
 
-                <div class="lg:col-span-6">
+                <!-- <div class="lg:col-span-6">
                   <div class="mb-3">
                     <label class="form-label">Tipe <span class="text-danger">*</span></label>
                     <vue3-select v-model="form.type" :options="types" placeholder="Select" />
                   </div>
-                </div>
+                </div> -->
 
                 <div class="lg:col-span-12">
                   <div class="mb-3">
@@ -143,8 +156,10 @@ export default {
   data() {
     return {
       projects: [],
+      employees: [],
       ticketPriority: null,
       ticketType: null,
+      ticketTypeText: null,
       form: {
         priority: null,
         type: null,
@@ -180,6 +195,32 @@ export default {
       this.isOpenVisible = false
 
       this.$emit('close')
+    },
+    async fetchEmployees() {
+      try {
+        let response
+        console.log('bukukas_project_id:', this.ticket.project_bukukas_id)
+        if (this.form.project_bukukas_id) {
+          response = await api.get('/users/index-user-project', {
+            params: {
+              bukukas_project_id: this.form.project_bukukas_id,
+            },
+          })
+        } else {
+          response = await api.get('/users', {
+            params: {
+              roles: ['direktur', 'manager', 'admin', 'pic-project', 'marketing'],
+            },
+          })
+        }
+
+        this.employees = (response.data || []).map(item => ({
+          label: item.name,
+          value: item.id,
+        }))
+      } catch (error) {
+        console.error('Gagal memuat data karyawan:', error)
+      }
     },
     handleAttachments(e) {
       const files = Array.from(e.target.files)
@@ -265,7 +306,6 @@ export default {
       type: Object,
       default: null,
     },
-    employees: Array,
   },
   watch: {
     ticket: {
@@ -275,10 +315,14 @@ export default {
 
         this.form.id = newVal.id ?? ''
         this.form.title = newVal.title ?? null
+        this.form.project_id = newVal.project_id ?? null
+        this.form.project_bukukas_id = newVal.project_bukukas_id ?? null
+        this.form.project_name = newVal.project_name ?? 'Non-Projek'
         this.form.description = newVal.description ?? null
         // simpan nilai awal dari ticket
         this.ticketPriority = newVal.priority_slug ?? null
         this.ticketType = newVal.type_slug ?? null
+        this.ticketTypeText = newVal.type ?? null
 
         // isi ke form hanya jika approval = approved
         if (this.form.approval === 'approved') {
@@ -320,6 +364,7 @@ export default {
     return {}
   },
   mounted() {
+    this.fetchEmployees()
     this.isOpenVisible = true
 
     requestAnimationFrame(() => {

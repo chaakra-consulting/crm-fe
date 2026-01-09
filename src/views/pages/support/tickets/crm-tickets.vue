@@ -525,7 +525,7 @@
                           :class="{
                             'bg-orange': record.status_slug == 'waiting-approval',
                             'bg-blue-700': record.status_slug == 'on-progress',
-                            'bg-warning': record.status_slug == 'customer-reply',
+                            'bg-secondary': record.status_slug == 'approval-done',
                             'bg-danger': record.status_slug == 'rejected',
                             'bg-success': record.status_slug == 'closed',
                           }"
@@ -547,7 +547,7 @@
                             </a>
 
                             <div
-                              class="dropdown-menu absolute end-0 w-[150px] z-[1] p-2 border border-borderColor rounded bg-white shadow-lg"
+                              class="dropdown-menu absolute end-0 w-[175px] z-[1] p-2 border border-borderColor rounded bg-white shadow-lg"
                               :class="{
                                 hidden: openDropdown !== record.id,
                                 block: openDropdown === record.id,
@@ -563,6 +563,26 @@
                                 @click.stop="openApprovalModal(record)"
                               >
                                 <i class="ti ti-checkbox text-blue me-1"></i> Persetujuan
+                              </a>
+                              <a
+                                v-if="
+                                  canApprovalDoneTickets(record.assigned_user_id) && record.status_slug === 'on-progress' && ['question','support'].includes(record.type_slug)
+                                "
+                                class="dropdown-item rounded p-2 flex items-center hover:bg-primary-transparent hover:text-primary"
+                                href="javascript:void(0);"
+                                @click.stop="sendApprovalComplete(record)"
+                              >
+                                <i class="ti ti-user-check me-1"></i> Ajukan Selesai
+                              </a>
+                              <a
+                                v-if="
+                                  canValidateDoneTickets && record.status_slug === 'approval-done'
+                                "
+                                class="dropdown-item rounded p-2 flex items-center hover:bg-primary-transparent hover:text-primary"
+                                href="javascript:void(0);"
+                                @click.stop="sendCompleted(record)"
+                              >
+                                <i class="ti ti-user-check me-1"></i> Persetujuan Selesai
                               </a>
                               <!-- <a
                                 class="dropdown-item rounded p-2 flex items-center hover:bg-primary-transparent hover:text-primary text-gray-900"
@@ -633,12 +653,12 @@
     :is="TicketsApprovalModal"
     :isOpen="showApprovalModal"
     :ticket="selectedTicket"
-    :employees="employees"
+    :projects="projects"
     @close="closeApprovalModal"
     @refresh-list="fetchTickets"
   />
 
-  <component
+  <!-- <component
     v-if="TicketsFollowUpModal && showFollowUpModal"
     :is="TicketsFollowUpModal"
     :isOpen="showFollowUpModal"
@@ -646,7 +666,7 @@
     :employees="employees"
     @close="closeFollowUpModal"
     @refresh-list="fetchTickets"
-  />
+  /> -->
 </template>
 <script>
 import BasePagination from '@/components/BasePagination.vue'
@@ -786,12 +806,14 @@ export default {
       showFollowUpModal: false,
       selectedTicket: null,
       roleSlug: '',
+      userId: '',
     }
   },
   created() {
     // <-- aman di sini
     const user = JSON.parse(localStorage.getItem('user') || '{}')
     this.roleSlug = (user.role_slug || '').toLowerCase()
+    this.userId = user.id || ''
   },
   computed: {
     canManageTickets() {
@@ -804,6 +826,9 @@ export default {
       return ['pic-customer'].includes(this.roleSlug)
     },
     canApproveTickets() {
+      return ['marketing'].includes(this.roleSlug)
+    },
+    canValidateDoneTickets() {
       return ['marketing'].includes(this.roleSlug)
     },
     filteredPages() {
@@ -833,6 +858,17 @@ export default {
     },
   },
   methods: {
+    canApprovalDoneTickets(assignedUserId) {
+      if (
+        assignedUserId === null ||
+        assignedUserId === undefined ||
+        typeof assignedUserId === 'object'
+      ) {
+        return false
+      }
+
+      return Number(assignedUserId) === Number(this.userId)
+    },
     async fetchTickets() {
       this.isLoading = true
       try {
@@ -857,6 +893,7 @@ export default {
           type: item.type || '',
           type_slug: item.type_slug || '',
           project_id: item.project_id || '',
+          project_bukukas_id: item.project_bukukas_id || '',
           project_name: item.project_name || '',
           reporter_user_id: item.reporter_user_id || '',
           reporter_name: item.reporter_name || '',
@@ -877,27 +914,128 @@ export default {
           // params: { no_company: true },
         })
 
-        this.projects = (response.data || []).map((item) => ({
-          label: item.title || '-',
-          value: item.id,
-        }))
+        this.projects = [
+          {
+            label: 'Non-Project',
+            value: null,
+          },
+          ...(response.data || []).map(item => ({
+            label: item.title || '-',
+            value: item.id,
+          })),
+        ]
+
       } catch (error) {
         console.error('Gagal memuat data Projek:', error)
       }
     },
-    async fetchEmployees() {
-      try {
-        const response = await api.get('/users', {
-          params: { roles: ['direktur', 'manager', 'admin', 'pic-project', 'marketing'] },
-        })
+    // async fetchEmployees() {
+    //   try {
+    //     const response = await api.get('/users', {
+    //       params: { roles: ['direktur', 'manager', 'admin', 'pic-project', 'marketing'] },
+    //     })
 
-        this.employees = (response.data || []).map((item) => ({
-          label: item.name,
-          value: item.id,
-        }))
-      } catch (error) {
-        console.error('Gagal memuat data karyawan:', error)
-      }
+    //     this.employees = (response.data || []).map((item) => ({
+    //       label: item.name,
+    //       value: item.id,
+    //     }))
+    //   } catch (error) {
+    //     console.error('Gagal memuat data karyawan:', error)
+    //   }
+    // },
+    sendApprovalComplete(record) {
+      this.$swal({
+        title: 'Ajukan Penyelesaian?',
+        html: `
+          <p class="text-sm text-gray-600 mt-2">
+            Apakah Anda yakin ingin mengajukan penyelesaian ${record.type} untuk
+            <strong>${record.ticket_number}</strong>?
+          </p>
+        `,
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonColor: '#03C95A',
+        cancelButtonText: 'Batal',
+        confirmButtonText: 'Ya, Ajukan!',
+        reverseButtons: true,
+      }).then((result) => {
+        if (!result.isConfirmed) return
+
+        api
+          .put(`/tickets/update-status/${record.id}`, {
+            status: 'approval-done',   // ✅ PARAM DIKIRIM
+          })
+          .then(() => {
+            this.$swal({
+              icon: 'success',
+              title: 'Pengajuan Terkirim',
+            })
+            this.fetchTickets()
+          })
+          .catch(() => {
+            this.$swal({
+              icon: 'error',
+              title: 'Gagal mengirim Pengajuan',
+            })
+          })
+      })
+    },
+    sendCompleted(record) {
+      this.$swal({
+        title: 'Persetujuan Penyelesaian Tiket',
+        html: `
+          <p class="text-sm text-gray-600 mt-2">
+            Setujui atau tolak penyelesaian tiket
+          </p>
+        `,
+        icon: 'question',
+
+        showCancelButton: false,
+        showDenyButton: true,
+
+        confirmButtonText: 'Setujui',
+        denyButtonText: 'Tolak',
+
+        confirmButtonColor: '#22C55E',
+        denyButtonColor: '#EF4444',
+
+        showCloseButton: true,
+        reverseButtons: true,
+
+        customClass: {
+          actions: 'swal-actions-equal',
+          confirmButton: 'swal-btn-equal',
+          denyButton: 'swal-btn-equal',
+        },
+      }).then((result) => {
+        if (result.isConfirmed) this.submitCompletion(record, 'approve')
+        if (result.isDenied) this.submitCompletion(record, 'reject')
+      })
+    },
+    submitCompletion(record, status) {
+      api
+        .put(`/tickets/update-approval-done/${record.id}`, {
+          status: status, // 'approve' | 'reject'
+        })
+        .then(() => {
+          this.$swal({
+            icon: 'success',
+            title:
+              status === 'approve'
+                ? 'Pengajuan disetujui'
+                : 'Pengajuan ditolak',
+          })
+          this.fetchTickets()
+        })
+        .catch(() => {
+          this.$swal({
+            icon: 'error',
+            title:
+              status === 'approve'
+                ? 'Gagal menyetujui pengajuan'
+                : 'Gagal menolak pengajuan',
+          })
+        })
     },
     openCreateModal() {
       document.body.classList.add('overflow-hidden')
@@ -1072,7 +1210,7 @@ export default {
   mounted() {
     this.fetchProjects()
     this.fetchTickets()
-    this.fetchEmployees()
+    // this.fetchEmployees()
   },
   updated() {
     initFlowbite()

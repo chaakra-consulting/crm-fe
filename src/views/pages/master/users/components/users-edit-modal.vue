@@ -71,6 +71,16 @@
             </div>
             <div class="md:col-span-12">
               <div class="mb-3">
+                <label class="form-label">Integrasi Akun SDM</label>
+                <vue3-select
+                  v-model="form.sdm_user_id"
+                  :options="usersSDM"
+                  placeholder="Pilih/Cari"
+                />
+              </div>
+            </div>
+            <div class="md:col-span-12">
+              <div class="mb-3">
                 <div class="flex justify-between items-center">
                   <label class="form-label">Nama <span class="text-danger">*</span></label>
                 </div>
@@ -137,12 +147,13 @@ export default {
       isOpening: false,
       isOpenVisible: false,
       photoPreview: null,
-    photoFile: null,
+      photoFile: null,
       mode: 'create',
       internalTags: [],
       form: {
         name: '',
         username: '',
+        sdm_user_id: '',
         email: '',
         role_id: '',
         is_active: 1,
@@ -152,6 +163,7 @@ export default {
         { label: 'Tidak Aktif', value: 0 },
       ],
       roles: [],
+      usersSDM: [],
     }
   },
   methods: {
@@ -214,12 +226,7 @@ export default {
     },
     editData() {
       // Validasi field wajib
-      if (
-        !this.form.name ||
-        !this.form.role_id ||
-        !this.form.email ||
-        !this.form.username
-      ) {
+      if (!this.form.name || !this.form.role_id || !this.form.email || !this.form.username) {
         this.$swal({
           icon: 'warning',
           title: 'Field Wajib Belum Terisi',
@@ -297,23 +304,25 @@ export default {
       default: () => ({}),
     },
     roles: Array,
+    usersSDM: Array,
   },
   watch: {
     user: {
       handler(newVal) {
         if (newVal) {
-          this.form.name= newVal.name ?? '',
-          this.form.role_id= newVal.role_id ?? '',
-          this.form.role_slug= newVal.role_slug ?? '',
-          this.form.role_name= newVal.role_name ?? '',
-          this.form.username= newVal.username ?? '',
-          this.form.email= newVal.email ?? '',
-          this.form.is_active= newVal.is_active ?? false,
-          this.form.is_active_text= newVal.is_active_text ?? false,
-          this.form.photo_path= newVal.photo_path ?? '',
-          this.form.photo_url= newVal.photo_url ?? '',
-          this.form.created_at= newVal.created_at ?? '',
-          this.form.created_at_format= newVal.created_at_format ?? ''
+          ;(this.form.name = newVal.name ?? ''),
+            (this.form.role_id = newVal.role_id ?? ''),
+            (this.form.role_slug = newVal.role_slug ?? ''),
+            (this.form.role_name = newVal.role_name ?? ''),
+            (this.form.sdm_user_id = newVal.sdm_user_id ?? ''),
+            (this.form.username = newVal.username ?? ''),
+            (this.form.email = newVal.email ?? ''),
+            (this.form.is_active = newVal.is_active ?? false),
+            (this.form.is_active_text = newVal.is_active_text ?? false),
+            (this.form.photo_path = newVal.photo_path ?? ''),
+            (this.form.photo_url = newVal.photo_url ?? ''),
+            (this.form.created_at = newVal.created_at ?? ''),
+            (this.form.created_at_format = newVal.created_at_format ?? '')
         }
       },
       immediate: true,

@@ -82,7 +82,7 @@ export default {
     },
     methods: {
         togglePassword() {
-            this.showPassword = !this.showPassword;
+          this.showPassword = !this.showPassword;
         },
     },
 }

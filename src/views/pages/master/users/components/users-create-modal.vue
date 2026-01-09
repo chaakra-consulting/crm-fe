@@ -72,6 +72,16 @@
             </div>
             <div class="md:col-span-12">
               <div class="mb-3">
+                <label class="form-label">Integrasi Akun SDM</label>
+                <vue3-select
+                  v-model="form.sdm_user_id"
+                  :options="usersSDM"
+                  placeholder="Pilih/Cari"
+                />
+              </div>
+            </div>
+            <div class="md:col-span-12">
+              <div class="mb-3">
                 <div class="flex justify-between items-center">
                   <label class="form-label">Nama <span class="text-danger">*</span></label>
                 </div>
@@ -184,11 +194,13 @@ export default {
         username: '',
         email: '',
         role_id: '',
+        sdm_user_id: '',
         is_active: 1,
         password: '',
         password_confirmation: '',
       },
       roles: [],
+      usersSDM: [],
       statuses: [
         { label: 'Aktif', value: 1 },
         { label: 'Tidak Aktif', value: 0 },
@@ -334,6 +346,7 @@ export default {
       default: false,
     },
     roles: Array,
+    usersSDM: Array,
   },
   watch: {
     //

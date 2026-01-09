@@ -412,7 +412,7 @@
                             <a
                               class="dropdown-item rounded p-2 flex items-center hover:bg-primary-transparent hover:text-primary"
                               href="javascript:void(0);"
-                              @click.stop="sendActivateEmail(record.user_id)"
+                              @click.stop="sendActivateEmail(record)"
                             >
                               <i class="ti ti-user-check me-1"></i> Aktivasi Akun
                             </a>
@@ -901,9 +901,15 @@ export default {
           })
       })
     },
-    sendActivateEmail(userId) {
+    sendActivateEmail(record) {
       this.$swal({
         title: 'Kirim Email Aktivasi Akun?',
+        html: `
+          <p class="text-sm text-gray-600 mt-2">
+            Email akan dikirim ke:<br>
+            <strong>${record.email}</strong>
+          </p>
+        `,
         icon: 'question',
         showCancelButton: true,
         confirmButtonColor: '#03C95A',
@@ -914,8 +920,8 @@ export default {
         if (!result.isConfirmed) return
 
         api
-          // .post(`/contacts/send-email/${userId}`)
-          .post(``)
+          .post(`/contacts/activation-email/${record.user_id}`)
+          // .post(``)
           .then(() => {
             this.$swal({
               icon: 'success',

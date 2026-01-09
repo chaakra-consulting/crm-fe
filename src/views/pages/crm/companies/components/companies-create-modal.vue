@@ -574,6 +574,11 @@ export default {
 
       // === JIKA BUAT KONTAK BARU ===
       if (this.form.pic_contact_id === 'new') {
+
+        if (this.photoFile) {
+          formData.append('photo', this.photoFile)
+        }
+        
         Object.entries(this.form.new_contact).forEach(([key, value]) => {
           // KHUSUS TAGS
           if (key === 'tags') {

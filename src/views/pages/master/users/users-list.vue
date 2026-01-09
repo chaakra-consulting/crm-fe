@@ -289,6 +289,7 @@
     :is="UsersCreateModal"
     :isOpen="showCreateModal"
     :roles="roles"
+    :usersSDM="usersSDM"
     @close="closeCreateModal"
     @refresh-list="fetchUsers"
   />
@@ -299,6 +300,7 @@
     :isOpen="showEditModal"
     :user="selectedUser"
     :roles="roles"
+    :usersSDM="usersSDM"
     @close="closeEditModal"
     @refresh-list="fetchUsers"
   />
@@ -486,6 +488,7 @@ export default {
           role_id: item.role_id || '',
           role_slug: item.role_slug || '',
           role_name: item.role_name || '',
+          sdm_user_id: item.sdm_user_id || '',
           username: item.username || '',
           email: item.email || '',
           is_active: item.is_active || false,
@@ -514,6 +517,23 @@ export default {
           }))
       } catch (error) {
         console.error('Gagal memuat data roles:', error)
+      }
+    },
+    async fetchUsersSDM() {
+      try {
+        const response = await api.get('/users/index-sdm')
+        const userSDM = Array.isArray(response.data)
+          ? response.data
+          : response.data.data || []
+
+        this.usersSDM = userSDM.map(item => ({
+          label: item.jabatan
+            ? `${item.name} (${item.divisi} - ${item.jabatan})`
+            : item.name,
+          value: item.id,
+        }))
+      } catch (error) {
+        console.error('Gagal memuat data users:', error)
       }
     },
     handleTableChange() {
@@ -677,6 +697,7 @@ export default {
     }
 
     this.fetchUsers()
+    this.fetchUsersSDM()
     this.fetchRoles()
   },
   setup() {
