@@ -373,11 +373,11 @@
                             <div class="w-full bg-gray-200 rounded h-3 overflow-hidden">
                               <div
                                 class="bg-primary h-3"
-                                :style="{ width: record.progress + '%' }"
+                                :style="{ width: record.progress == 0 ? 0 :record.progress  + '%' }"
                               ></div>
                             </div>
                             <span class="text-dark font-medium text-sm">
-                              {{ record.progress }}%
+                              {{ record.progress == 0 ? '0' :record.progress}}%
                             </span>
                           </div>
                         </div>
@@ -477,8 +477,8 @@
                                 class="dropdown-item rounded p-2 flex items-center hover:bg-primary-transparent hover:text-primary text-gray-900"
                                 :to="{ path: `/crm/projects-details/${record.id}` }"
                               >
-                              <i class="ti ti-eye text-blue-light me-1"></i> Lihat
-                            </router-link>
+                                <i class="ti ti-eye text-blue-light me-1"></i> Lihat
+                              </router-link>
                             </div>
                           </div>
                         </template>
@@ -486,14 +486,10 @@
                         <!-- ROLE LAIN -->
                         <template v-else>
                           <router-link
-                          class="dropdown-item inline-flex items-center justify-center
-                                  border border-primary bg-skyblue-transparent
-                                  rounded-md px-2 py-1
-                                  text-primary hover:bg-primary hover:text-white
-                                  transition text-xs"
-                          :to="{ path: `/crm/projects-details/${record.id}` }"
+                            class="dropdown-item inline-flex items-center justify-center border border-primary bg-skyblue-transparent rounded-md px-2 py-1 text-primary hover:bg-primary hover:text-white transition text-xs"
+                            :to="{ path: `/crm/projects-details/${record.id}` }"
                           >
-                          <i class="ti ti-eye text-sm"></i>
+                            <i class="ti ti-eye text-sm"></i>
                           </router-link>
                         </template>
                       </template>
@@ -672,6 +668,7 @@ import DateRangePicker from 'daterangepicker'
 import { initFlowbite } from 'flowbite'
 import { onMounted, onUnmounted, ref } from 'vue'
 import api from '../../../../api/api'
+import sdm_url from '../../../../api/sdm_url'
 export default {
   components: {
     BasePagination,
@@ -813,72 +810,81 @@ export default {
         const response = await api.get('/projects', { params })
         const projects = response.data
 
-        this.data = projects.map((item) => ({
-          id: item.id || '',
-          title: item.title || '',
-          code: item.code || '',
-          spk_code: item.spk_code || '',
+        this.data = projects.map((item) => {
+          //sync the progress with sdm
 
-          // customer
-          fid_cust: item.fid_cust || '',
-          fid_custt: item.fid_custt || '',
-          company_name: item.company_name || '',
+          // var progress_sdm = sdm_url.get('/project/progress', {
+          //   title: item.title,
+          //   company_name: item.company_name,
+          // })
+          return {
+            id: item.id || '',
+            title: item.title || '',
+            code: item.code || '',
+            spk_code: item.spk_code || '',
 
-          // invoice
-          no_inv: item.no_inv || '',
-          coa_sales: item.coa_sales || '',
-          inv_address: item.inv_address || '',
-          status: item.status || '',
-          paid: item.paid || '',
-          fid_tax: item.fid_tax || '',
-          termin: item.termin || '',
-          currency: item.currency || '',
-          sub_total: item.sub_total || '',
-          penjualan: item.penjualan || '',
-          potongan: item.potongan || '',
-          amount: item.amount || '',
-          residual: item.residual || '',
-          total: item.total || '',
+            // customer
+            fid_cust: item.fid_cust || '',
+            fid_custt: item.fid_custt || '',
+            company_name: item.company_name || '',
 
-          // tanggal
-          inv_date: item.inv_date || '',
-          inv_date_format: item.inv_date_format || '',
-          inv_contract_date: item.inv_contract_date || '',
-          inv_contract_date_format: item.inv_contract_date_format || '',
-          created_at: item.created_at || '',
-          created_at_format: item.created_at_format || '',
+            // invoice
+            no_inv: item.no_inv || '',
+            coa_sales: item.coa_sales || '',
+            inv_address: item.inv_address || '',
+            status: item.status || '',
+            paid: item.paid || '',
+            fid_tax: item.fid_tax || '',
+            termin: item.termin || '',
+            currency: item.currency || '',
+            sub_total: item.sub_total || '',
+            penjualan: item.penjualan || '',
+            potongan: item.potongan || '',
+            amount: item.amount || '',
+            residual: item.residual || '',
+            total: item.total || '',
 
-          is_verified: item.is_verified || '',
-          dikirim: item.dikirim || '',
-          tgl_dikirim: item.tgl_dikirim || '',
-          keterangan: item.keterangan || '',
-          deleted: item.deleted || '',
+            // tanggal
+            inv_date: item.inv_date || '',
+            inv_date_format: item.inv_date_format || '',
+            inv_contract_date: item.inv_contract_date || '',
+            inv_contract_date_format: item.inv_contract_date_format || '',
+            created_at: item.created_at || '',
+            created_at_format: item.created_at_format || '',
 
-          // project extension
-          pic_project_user_id: item.pic_project_user_id || '',
-          pic_company_user_id: item.pic_company_user_id || '',
-          rewards: item.rewards || '',
-          feedback_point: item.feedback_point || '',
-          feedback_text: item.feedback_text || '',
-          is_active: item.is_active ?? '',
+            is_verified: item.is_verified || '',
+            dikirim: item.dikirim || '',
+            tgl_dikirim: item.tgl_dikirim || '',
+            keterangan: item.keterangan || '',
+            deleted: item.deleted || '',
 
-          // tambahan lama (untuk Company Bukukas jika masih perlu)
-          jenis: item.jenis || '',
-          bentuk: item.bentuk || '',
-          npwp: item.npwp || '',
-          address: item.address || '',
-          email: item.email || '',
-          memo: item.memo || '',
-          pic_contact_id: item.pic_contact_id || '',
+            // project extension
+            pic_project_user_id: item.pic_project_user_id || '',
+            pic_company_user_id: item.pic_company_user_id || '',
+            rewards: item.rewards || '',
+            feedback_point: item.feedback_point || '',
+            feedback_text: item.feedback_text || '',
+            is_active: item.is_active ?? '',
 
-          progress: item.progress || '',
-        }))
+            // tambahan lama (untuk Company Bukukas jika masih perlu)
+            jenis: item.jenis || '',
+            bentuk: item.bentuk || '',
+            npwp: item.npwp || '',
+            address: item.address || '',
+            email: item.email || '',
+            memo: item.memo || '',
+            pic_contact_id: item.pic_contact_id || '',
+
+            progress: item.progress || '',
+          }
+        })
       } catch (error) {
         console.error('Gagal memuat data projects:', error)
       } finally {
         this.isLoading = false
       }
     },
+
     async fetchCompany() {
       try {
         const response = await api.get('/companies')
@@ -901,9 +907,8 @@ export default {
     },
     async fetchEmployees() {
       try {
-
         const response = await api.get('/users', {
-          params: { roles: ['direktur','manager','admin','pic-project','marketing'] },
+          params: { roles: ['direktur', 'manager', 'admin', 'pic-project', 'marketing'] },
         })
 
         this.employees = (response.data || []).map((item) => ({
