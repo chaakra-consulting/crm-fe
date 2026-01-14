@@ -143,9 +143,14 @@
               <div class="mb-3">
                 <div class="flex items-center gap-2">
                   <div class="w-full bg-gray-200 rounded h-3 overflow-hidden">
-                    <div class="bg-primary h-3" :style="{ width: project.progress + '%' }"></div>
+                    <div
+                      class="bg-primary h-3"
+                      :style="{ width: project.progress == 0 ? '0' : project.progress + '%' }"
+                    ></div>
                   </div>
-                  <span class="text-dark font-medium text-sm">{{ project.progress }}%</span>
+                  <span class="text-dark font-medium text-sm"
+                    >{{ project.progress == 0 ? '0' : project.progress }}%</span
+                  >
                 </div>
               </div>
 
@@ -325,8 +330,12 @@
                             </tr>
                             <tr v-else v-for="(pay, index) in project.payments" :key="pay.id">
                               <td class="border border-dark-100 text-dark">{{ index + 1 }}.</td>
-                              <td class="border border-dark-100 text-dark">{{ pay.invoice_code }}</td>
-                              <td class="border border-dark-100 text-dark">{{ pay.payment_date }}</td>
+                              <td class="border border-dark-100 text-dark">
+                                {{ pay.invoice_code }}
+                              </td>
+                              <td class="border border-dark-100 text-dark">
+                                {{ pay.payment_date }}
+                              </td>
 
                               <td class="border border-dark-100">
                                 <span class="flex justify-start">
@@ -345,18 +354,30 @@
                                 </span>
                               </td>
 
-                              <td class="border border-dark-100 text-dark">Rp {{ formatNumber(pay.total) }}</td>
+                              <td class="border border-dark-100 text-dark">
+                                Rp {{ formatNumber(pay.total) }}
+                              </td>
                             </tr>
                             <!-- SUBTOTAL -->
-                            <tr v-if="project.invoice_total_summary.tax > 1 || project.invoice_total_summary.diskon > 0"
-                                class="font-semibold text-gray-800 bg-gray-50">
+                            <tr
+                              v-if="
+                                project.invoice_total_summary.tax > 1 ||
+                                project.invoice_total_summary.diskon > 0
+                              "
+                              class="font-semibold text-gray-800 bg-gray-50"
+                            >
                               <td class="text-left pr-2 border border-dark-100" colspan="4">DPP</td>
-                              <td>Rp. {{ formatNumber(project.invoice_total_summary.invoice_subtotal) }}</td>
+                              <td>
+                                Rp.
+                                {{ formatNumber(project.invoice_total_summary.invoice_subtotal) }}
+                              </td>
                             </tr>
 
                             <!-- TAX / PPN -->
-                            <tr v-if="project.invoice_total_summary.tax > 1"
-                                class="font-semibold text-gray-800  bg-gray-50">
+                            <tr
+                              v-if="project.invoice_total_summary.tax > 1"
+                              class="font-semibold text-gray-800 bg-gray-50"
+                            >
                               <td class="text-right pr-2 border border-dark-100" colspan="4">
                                 {{ project.invoice_total_summary.tax_name }} (11%)
                               </td>
@@ -364,24 +385,38 @@
                             </tr>
 
                             <!-- PPH -->
-                            <tr v-if="project.invoice_total_summary.diskon > 0"
-                                class="font-semibold text-gray-800 bg-gray-50">
-                              <td class="text-right pr-2 border border-dark-100" colspan="4">PPH</td>
-                              <td>Rp. {{ formatNumber(project.invoice_total_summary.potongan) }}</td>
+                            <tr
+                              v-if="project.invoice_total_summary.diskon > 0"
+                              class="font-semibold text-gray-800 bg-gray-50"
+                            >
+                              <td class="text-right pr-2 border border-dark-100" colspan="4">
+                                PPH
+                              </td>
+                              <td>
+                                Rp. {{ formatNumber(project.invoice_total_summary.potongan) }}
+                              </td>
                             </tr>
 
                             <!-- GRAND TOTAL -->
                             <tr class="font-bold text-gray-800 bg-gray-100">
-                              <td class="text-right pr-2 border border-dark-100" colspan="4">Grand Total</td>
-                              <td>Rp. {{ formatNumber(project.invoice_total_summary.grand_total) }}</td>
+                              <td class="text-right pr-2 border border-dark-100" colspan="4">
+                                Grand Total
+                              </td>
+                              <td>
+                                Rp. {{ formatNumber(project.invoice_total_summary.grand_total) }}
+                              </td>
                             </tr>
 
                             <!-- TOTAL TERBAYAR -->
                             <tr class="font-bold text-gray-800 bg-gray-100">
-                              <td class="text-right pr-2 border border-dark-100" colspan="4">Total Terbayar</td>
-                              <td>Rp. {{ formatNumber(project.invoice_total_summary.payment_subtotal) }}</td>
+                              <td class="text-right pr-2 border border-dark-100" colspan="4">
+                                Total Terbayar
+                              </td>
+                              <td>
+                                Rp.
+                                {{ formatNumber(project.invoice_total_summary.payment_subtotal) }}
+                              </td>
                             </tr>
-
                           </tbody>
                         </table>
                       </div>
@@ -1409,7 +1444,7 @@ import api from '../../../../api/api'
 export default {
   data() {
     return {
-      project:{
+      project: {
         payments: [],
         invoice_total_summary: [],
       },
@@ -1438,40 +1473,38 @@ export default {
   },
   computed: {
     paidCount() {
-      if (!this.project?.payments) return 0;
+      if (!this.project?.payments) return 0
 
-      return this.project.payments.filter(
-        (p) => p.status === "terbayar"
-      ).length;
+      return this.project.payments.filter((p) => p.status === 'terbayar').length
     },
 
     paymentStatusText() {
-      const totalTermin = parseInt(this.project?.termin) || 0;
-      const paid = this.paidCount;
+      const totalTermin = parseInt(this.project?.termin) || 0
+      const paid = this.paidCount
 
-      if (totalTermin === 0) return "-";
-      if (paid >= totalTermin) return "Lunas";
+      if (totalTermin === 0) return '-'
+      if (paid >= totalTermin) return 'Lunas'
 
-      return `${paid} / ${totalTermin}`;
+      return `${paid} / ${totalTermin}`
     },
 
     paymentStatusClass() {
-      const totalTermin = parseInt(this.project?.termin) || 0;
-      const paid = this.paidCount;
+      const totalTermin = parseInt(this.project?.termin) || 0
+      const paid = this.paidCount
 
       // "-" case
-      if (totalTermin === 0) return "bg-gray-400";
+      if (totalTermin === 0) return 'bg-gray-400'
 
       // LUNAS
-      if (paid >= totalTermin) return "bg-success";
+      if (paid >= totalTermin) return 'bg-success'
 
       // BELUM LUNAS (1 / 2, 0 / 2, 2 / 3 etc)
-      return "bg-danger";
-    }
+      return 'bg-danger'
+    },
   },
   methods: {
     formatNumber(value) {
-      return Number(value || 0).toLocaleString("id-ID");
+      return Number(value || 0).toLocaleString('id-ID')
     },
     toggleEditor() {
       this.isEditorVisible = !this.isEditorVisible
@@ -1572,7 +1605,7 @@ export default {
           memo: item.memo || '-',
           pic_contact_id: item.pic_contact_id || '-',
 
-          progress: item.progress || '-',
+          progress: item.progress || 0,
           payments: item.payments || [],
           invoice_total_summary: item.invoice_total_summary || [],
         }

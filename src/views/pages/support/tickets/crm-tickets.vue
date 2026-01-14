@@ -566,7 +566,9 @@
                               </a>
                               <a
                                 v-if="
-                                  canApprovalDoneTickets(record.assigned_user_id) && record.status_slug === 'on-progress' && ['question','support'].includes(record.type_slug)
+                                  canApprovalDoneTickets(record.assigned_user_id) &&
+                                  record.status_slug === 'on-progress' &&
+                                  ['question', 'support'].includes(record.type_slug)
                                 "
                                 class="dropdown-item rounded p-2 flex items-center hover:bg-primary-transparent hover:text-primary"
                                 href="javascript:void(0);"
@@ -919,12 +921,11 @@ export default {
             label: 'Non-Project',
             value: null,
           },
-          ...(response.data || []).map(item => ({
+          ...(response.data || []).map((item) => ({
             label: item.title || '-',
             value: item.id,
           })),
         ]
-
       } catch (error) {
         console.error('Gagal memuat data Projek:', error)
       }
@@ -963,7 +964,7 @@ export default {
 
         api
           .put(`/tickets/update-status/${record.id}`, {
-            status: 'approval-done',   // ✅ PARAM DIKIRIM
+            status: 'approval-done', // ✅ PARAM DIKIRIM
           })
           .then(() => {
             this.$swal({
@@ -1020,20 +1021,14 @@ export default {
         .then(() => {
           this.$swal({
             icon: 'success',
-            title:
-              status === 'approve'
-                ? 'Pengajuan disetujui'
-                : 'Pengajuan ditolak',
+            title: status === 'approve' ? 'Pengajuan disetujui' : 'Pengajuan ditolak',
           })
           this.fetchTickets()
         })
         .catch(() => {
           this.$swal({
             icon: 'error',
-            title:
-              status === 'approve'
-                ? 'Gagal menyetujui pengajuan'
-                : 'Gagal menolak pengajuan',
+            title: status === 'approve' ? 'Gagal menyetujui pengajuan' : 'Gagal menolak pengajuan',
           })
         })
     },

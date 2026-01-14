@@ -14,7 +14,7 @@
     :class="isOpening ? 'translate-x-0' : 'translate-x-full'"
   >
     <div class="p-4 border-b border-borderColor">
-      <h5 class="inline-flex items-center font-bold">Edit Perusahaan</h5>
+      <h5 class="inline-flex items-center font-bold">Edit Project</h5>
       <button
         type="button"
         @click="close"

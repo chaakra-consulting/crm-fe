@@ -138,10 +138,12 @@
                 </div>
               </div>
               <div class="mb-3">
-                  <h6 class="mb-2">Projek</h6>
-                  <p v-if="ticket.project_name" class="text-gray-800 mb-2">{{ ticket.project_name }}</p>
-                  <p v-else class="text-gray-800 mb-2">Non-Projek</p>
-                  <h6 class="mb-2">Subjek</h6>
+                <h6 class="mb-2">Projek</h6>
+                <p v-if="ticket.project_name" class="text-gray-800 mb-2">
+                  {{ ticket.project_name }}
+                </p>
+                <p v-else class="text-gray-800 mb-2">Non-Projek</p>
+                <h6 class="mb-2">Subjek</h6>
                 <p class="text-gray-800 mb-2">{{ ticket.title }}</p>
                 <h6 class="mb-2">Deskripsi</h6>
                 <div class="quill-content text-gray-800" v-html="ticket.description"></div>
@@ -204,7 +206,7 @@
                 @click="showFormCreateMessage = true"
               >
                 <i class="ti ti-edit"></i>
-                Jawab
+                {{ btnText }}
               </button>
               <form v-if="showFormCreateMessage" @submit.prevent="createMessage">
                 <div class="border border-borderColor rounded-lg p-4 bg-white mb-3">
@@ -281,10 +283,10 @@
                 </div>
               </form>
               <div
-                  v-if="ticketClosed"
-                  class="bg-secondary/10 border border-secondary text-[13px] text-gray-700 rounded py-2.5 px-3.5 mb-3"
-                  role="alert"
-                >
+                v-if="ticketClosed"
+                class="bg-secondary/10 border border-secondary text-[13px] text-gray-700 rounded py-2.5 px-3.5 mb-3"
+                role="alert"
+              >
                 <i class="ti ti-alert-triangle-filled text-[16px] me-2 text-yellow-500"></i>
                 Tiket sudah diselesaikan. Anda dapat menjawab ke tiket ini jika ingin membuka lagi.
               </div>
@@ -452,6 +454,7 @@ export default {
   data() {
     return {
       content: '',
+      btnText: '',
       showFormCreateMessage: false,
       form: {
         messages: [],
@@ -536,20 +539,24 @@ export default {
           },
         })
         .then(() => {
-          this.$swal({
-            icon: 'success',
-            title: 'Berhasil!',
-            text: 'Data berhasil diubah!',
-            timer: 2500,
-          }).then(() => {
-            // this.$emit('refresh-list')
-            // this.$emit('refresh-tags')
-            // this.$emit('close')
-            this.fetchTicket()
-            this.form.message = ''
-            this.form.attachments = []
-            this.showFormCreateMessage = false
-          })
+          this.fetchTicket()
+          this.form.message = ''
+          this.form.attachments = []
+          this.showFormCreateMessage = false
+          // this.$swal({
+          //   icon: 'success',
+          //   title: 'Berhasil!',
+          //   text: 'Data berhasil diubah!',
+          //   timer: 2500,
+          // }).then(() => {
+          //   // this.$emit('refresh-list')
+          //   // this.$emit('refresh-tags')
+          //   // this.$emit('close')
+          //   this.fetchTicket()
+          //   this.form.message = ''
+          //   this.form.attachments = []
+          //   this.showFormCreateMessage = false
+          // })
         })
         .catch((error) => {
           const backendMessage = error.response?.data?.message
@@ -572,11 +579,8 @@ export default {
 
       try {
         const id = this.$route.params.id
-
         const response = await api.get(`/tickets/detail/${id}`)
-
         const item = response.data.data || response.data.ticket || response.data
-
         if (!item) {
           console.error('Data ticket tidak ditemukan')
           return
@@ -701,6 +705,11 @@ export default {
   mounted() {
     initFlowbite()
     this.fetchTicket()
+    if (!this.ticket) {
+      this.btnText = 'Buat Pesan'
+    } else {
+      this.btnText = 'Jawab'
+    }
   },
 }
 </script>
