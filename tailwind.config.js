@@ -1,43 +1,42 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-    "node_modules/flowbite-vue/**/*.{js,jsx,ts,tsx}",
-    "node_modules/flowbite/**/*.js", 
+    './src/**/*.{js,jsx,ts,tsx,vue}',
+    'node_modules/flowbite-vue/**/*.{js,jsx,ts,tsx,vue}',
+    'node_modules/flowbite/**/*.js',
   ],
   darkMode: 'class',
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
-    require('flowbite/plugin')
+    require('flowbite/plugin'),
   ],
   theme: {
     extend: {
       rotate: {
-        '317': '317deg', // Custom rotation
+        317: '317deg', // Custom rotation
       },
       spacing: {
-        '17': '68px',
+        17: '68px',
       },
-      transform:{
-        'transition':'scale(1.14)',
+      transform: {
+        transition: 'scale(1.14)',
       },
       screens: {
-        'sm': {'min': '576px'},   
-        'lg': {'min': '992px'},    
-        'xl': {'min': '1200px'},   
-        'xxl': {'min': '1400px'},      
-        'media-max-xs': {'max': '575.98px'},   
-        'media-max-sm': {'max': '767.98px'},   
-        'media-max-md': {'max': '991.98px'},      
-        'media-max-lg': {'max': '1199.98px'},      
-      },  
-      maxWidth: {
-        'sm':'400px',
-        
+        sm: { min: '576px' },
+        lg: { min: '992px' },
+        xl: { min: '1200px' },
+        xxl: { min: '1400px' },
+        'media-max-xs': { max: '575.98px' },
+        'media-max-sm': { max: '767.98px' },
+        'media-max-md': { max: '991.98px' },
+        'media-max-lg': { max: '1199.98px' },
       },
-      opacity:{
-        '50':'0.5',
+      maxWidth: {
+        sm: '400px',
+      },
+      opacity: {
+        50: '0.5',
       },
       boxShadow: {
         shadow: '0px 4px 4px 0px #DBDBDB40',
@@ -49,30 +48,30 @@ module.exports = {
         custom_shadow: '2px -2px 0 1px #fff, 3px -3px 0 2px rgba(255, 255, 255, 0.1)',
       },
       borderRadius: {
-        'input': '5px',
-        'defaultradius': '5px',
+        input: '5px',
+        defaultradius: '5px',
       },
       width: {
-        'sidebar': '252px',
-        '90':'90%',
+        sidebar: '252px',
+        90: '90%',
       },
       zIndex: {
-        '40': '1050',
+        40: '1050',
       },
       colors: {
-        'default': '#6B7280',
-        'body': '#707070',
-        'title': '#202C4B',
-        'borderColor': '#e8e8e8',
-        'darkBorderColor': '#ffffff1a',
-        'white': '#FFF',
-        'black': '#000',
-        'dark': '#212529',
-        'dark-mode-body':'#0c0c20',
-        'dark-mode-dark':'#030318',
-        'dark-border':'#1F2228',
-        'dark-color':'#D8DFEE',
-        'primary': {
+        default: '#6B7280',
+        body: '#707070',
+        title: '#202C4B',
+        borderColor: '#e8e8e8',
+        darkBorderColor: '#ffffff1a',
+        white: '#FFF',
+        black: '#000',
+        dark: '#212529',
+        'dark-mode-body': '#0c0c20',
+        'dark-mode-dark': '#030318',
+        'dark-border': '#1F2228',
+        'dark-color': '#D8DFEE',
+        primary: {
           DEFAULT: '#e41f07',
           100: '#FEF0E9',
           200: '#FCE0D3',
@@ -84,7 +83,7 @@ module.exports = {
           800: '#F5844E',
           900: '#F37438',
         },
-        'secondary': {
+        secondary: {
           DEFAULT: '#ffa201',
           100: '#DCE5E8',
           200: '#CAD8DD',
@@ -96,7 +95,7 @@ module.exports = {
           800: '#618B98',
           900: '#4F7E8D',
         },
-        'success': {
+        success: {
           DEFAULT: '#03C95A',
           100: '#D2F5E1',
           200: '#BBF0D3',
@@ -108,7 +107,7 @@ module.exports = {
           800: '#33D37A',
           900: '#1CCE6B',
         },
-        'danger': {
+        danger: {
           DEFAULT: '#E70D0D',
           100: '#F6CECE',
           200: '#F1B6B6',
@@ -120,7 +119,7 @@ module.exports = {
           800: '#D52424',
           900: '#D00C0C',
         },
-        'warning': {
+        warning: {
           DEFAULT: '#FFC107',
           100: '#FFF4D2',
           200: '#FFEEBC',
@@ -132,7 +131,7 @@ module.exports = {
           800: '#FFCD36',
           900: '#FFC720',
         },
-        'info': {
+        info: {
           DEFAULT: '#1B84FF',
           100: '#D6E9FF',
           200: '#C2DEFF',
@@ -144,7 +143,7 @@ module.exports = {
           800: '#479BFF',
           900: '#3290FF',
         },
-        'light': {
+        light: {
           DEFAULT: '#F8F9FA',
           100: '#FDFDFE',
           200: '#FBFBFD',
@@ -156,7 +155,7 @@ module.exports = {
           800: '#EDF1F6',
           900: '#E9EDF4',
         },
-        'gray': {
+        gray: {
           100: '#CDCDCD',
           200: '#B5B5B5',
           300: '#9D9D9D',
@@ -167,7 +166,7 @@ module.exports = {
           800: '#323333',
           900: '#1F2020',
         },
-        'pink': {
+        pink: {
           DEFAULT: '#FD3995',
           100: '#FFDBEC',
           200: '#FECAE3',
@@ -179,7 +178,7 @@ module.exports = {
           800: '#FD5FAA',
           900: '#FD4DA0',
         },
-        'purple': {
+        purple: {
           DEFAULT: '#800080',
           100: '#F0DEF3',
           200: '#E8CDED',
@@ -191,7 +190,7 @@ module.exports = {
           800: '#BB6AC9',
           900: '#B359C3',
         },
-        'skyblue': {
+        skyblue: {
           DEFAULT: '#0DCAF0',
           100: '#D3F5FC',
           200: '#BEF1FB',
@@ -210,14 +209,14 @@ module.exports = {
         'sidebar-6': '#2F80ED',
         'sidebar-7': '#3538CD',
         'night-blue': '#0F0F41',
-        'dark-gray': '#2E2E48',   
+        'dark-gray': '#2E2E48',
         'royal-blue': '#0039C6',
         indigo: '#3538CD',
         darkaqua: '#116D6E',
         whiterock: '#F0E4D7',
         rockblue: '#8CB9BD',
         bluehaze: '#B5C0D0',
-        brightblue:  '#2066FF',
+        brightblue: '#2066FF',
         lunargreen: '#365E32',
         lavendar: '#673AB7',
         magenta: '#E83E8C',
@@ -241,9 +240,9 @@ module.exports = {
         'teal-transparent': '#E6F9FF',
         'purple-transparent': '#F7EEF9',
         'skyblue-transparent': '#E9FAFE',
-        'dark-mode-dark':'#030318',
+        'dark-mode-dark': '#030318',
         'dark-mode-transparent': '#212324',
-        'dark-border':'#1F2228',
+        'dark-border': '#1F2228',
       },
       backgroundImage: {
         'primary-gradient': 'linear-gradient(180deg, #18ACCF 0%, #0F59AD 100%)',
@@ -258,21 +257,22 @@ module.exports = {
         'teal-gradient': 'linear-gradient(180deg, #18C3B0 0%, #0E9384 100%)',
         'orange-gradient': 'linear-gradient(180deg, #F99D6F 0%, #FA6D70 100%)',
         'linear-gradient': 'linear-gradient(115.43deg, #FFFFFF 0.45%, #FFF3ED 100%)',
-        'striped': 'linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent)',
-        'primary-gradient-100':' linear-gradient(180deg, #FFFFFF 0%, #FFEEEE 100%)',
-        'pink-gradient':'linear-gradient(180deg, #FFFFFF 0%, #FFEBF4 100%)',
-        'succcess-gradient-100':'linear-gradient(180deg, #FFFFFF 0%, #E8FFF2 100%)',
-        'purple-gradient':' linear-gradient(180deg, #AF1FAF 0%, #800080 100%)',
+        striped:
+          'linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent)',
+        'primary-gradient-100': ' linear-gradient(180deg, #FFFFFF 0%, #FFEEEE 100%)',
+        'pink-gradient': 'linear-gradient(180deg, #FFFFFF 0%, #FFEBF4 100%)',
+        'succcess-gradient-100': 'linear-gradient(180deg, #FFFFFF 0%, #E8FFF2 100%)',
+        'purple-gradient': ' linear-gradient(180deg, #AF1FAF 0%, #800080 100%)',
         'custom-gradient': 'linear-gradient(180deg, #FFF8F4 0%, #FFFFFF 100%)',
       },
       fontFamily: {
         roboto: ['"Golos Text"', 'sans-serif'],
         FontAwesome: ['FontAwesome'],
-      },  
+      },
       animation: {
         'progress-bar-animated': 'progress-bar-stripes 1s linear infinite',
-          ripple: 'ripple 2s infinite',
-          pulsate1: 'pulsate1 2s infinite forwards',
+        ripple: 'ripple 2s infinite',
+        pulsate1: 'pulsate1 2s infinite forwards',
       },
       keyframes: {
         'progress-bar-stripes': {
@@ -291,7 +291,8 @@ module.exports = {
           '0%': {
             transform: 'scale(0.6)',
             opacity: '1',
-            boxShadow: 'inset 0px 0px 25px 3px rgba(255, 255, 255, 0.75), 0px 0px 25px 10px rgba(255, 255, 255, 0.75)',
+            boxShadow:
+              'inset 0px 0px 25px 3px rgba(255, 255, 255, 0.75), 0px 0px 25px 10px rgba(255, 255, 255, 0.75)',
           },
           '100%': {
             transform: 'scale(1)',
@@ -309,8 +310,5 @@ module.exports = {
       textColor: ['disabled'],
     },
   },
-  plugins: [
-    require('flowbite/plugin')
-  ],
+  plugins: [require('flowbite/plugin')],
 }
-

@@ -11,7 +11,7 @@
           <ol class="flex flex-wrap space-x-1 text-sm text-gray-500">
             <li>
               <router-link to="/dashboard/" class="hover:underline text-gray-700"
-                >Tiket</router-link
+                >Helpdesk</router-link
               >
               <span><i class="ti ti-chevron-right"></i></span>
             </li>

@@ -58,7 +58,6 @@ const routes = [
       ],
     }, // roles yang diizinkan
     children: [
-      { path: '', redirect: '/crm/contacts-grid' },
       {
         path: 'contacts-grid',
         component: () => import('@/views/pages/crm/contacts/contacts-grid.vue'),
@@ -164,6 +163,31 @@ const routes = [
           title: 'Helpdesk Detail | CRM',
         },
       },
+    ],
+  },
+  {
+    path: '/leads',
+    name: 'leads',
+    component: () => import('@/views/pages/crm/leads/leads-index.vue'),
+    meta: {
+      title: 'Leads | CRM',
+      roles: ['superadmin', 'direktur', 'manager', 'marketing', 'admin'],
+    },
+    children: [
+      {
+        path: 'list',
+        component: () => import('@/views/pages/crm/leads/leads-list.vue'),
+        meta: {
+          title: 'Leads | CRM',
+        },
+      },
+      // {
+      //   path: 'ticket-details/:id',
+      //   component: () => import('@/views/pages/support/tickets/ticket-details.vue'),
+      //   meta: {
+      //     title: 'Helpdesk Detail | CRM',
+      //   },
+      // },
     ],
   },
   {
@@ -443,89 +467,7 @@ const routes = [
       },
     ],
   },
-  {
-    path: '/tables',
-    component: () => import('@/views/pages/uiinterface/tables/tables-index.vue'),
-    children: [
-      { path: '', redirect: '/tables/tables-basic' },
-      {
-        path: 'tables-basic',
-        component: () => import('@/views/pages/uiinterface/tables/tables-basic.vue'),
-      },
-      {
-        path: 'data-tables',
-        component: () => import('@/views/pages/uiinterface/tables/data-tables.vue'),
-      },
-    ],
-  },
-  {
-    path: '/charts',
-    component: () => import('@/views/pages/uiinterface/charts/charts-index.vue'),
-    children: [
-      { path: '', redirect: '/charts/chart-apex' },
-      {
-        path: 'chart-apex',
-        component: () => import('@/views/pages/uiinterface/charts/apex/chart-apex.vue'),
-      },
-      {
-        path: 'chart-c3',
-        component: () => import('@/views/pages/uiinterface/charts/c3/chart-c3.vue'),
-      },
-      // { path: "chart-js", component: () => import('@/views/pages/uiinterface/charts/js/chart-js.vue') },
-      {
-        path: 'chart-flot',
-        component: () => import('@/views/pages/uiinterface/charts/flot/chart-flot.vue'),
-      },
-      {
-        path: 'chart-morris',
-        component: () => import('@/views/pages/uiinterface/charts/morris/chart-morris.vue'),
-      },
-    ],
-  },
-  {
-    path: '/icons',
-    component: () => import('@/views/pages/uiinterface/icons/icons-index.vue'),
-    children: [
-      { path: '', redirect: '/icons/icon-fontawesome' },
-      {
-        path: 'icon-fontawesome',
-        component: () => import('@/views/pages/uiinterface/icons/icon-fontawesome.vue'),
-      },
-      {
-        path: 'icon-tabler',
-        component: () => import('@/views/pages/uiinterface/icons/icon-tabler.vue'),
-      },
-      {
-        path: 'icon-bootstrap',
-        component: () => import('@/views/pages/uiinterface/icons/icon-bootstrap.vue'),
-      },
-      {
-        path: 'icon-remix',
-        component: () => import('@/views/pages/uiinterface/icons/icon-remix.vue'),
-      },
-      {
-        path: 'icon-ionic',
-        component: () => import('@/views/pages/uiinterface/icons/icon-ionic.vue'),
-      },
-      {
-        path: 'icon-feather',
-        component: () => import('@/views/pages/uiinterface/icons/icon-feather.vue'),
-      },
-      { path: 'icon-pe7', component: () => import('@/views/pages/uiinterface/icons/icon-pe7.vue') },
-      {
-        path: 'icon-weather',
-        component: () => import('@/views/pages/uiinterface/icons/icon-weather.vue'),
-      },
-      {
-        path: 'icon-typicon',
-        component: () => import('@/views/pages/uiinterface/icons/icon-typicon.vue'),
-      },
-      {
-        path: 'icon-flag',
-        component: () => import('@/views/pages/uiinterface/icons/icon-flag.vue'),
-      },
-    ],
-  },
+
   {
     path: '/:pathMatch(.*)*',
     redirect: '/',
@@ -627,4 +569,3 @@ router.beforeEach(async (to, from, next) => {
 
   next()
 })
-

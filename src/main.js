@@ -1,12 +1,12 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import { createPinia } from 'pinia'
-import { router } from './router';
+import { router } from './router'
 import Vue3Select from 'vue3-select-component'
-import Antd from 'ant-design-vue';
-import { IconHome } from '@tabler/icons-vue';
-import 'flowbite';
-import Vue3TagsInput from 'vue3-tags-input';
+import Antd from 'ant-design-vue'
+import { IconHome } from '@tabler/icons-vue'
+import 'flowbite'
+import Vue3TagsInput from 'vue3-tags-input'
 import {
   FwbInput,
   FwbButton,
@@ -16,58 +16,61 @@ import {
   FwbDropdown,
   FwbBadge,
   FwbNavbar,
-  FwbSidebar
-} from 'flowbite-vue';
+  FwbSidebar,
+} from 'flowbite-vue'
+
+// import dayjs from 'dayjs'
+// import relativeTime from 'dayjs/plugin/relativeTime'
+// import 'dayjs/locale/id'
+
 import DatePicker from 'vue3-datepicker'
 import Multiselect from 'vue-multiselect'
 import 'vue-multiselect/dist/vue-multiselect.css'
-import VueApexCharts from "vue3-apexcharts";
-import VueFeather from 'vue-feather';
-import FlagIcon from 'vue-flag-icon';
-import StarRating from "vue3-star-ratings";
-import Vue3Autocounter from 'vue3-autocounter';
-import VueSweetalert2 from 'vue-sweetalert2';
-import { initFlowbite } from 'flowbite';
+import VueApexCharts from 'vue3-apexcharts'
+import VueFeather from 'vue-feather'
+import FlagIcon from 'vue-flag-icon'
+import StarRating from 'vue3-star-ratings'
+import Vue3Autocounter from 'vue3-autocounter'
+import VueSweetalert2 from 'vue-sweetalert2'
+import { initFlowbite } from 'flowbite'
 
 // import 'bootstrap/dist/css/bootstrap.min.css'
 // import 'bootstrap/dist/js/bootstrap.bundle.min.js'
-import 'bootstrap-icons/font/bootstrap-icons.css';
-import '@fortawesome/fontawesome-free/css/fontawesome.min.css';
-import '@fortawesome/fontawesome-free/css/all.min.css';
-import 'material-icons/css/material-icons.min.css';
-import 'material-icons/css/material-icons.css';
-import 'pe7-icon/dist/dist/pe-icon-7-stroke.css';
-import 'typicons.font/src/font/typicons.css';
+import 'bootstrap-icons/font/bootstrap-icons.css'
+import '@fortawesome/fontawesome-free/css/fontawesome.min.css'
+import '@fortawesome/fontawesome-free/css/all.min.css'
+import 'material-icons/css/material-icons.min.css'
+import 'material-icons/css/material-icons.css'
+import 'pe7-icon/dist/dist/pe-icon-7-stroke.css'
+import 'typicons.font/src/font/typicons.css'
 import 'weathericons/css/weather-icons.css'
-import 'ionicons-npm/css/ionicons.css';
+import 'ionicons-npm/css/ionicons.css'
 import '@/assets/css/tabler-icons.css'
-import 'remixicon/fonts/remixicon.css';
-import 'leaflet/dist/leaflet.css';
-import "flowbite/dist/flowbite.css";
-import '@/assets/css/style.css';
-import '@/assets/css/vue.css';
-import '@/assets/css/feather.css';
-import '@/assets/css/ant-table.css';
-import '@/assets/css/tailwind.css';
-import 'flowbite-vue/index.css';
-import 'sweetalert2/dist/sweetalert2.min.css';
-
-
+import 'remixicon/fonts/remixicon.css'
+import 'leaflet/dist/leaflet.css'
+import 'flowbite/dist/flowbite.css'
+import '@/assets/css/style.css'
+import '@/assets/css/vue.css'
+import '@/assets/css/feather.css'
+import '@/assets/css/ant-table.css'
+import '@/assets/css/tailwind.css'
+import 'flowbite-vue/index.css'
+import 'sweetalert2/dist/sweetalert2.min.css'
 
 // *************** Components ***************
 // import Breadcrumb from "@/components/breadcrumb/page-header.vue"
 // import DashboardHeader from "@/components/breadcrumb/dashboard-header.vue"
 
 // *************** Layout Component ***************
-import Header from "@/views/layouts/layouts-header.vue"
-import Sidebar from "@/views/layouts/layouts-sidebar.vue"
-import RtlSidebar from "@/views/layouts/layouts-rtl-sidebar.vue"
-import Footer from "@/views/layouts/layouts-footer.vue"
+import Header from '@/views/layouts/layouts-header.vue'
+import Sidebar from '@/views/layouts/layouts-sidebar.vue'
+import RtlSidebar from '@/views/layouts/layouts-rtl-sidebar.vue'
+import Footer from '@/views/layouts/layouts-footer.vue'
 import VerticalSidebar from '@/views/layouts/vertical-sidebar.vue'
 // import FilesSidebar from "@/views/layouts/files-sidebar.vue";
 // import IndexLoader from '@/views/layouts/index-loader.vue'
-import sidebarMenu from '@/views/layouts/sidebar-menu.vue';
-import ThemeSettings from '@/views/layouts/theme-settings.vue';
+import sidebarMenu from '@/views/layouts/sidebar-menu.vue'
+import ThemeSettings from '@/views/layouts/theme-settings.vue'
 
 // *************** Page Component ***************
 // import LightBoxOne from "@/views/pages/uiinterface/advancedUI/lightbox-one.vue";
@@ -94,7 +97,7 @@ import ThemeSettings from '@/views/layouts/theme-settings.vue';
 // import taxRatesModal from '@/components/modal/tax-rates-modal.vue';
 // import currenciesModal from '@/components/modal/currencies-modal.vue';
 // import ProjectDashboardModal from '@/components/modal/project-dashboard-modal.vue';
-import ticketModal from '@/components/modal/ticket-modal.vue';
+import ticketModal from '@/components/modal/ticket-modal.vue'
 // import invoicesModal from '@/components/modal/invoices-modal.vue';
 // import projectsModal from '@/components/modal/projects-modal.vue';
 // import compaignModal from '@/components/modal/compaign-modal.vue';
@@ -109,15 +112,12 @@ import ticketModal from '@/components/modal/ticket-modal.vue';
 // import packagesModal from '@/components/modal/packages-modal.vue';
 // import estimationsModal from '@/components/modal/estimations-modal.vue';
 
-
 // import swal from 'sweetalert2';
-
 
 // window.Swal = swal;
 
 const app = createApp(App)
 const pinia = createPinia()
-
 
 // *************** Components ***************
 // app.component('page-header', Breadcrumb)
@@ -152,8 +152,6 @@ app.component('theme-settings', ThemeSettings)
 // app.component('leads-kanban',leadsKanban)
 // app.component('deals-kanban',dealsKanban)
 
-
-
 // *********** (Modal) **********//
 // app.component('calendar-modal',CalendarModal)
 // app.component('companies-list-modal',companiesListModal)
@@ -176,19 +174,26 @@ app.component('theme-settings', ThemeSettings)
 // app.component('packages-modal', packagesModal)
 // app.component('estimations-modal', estimationsModal)
 
-app.component('vue3-select', Vue3Select);
+app.component('vue3-select', Vue3Select)
 app.component(VueFeather.name, VueFeather)
-app.component('IconHome', IconHome);
+app.component('IconHome', IconHome)
 app.component('vue3-autocounter', Vue3Autocounter)
 app.component('star-rating', StarRating)
-app.component('vue-multiselect', Multiselect);
-app.component('date-picker', DatePicker);
-app.component('vue3-tags-input', Vue3TagsInput);
-app.use(initFlowbite);
-app.use(VueSweetalert2);
+app.component('vue-multiselect', Multiselect)
+app.component('date-picker', DatePicker)
+app.component('vue3-tags-input', Vue3TagsInput)
+app.use(initFlowbite)
+app.use(VueSweetalert2)
 app.use(VueApexCharts)
 app.use(FlagIcon)
 app.use(Antd)
 app.use(pinia)
 app.use(router)
-app.mount('#app');
+
+// dayjs.extend(relativeTime)
+// dayjs().locale('id')
+
+// app.provide('dayjs', dayjs) // provide dayJS
+// app.config.globalProperties.$dayjs = dayjs
+
+app.mount('#app')

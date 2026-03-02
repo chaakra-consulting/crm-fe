@@ -42,7 +42,7 @@
         "menuValue": "Kontak",
         "icon": "ti ti-user-up",
         "route": "/crm/contacts-list",
-        "roles": ["superadmin", "direktur", "manager", "marketing", "admin"], 
+        "roles": ["superadmin", "direktur", "manager", "marketing", "admin"],
         "active_link": "/crm/contacts-list",
         "active_link1": "/crm/contact-grid",
         "active_link2": "/crm/contact-details",
@@ -55,10 +55,22 @@
         "hasSubRoute": false,
         "showSubRoute": false,
         "route": "/crm/companies-list",
-        "roles": ["superadmin", "direktur", "manager", "marketing", "admin"], 
+        "roles": ["superadmin", "direktur", "manager", "marketing", "admin"],
         "active_link": "/crm/companies-list",
         "active_link1": "/crm/companies-grid",
         "active_link2": "/crm/company-details",
+        "subRoutes": []
+      },
+      {
+        "menuValue": "Leads",
+        "icon": "ti ti-chart-arcs",
+        "hasSubRoute": false,
+        "showSubRoute": false,
+        "route": "/leads/list",
+        "roles": ["superadmin", "direktur", "manager", "marketing", "admin"],
+        "active_link": "/leads",
+        "active_link1": "/leads-grid",
+        "active_link2": "/leads-details",
         "subRoutes": []
       },
       {
@@ -67,7 +79,15 @@
         "hasSubRoute": false,
         "showSubRoute": false,
         "route": "/crm/projects-list",
-        "roles": ["superadmin", "direktur", "manager", "marketing", "admin","pic-project","pic-customer"],
+        "roles": [
+          "superadmin",
+          "direktur",
+          "manager",
+          "marketing",
+          "admin",
+          "pic-project",
+          "pic-customer"
+        ],
         "active_link": "/crm/projects-list",
         "active_link1": "/crm/project-grid",
         "active_link2": "/crm/projects-details",
@@ -117,7 +137,7 @@
           },
           {
             "menuValue": "Tags",
-            "route":"/master/tags-list",
+            "route": "/master/tags-list",
             "active_link": "/master/tags-list"
           },
           {
