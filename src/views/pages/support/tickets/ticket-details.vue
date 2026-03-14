@@ -189,99 +189,102 @@
                         {{ file.size ?? '-' }}
                       </p>
                     </div>
-                    <a
+                    <button
                       href="#"
                       @click.prevent="downloadFile(file.attachment)"
                       class="w-7 h-7 rounded-full absolute right-3 bg-light text-dark flex items-center justify-center hover:bg-gray-200"
                     >
                       <i class="ti ti-arrow-down text-[14px]"></i>
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
-              <button
-                v-if="!showFormCreateMessage"
-                type="button"
-                class="btn btn-primary mb-3"
-                @click="showFormCreateMessage = true"
-              >
-                <i class="ti ti-edit"></i>
-                {{ btnText }}
-              </button>
-              <form v-if="showFormCreateMessage" @submit.prevent="createMessage">
-                <div class="border border-borderColor rounded-lg p-4 bg-white mb-3">
-                  <div class="mb-2">
-                    <h6 class="mb-2">Jawaban</h6>
-                    <QuillEditor
-                      v-model:content="form.message"
-                      content-type="html"
-                      theme="snow"
-                      class="quill-editor-custom"
-                      :toolbar="[
-                        ['bold', 'italic', 'underline', 'strike'],
-                        [{ header: [1, 2, 3, false] }],
-                        [{ list: 'ordered' }, { list: 'bullet' }],
-                        [{ align: [] }],
-                        ['link'],
-                        ['clean'],
-                      ]"
-                    />
-                  </div>
+              <div v-if="!ticketClosed">
+                <button
+                  v-if="!showFormCreateMessage"
+                  type="button"
+                  class="btn btn-primary mb-3"
+                  @click="showFormCreateMessage = true"
+                >
+                  <i class="ti ti-edit"></i>
+                  {{ btnText }}
+                </button>
+                <form v-if="showFormCreateMessage" @submit.prevent="createMessage">
+                  <div class="border border-borderColor rounded-lg p-4 bg-white mb-3">
+                    <div class="mb-2">
+                      <h6 class="mb-2">Jawaban</h6>
+                      <QuillEditor
+                        v-model:content="form.message"
+                        content-type="html"
+                        theme="snow"
+                        class="quill-editor-custom"
+                        :toolbar="[
+                          ['bold', 'italic', 'underline', 'strike'],
+                          [{ header: [1, 2, 3, false] }],
+                          [{ list: 'ordered' }, { list: 'bullet' }],
+                          [{ align: [] }],
+                          ['link'],
+                          ['clean'],
+                        ]"
+                      />
+                    </div>
 
-                  <div class="md:col-span-12">
-                    <div class="mb-3">
-                      <label class="form-label">Attachments (Opsional)</label>
+                    <div class="md:col-span-12">
+                      <div class="mb-3">
+                        <label class="form-label">Attachments (Opsional)</label>
 
-                      <div
-                        class="w-100 flex bg-light border border-borderColor rounded p-6 shadow items-center justify-center flex-col relative"
-                      >
-                        <span class="block mb-1">
-                          <i class="ti ti-folder-open text-primary fs-16"></i>
-                        </span>
-
-                        <p class="mb-0 text-[14px] text-dark">Drop atau cari file nya</p>
-
-                        <input
-                          type="file"
-                          multiple
-                          class="opacity-0 absolute inset-0 w-full h-full cursor-pointer"
-                          @change="handleAttachments"
-                        />
-
-                        <p class="text-[13px] mb-0">Maximum size : 5 MB</p>
-                      </div>
-
-                      <ul v-if="form.attachments.length" class="mt-3 text-sm">
-                        <li
-                          v-for="(file, index) in form.attachments"
-                          :key="index"
-                          class="flex justify-between items-center mb-1"
+                        <div
+                          class="w-100 flex bg-light border border-borderColor rounded p-6 shadow items-center justify-center flex-col relative"
                         >
-                          <span>{{ file.name }}</span>
-                          <button
-                            type="button"
-                            class="text-danger text-xs"
-                            @click="removeAttachment(index)"
+                          <span class="block mb-1">
+                            <i class="ti ti-folder-open text-primary fs-16"></i>
+                          </span>
+
+                          <p class="mb-0 text-[14px] text-dark">Drop atau cari file nya</p>
+
+                          <input
+                            type="file"
+                            multiple
+                            class="opacity-0 absolute inset-0 w-full h-full cursor-pointer"
+                            @change="handleAttachments"
+                          />
+
+                          <p class="text-[13px] mb-0">Maximum size : 5 MB</p>
+                        </div>
+
+                        <ul v-if="form.attachments.length" class="mt-3 text-sm">
+                          <li
+                            v-for="(file, index) in form.attachments"
+                            :key="index"
+                            class="flex justify-between items-center mb-1"
                           >
-                            Hapus
-                          </button>
-                        </li>
-                      </ul>
+                            <span>{{ file.name }}</span>
+                            <button
+                              type="button"
+                              class="text-danger text-xs"
+                              @click="removeAttachment(index)"
+                            >
+                              Hapus
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center justify-end">
+                      <button
+                        type="button"
+                        class="btn btn-light me-3"
+                        @click="showFormCreateMessage = false"
+                      >
+                        Batal
+                      </button>
+                      <button type="submit" class="btn btn-primary">Kirim</button>
                     </div>
                   </div>
+                </form>
+              </div>
 
-                  <div class="flex items-center justify-end">
-                    <button
-                      type="button"
-                      class="btn btn-light me-3"
-                      @click="showFormCreateMessage = false"
-                    >
-                      Batal
-                    </button>
-                    <button type="submit" class="btn btn-primary">Kirim</button>
-                  </div>
-                </div>
-              </form>
               <div
                 v-if="ticketClosed"
                 class="bg-secondary/10 border border-secondary text-[13px] text-gray-700 rounded py-2.5 px-3.5 mb-3"
@@ -454,6 +457,7 @@ export default {
   data() {
     return {
       content: '',
+      ticketClosed: false,
       btnText: '',
       showFormCreateMessage: false,
       form: {
@@ -585,8 +589,25 @@ export default {
           console.error('Data ticket tidak ditemukan')
           return
         }
+        if (item.status_slug == 'closed') {
+          this.ticketClosed = true
+        }
+        if (item.attachments && item.attachments.length > 0) {
+          // Use Promise.all to fetch sizes in parallel
+          item.attachments = await Promise.all(
+            item.attachments.map(async (att) => {
+              try {
+                // Assuming your API supports this endpoint
+                const head = await api.head(`/download/${encodeURIComponent(att.attachment)}`)
+                const size = head.headers['content-length']
+                return { ...att, size: size ? this.formatBytes(size) : 'Unknown' }
+              } catch (e) {
+                return { ...att, size: 'Error' }
+              }
+            }),
+          )
+        }
 
-        // mapping sesuai kebutuhan kamu
         this.ticket = {
           id: item.id,
           ticket_number: item.ticket_number || '',
@@ -614,6 +635,14 @@ export default {
       } finally {
         this.loading = false
       }
+    },
+    formatBytes(bytes, decimals = 2) {
+      if (bytes === 0) return '0 Bytes'
+      const k = 1024
+      const dm = decimals < 0 ? 0 : decimals
+      const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB']
+      const i = Math.floor(Math.log(bytes) / Math.log(k))
+      return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i]
     },
     closeTicket(ticket) {
       this.$swal({

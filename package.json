@@ -22,6 +22,7 @@
     "@fullcalendar/vue3": "^6.1.19",
     "@j-t-mcc/vue3-chartjs": "^2.1.0",
     "@tabler/icons-vue": "^3.35.0",
+    "@tailwindcss/vite": "^4.2.1",
     "@vue-leaflet/vue-leaflet": "^0.10.1",
     "@vueform/slider": "^2.1.10",
     "@vueup/vue-quill": "^1.2.0",
@@ -51,6 +52,7 @@
     "typicons.font": "^2.1.2",
     "vee-validate": "^4.15.1",
     "vue": "^3.5.22",
+    "vue-avatar-3": "^0.3.1",
     "vue-chartjs": "^5.3.2",
     "vue-draggable-next": "^2.3.0",
     "vue-easy-lightbox": "^1.19.0",
@@ -76,7 +78,7 @@
     "@vitejs/plugin-vue": "^6.0.1",
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.14",
+    "tailwindcss": "^4.2.1",
     "vite": "^7.1.10",
     "vite-plugin-vue-devtools": "^8.0.2"
   }

@@ -181,13 +181,31 @@ const routes = [
           title: 'Leads | CRM',
         },
       },
-      // {
-      //   path: 'ticket-details/:id',
-      //   component: () => import('@/views/pages/support/tickets/ticket-details.vue'),
-      //   meta: {
-      //     title: 'Helpdesk Detail | CRM',
-      //   },
-      // },
+    ],
+  },
+  {
+    path: '/survey',
+    name: 'survey',
+    component: () => import('@/views/pages/crm/survey/survey-index.vue'),
+    meta: {
+      title: 'Survey | CRM',
+      roles: ['superadmin', 'direktur', 'manager', 'marketing', 'admin'],
+    },
+    children: [
+      {
+        path: 'list',
+        component: () => import('@/views/pages/crm/survey/survey-list.vue'),
+        meta: {
+          title: 'Survey | CRM',
+        },
+      },
+      {
+        path: 'details/:id',
+        component: () => import('@/views/pages/crm/survey/survey-question-details.vue'),
+        meta: {
+          title: 'Survey | CRM',
+        },
+      },
     ],
   },
   {

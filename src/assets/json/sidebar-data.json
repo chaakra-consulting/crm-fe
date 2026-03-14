@@ -107,6 +107,14 @@
         "active_link": "/support/tickets",
         "hasSubRoute": false,
         "showSubRoute": false
+      },
+      {
+        "menuValue": "Survey",
+        "icon": "ti ti-bolt",
+        "route": "/survey/list",
+        "active_link": "/survey/list",
+        "hasSubRoute": false,
+        "showSubRoute": false
       }
     ]
   },
