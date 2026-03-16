@@ -189,7 +189,7 @@ const routes = [
     component: () => import('@/views/pages/crm/survey/survey-index.vue'),
     meta: {
       title: 'Survey | CRM',
-      roles: ['superadmin', 'direktur', 'manager', 'marketing', 'admin'],
+      roles: ['admin', 'pic-customer'],
     },
     children: [
       {
@@ -206,11 +206,22 @@ const routes = [
           title: 'Survey | CRM',
         },
       },
+      {
+        path: 'answer/:id',
+        component: () => import('@/views/pages/crm/survey/answer-survey/index.vue'),
+        meta: {
+          title: 'Jawab Survey | CRM',
+        },
+      },
     ],
   },
   {
     path: '/master',
     component: () => import('@/views/pages/master/master-index.vue'),
+    meta: {
+      title: 'Survey | CRM',
+      roles: ['admin'],
+    },
     // beforeEnter: requireAuth,
     children: [
       { path: '', redirect: '/master/users-list' },

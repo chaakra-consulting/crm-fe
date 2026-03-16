@@ -10,16 +10,13 @@
           <h4 class="mb-1 text-xl font-bold flex items-center">
             Leads
             <span
-              class="ml-2 text-danger bg-danger-100 text-sm font-medium px-1.5 py-0.5 rounded border-b border-danger text-[12px]"
-              >{{ leads_data.length }}</span
-            >
+              class="ml-2 text-danger bg-danger-100 text-sm font-medium px-1.5 py-0.5 rounded border-b border-danger text-[12px]">{{
+                leads_data.length }}</span>
           </h4>
           <nav aria-label="breadcrumb">
             <ol class="flex flex-wrap space-x-1 text-sm text-gray-500">
               <li>
-                <router-link to="/dashboard/" class="hover:underline text-gray-700"
-                  >Home</router-link
-                >
+                <router-link to="/dashboard/" class="hover:underline text-gray-700">Home</router-link>
                 <span><i class="ti ti-chevron-right"></i></span>
               </li>
               <li class="text-dark font-medium" aria-current="page">Leads</li>
@@ -29,29 +26,21 @@
         <div class="flex flex-wrap items-center gap-2">
           <!-- Dropdown -->
           <div>
-            <a
-              href="javascript:void(0);"
+            <a href="javascript:void(0);"
               class="border border-borderColor shadow rounded p-2 bg-white inline-flex items-center focus:bg-primary focus:border-primary focus:text-white text-gray-900"
-              data-dropdown-toggle="export-dropdown"
-            >
+              data-dropdown-toggle="export-dropdown">
               <i class="ti ti-package-export me-2"></i>Export<i class="ti ti-chevron-down ml-1"></i>
             </a>
-            <ul
-              id="export-dropdown"
-              class="hidden p-2 z-[1] border border-borderColor rounded bg-white shadow-lg"
-            >
+            <ul id="export-dropdown" class="hidden p-2 z-[1] border border-borderColor rounded bg-white shadow-lg">
               <li>
-                <a
-                  href="javascript:void(0);"
-                  class="rounded p-2 flex items-center hover:bg-primary-transparent hover:text-primary text-gray-900"
-                  ><i class="ti ti-file-type-pdf me-1"></i>Export as PDF</a
-                >
+                <a href="javascript:void(0);"
+                  class="rounded p-2 flex items-center hover:bg-primary-transparent hover:text-primary text-gray-900"><i
+                    class="ti ti-file-type-pdf me-1"></i>Export as PDF</a>
               </li>
               <li>
-                <a
-                  href="javascript:void(0);"
-                  class="rounded p-2 flex items-center hover:bg-primary-transparent hover:text-primary text-gray-900"
-                  ><i class="ti ti-file-type-xls me-1"></i>Export as Excel
+                <a href="javascript:void(0);"
+                  class="rounded p-2 flex items-center hover:bg-primary-transparent hover:text-primary text-gray-900"><i
+                    class="ti ti-file-type-xls me-1"></i>Export as Excel
                 </a>
               </li>
             </ul>
@@ -59,17 +48,13 @@
           <!-- Refresh Button -->
           <button
             class="border border-borderColor w-9 h-9 rounded shadow bg-white hover:bg-light flex items-center justify-center"
-            title="Refresh"
-          >
+            title="Refresh">
             <i class="ti ti-refresh"></i>
           </button>
           <!-- Collapse Button -->
           <button
             class="border border-borderColor w-9 h-9 rounded shadow bg-white hover:bg-light flex items-center justify-center"
-            title="Collapse"
-            id="collapse-header"
-            @click="toggleHeader"
-          >
+            title="Collapse" id="collapse-header" @click="toggleHeader">
             <i class="ti ti-transition-top"></i>
           </button>
         </div>
@@ -78,29 +63,19 @@
 
       <div class="card">
         <div
-          class="flex flex-wrap items-center justify-between gap-2 p-4 border-b border-borderColor bg-white rounded-t"
-        >
+          class="flex flex-wrap items-center justify-between gap-2 p-4 border-b border-borderColor bg-white rounded-t">
           <div class="relative">
-            <span
-              class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-500 pointer-events-none"
-            >
+            <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-500 pointer-events-none">
               <i class="ti ti-search"></i>
             </span>
-            <input
-              type="text"
-              placeholder="Search"
-              v-model="searchQuery"
-              class="pl-9 pr-4 py-1.5 border shadow border-borderColor rounded-md focus:outline-none focus:ring-0 placeholder:text-sm"
-            />
+            <input type="text" placeholder="Search" v-model="searchQuery"
+              class="pl-9 pr-4 py-1.5 border shadow border-borderColor rounded-md focus:outline-none focus:ring-0 placeholder:text-sm" />
           </div>
 
           <!-- Add New Button -->
-          <a
-            href="javascript:void(0);"
-            @click="openCreateModal"
+          <a href="javascript:void(0);" @click="openCreateModal"
             class="inline-flex items-center gap-1 px-4 py-2 bg-primary hover:bg-primary-900 text-white rounded-md transition"
-            data-drawer-placement="right"
-          >
+            data-drawer-placement="right">
             <i class="ti ti-square-rounded-plus-filled"></i>
             Add Lead
           </a>
@@ -123,11 +98,7 @@
                 <div class="col-span-2 table-responsive">
                   <a-table
                     class="table table-nowrap border border-borderColor dataTable min-w-full text-sm align-middle whitespace-nowrap"
-                    :columns="columns"
-                    :data-source="paginatedData"
-                    :row-selection="rowSelection"
-                    :pagination="false"
-                  >
+                    :columns="columns" :data-source="paginatedData" :row-selection="rowSelection" :pagination="false">
                     <template #bodyCell="{ column, record, index }">
                       <template v-if="column.key === 'index'">
                         {{ (currentPage - 1) * pageSize + index + 1 }}
@@ -138,7 +109,7 @@
                             {{ record.name }}
                             <span class="text-default text-[13px] font-normal mt-1">{{
                               record.Location
-                            }}</span>
+                              }}</span>
                           </router-link>
                         </h6>
                       </template>
@@ -148,25 +119,21 @@
                             {{ record.company_name }}
                             <span class="truncate w-32 text-default text-[13px] mt-1 font-normal">{{
                               record.company_address
-                            }}</span>
+                              }}</span>
                           </router-link>
                         </h6>
                       </template>
                       <template v-if="column.key === 'phone_number'">
                         <a :href="'https://wa.me/' + record.phone_number" target="_blank">
-                          {{ record.phone_number }}</a
-                        >
+                          {{ record.phone_number }}</a>
                       </template>
                       <template v-if="column.key === 'status'">
-                        <span
-                          class="px-1.5 py-0.5 rounded text-[12px] text-white inline-flex"
-                          :class="{
-                            'bg-success': record.status === 'Qualified',
-                            'bg-info': record.status === 'New',
-                            'bg-warning': record.status === 'Warm',
-                            'bg-danger': record.status === 'Unqualified',
-                          }"
-                        >
+                        <span class="px-1.5 py-0.5 rounded text-[12px] text-white inline-flex" :class="{
+                          'bg-success': record.status === 'Qualified',
+                          'bg-info': record.status === 'New',
+                          'bg-warning': record.status === 'Warm',
+                          'bg-danger': record.status === 'Unqualified',
+                        }">
                           {{ record.status }}
                         </span>
                       </template>
@@ -180,12 +147,9 @@
                       </template>
                       <template v-if="column.key === 'action'">
                         <div class="dropdown relative table-action">
-                          <a
-                            href="javascript:void(0);"
+                          <a href="javascript:void(0);"
                             class="dropdown-toggle w-6 h-6 flex items-center border border-borderColor rounded shadow btn-icon btn-outline-light"
-                            @click="toggleDropdown(record.id, $event)"
-                            :class="{ active: openDropdown === record.id }"
-                          >
+                            @click="toggleDropdown(record.id, $event)" :class="{ active: openDropdown === record.id }">
                             <i class="ti ti-dots-vertical"></i>
                           </a>
                           <div
@@ -193,28 +157,19 @@
                             :class="{
                               hidden: openDropdown !== record.id,
                               block: openDropdown === record.id,
-                            }"
-                            style="top: 100%; right: 0"
-                          >
-                            <a
-                              class="dropdown-item rounded p-2 flex items-center hover:bg-primary-transparent hover:text-primary text-gray-900"
-                              href="javascript:void(0);"
-                              @click.stop="openEditModal(record)"
-                              data-drawer-placement="right"
-                            >
+                            }" style="top: 100%; right: 0">
+                            <a class="dropdown-item rounded p-2 flex items-center hover:bg-primary-transparent hover:text-primary text-gray-900"
+                              href="javascript:void(0);" @click.stop="openEditModal(record)"
+                              data-drawer-placement="right">
                               <i class="ti ti-edit me-1"></i> Edit
                             </a>
-                            <a
-                              class="dropdown-item rounded p-2 flex items-center hover:bg-danger-transparent hover:text-danger text-gray-900"
-                              href="javascript:void(0);"
-                              @click="deleteAlert(record.id)"
-                            >
+                            <a class="dropdown-item rounded p-2 flex items-center hover:bg-danger-transparent hover:text-danger text-gray-900"
+                              href="javascript:void(0);" @click="deleteAlert(record.id)">
                               <i class="ti ti-trash me-1"></i> Delete
                             </a>
                             <router-link
                               class="dropdown-item rounded p-2 flex items-center hover:bg-primary-transparent hover:text-primary text-gray-900"
-                              to="/crm/lead-details"
-                            >
+                              to="/crm/lead-details">
                               <i class="ti ti-eye text-blue-light me-1"></i> Preview
                             </router-link>
                           </div>
@@ -230,14 +185,8 @@
               </div>
             </div>
           </div>
-          <BasePagination
-            :currentPage="currentPage"
-            :pageSize="pageSize"
-            :pageSizeOptions="pageSizeOptions"
-            :totalItems="filteredPages.length"
-            @page-change="onPageChange"
-            @page-size-change="onPageSizeChange"
-          />
+          <BasePagination :currentPage="currentPage" :pageSize="pageSize" :pageSizeOptions="pageSizeOptions"
+            :totalItems="filteredPages.length" @page-change="onPageChange" @page-size-change="onPageSizeChange" />
           <!-- /Contact List -->
         </div>
       </div>
@@ -247,21 +196,10 @@
     <layouts-footer></layouts-footer>
     <!-- End Footer -->
   </div>
-  <component
-    v-if="CreateModal && showCreateModal"
-    :is="CreateModal"
-    :isOpen="showCreateModal"
-    @close="closeCreateModal"
-    @refresh-list="fetchData"
-  />
-  <component
-    v-if="EditModal && showEditModal"
-    :is="EditModal"
-    :lead="selectedLead"
-    :isOpen="showEditModal"
-    @close="closeEditModal"
-    @refresh-list="fetchData"
-  />
+  <component v-if="CreateModal && showCreateModal" :is="CreateModal" :isOpen="showCreateModal" @close="closeCreateModal"
+    @refresh-list="fetchData" />
+  <component v-if="EditModal && showEditModal" :is="EditModal" :lead="selectedLead" :isOpen="showEditModal"
+    @close="closeEditModal" @refresh-list="fetchData" />
 </template>
 <script>
 const columns = [
@@ -321,9 +259,9 @@ const columns = [
   },
 ]
 const rowSelection = {
-  onChange: () => {},
-  onSelect: () => {},
-  onSelectAll: () => {},
+  onChange: () => { },
+  onSelect: () => { },
+  onSelectAll: () => { },
 }
 
 import 'daterangepicker/daterangepicker.css'
