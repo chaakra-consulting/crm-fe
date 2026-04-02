@@ -216,6 +216,24 @@ const routes = [
     ],
   },
   {
+    path: '/offers',
+    name: 'offers',
+    component: () => import('@/views/pages/crm/offers/offers-index.vue'),
+    meta: {
+      title: 'Offers | CRM',
+      roles: ['admin', 'pic-customer'],
+    },
+    children: [
+      {
+        path: 'list',
+        component: () => import('@/views/pages/crm/offers/offers-list.vue'),
+        meta: {
+          title: 'Offers | CRM',
+        },
+      },
+    ],
+  },
+  {
     path: '/master',
     component: () => import('@/views/pages/master/master-index.vue'),
     meta: {

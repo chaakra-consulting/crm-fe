@@ -7,29 +7,11 @@
     "menu": [
       {
         "menuValue": "Dashboard",
-        "hasSubRoute": true,
+        "hasSubRoute": false,
         "showSubRoute": false,
-        "route": "/dashboard",
+        "route": "/dashboard/deals-dashboard",
         "active_link": "dashboard",
-        "icon": "ti ti-dashboard",
-        "subMenus": [
-          {
-            "menuValue": "Deals Dashboard",
-            "route": "/dashboard/deals-dashboard",
-            "active_link": "/dashboard/deals-dashboard",
-            "active_link1": "/dashboard/deals-dashboard-two"
-          },
-          {
-            "menuValue": "Leads Dashboard",
-            "route": "/dashboard/leads-dashboard",
-            "active_link": "/dashboard/leads-dashboard"
-          },
-          {
-            "menuValue": "Project Dashboard",
-            "route": "/dashboard/project-dashboard",
-            "active_link": "/dashboard/project-dashboard"
-          }
-        ]
+        "icon": "ti ti-dashboard"
       }
     ]
   },
@@ -71,6 +53,18 @@
         "active_link": "/leads",
         "active_link1": "/leads-grid",
         "active_link2": "/leads-details",
+        "subRoutes": []
+      },
+      {
+        "menuValue": "Offers",
+        "icon": "ti ti-flame",
+        "hasSubRoute": false,
+        "showSubRoute": false,
+        "route": "/offers/list",
+        "roles": ["superadmin", "direktur", "manager", "marketing", "admin"],
+        "active_link": "/offers",
+        "active_link1": "/offers-grid",
+        "active_link2": "/offers-details",
         "subRoutes": []
       },
       {

@@ -1,17 +1,15 @@
 <template>
   <layouts-header></layouts-header>
   <layouts-sidebar></layouts-sidebar>
-  <!-- Page Wrapper -->
   <div class="page-wrapper relative pt-[50px] ml-[240px]">
     <div class="content p-5">
-      <!-- Page Header -->
       <div class="flex flex-wrap items-center justify-between gap-2 mb-7">
         <div>
           <h4 class="mb-1 text-xl font-bold flex items-center">
-            Survey List
+            Offers List
             <span
               class="ml-2 text-danger bg-danger-100 text-sm font-medium px-1.5 py-0.5 rounded border-b border-danger text-[12px]"
-              >{{ survey_data.length }}</span
+              >{{ offers_data.length }}</span
             >
           </h4>
           <nav aria-label="breadcrumb">
@@ -22,40 +20,18 @@
                 >
                 <span><i class="ti ti-chevron-right"></i></span>
               </li>
-              <li class="text-dark font-medium" aria-current="page">Survey List</li>
+              <li class="text-dark font-medium" aria-current="page">Offers List</li>
             </ol>
           </nav>
         </div>
         <div class="flex flex-wrap items-center gap-2">
-          <!-- Dropdown -->
-          <!-- <div>
-            <a href="javascript:void(0);"
-              class="border border-borderColor shadow rounded p-2 bg-white inline-flex items-center focus:bg-primary focus:border-primary focus:text-white text-gray-900"
-              data-dropdown-toggle="export-dropdown">
-              <i class="ti ti-package-export me-2"></i>Export<i class="ti ti-chevron-down ml-1"></i>
-            </a>
-            <ul id="export-dropdown" class="hidden p-2 z-[1] border border-borderColor rounded bg-white shadow-lg">
-              <li>
-                <a href="javascript:void(0);"
-                  class="rounded p-2 flex items-center hover:bg-primary-transparent hover:text-primary text-gray-900"><i
-                    class="ti ti-file-type-pdf me-1"></i>Export as PDF</a>
-              </li>
-              <li>
-                <a href="javascript:void(0);"
-                  class="rounded p-2 flex items-center hover:bg-primary-transparent hover:text-primary text-gray-900"><i
-                    class="ti ti-file-type-xls me-1"></i>Export as Excel
-                </a>
-              </li>
-            </ul>
-          </div> -->
-          <!-- Refresh Button -->
           <button
             class="border border-borderColor w-9 h-9 rounded shadow bg-white hover:bg-light flex items-center justify-center"
             title="Refresh"
+            @click="fetchData"
           >
             <i class="ti ti-refresh"></i>
           </button>
-          <!-- Collapse Button -->
           <button
             class="border border-borderColor w-9 h-9 rounded shadow bg-white hover:bg-light flex items-center justify-center"
             title="Collapse"
@@ -66,8 +42,6 @@
           </button>
         </div>
       </div>
-      <!-- End Page Header -->
-
       <div class="card">
         <div
           class="flex flex-wrap items-center justify-between gap-2 p-4 border-b border-borderColor bg-white rounded-t"
@@ -86,7 +60,6 @@
             />
           </div>
 
-          <!-- Add New Button -->
           <a
             v-if="this.roleSlug == 'admin'"
             href="javascript:void(0);"
@@ -99,7 +72,6 @@
           </a>
         </div>
         <div class="bg-white p-4">
-          <!-- Contact List -->
           <div class="table-responsive custom-table">
             <div v-if="isLoading" class="flex justify-center items-center py-10 mt-20">
               <div class="spinner-grow bg-primary me-3" role="status">
@@ -126,56 +98,84 @@
                         {{ (currentPage - 1) * pageSize + index + 1 }}
                       </template>
 
-                      <template v-if="column.key === 'survey_number'">
+                      <template v-if="column.key === 'title'">
                         <h6 class="flex items-center text-[14px] font-medium mb-0">
-                          {{ record.survey_number }}
+                          {{ record.title }}
                         </h6>
                       </template>
-                      <template v-if="column.key === 'title'">
-                        {{ record.title }}
+                       <template v-if="column.key === 'lead_name'" v-html="record.lead_name">
+                      </template>
+                      <template v-if="column.key === 'message'">
+                        <p v-html="record.message"></p>
+                      </template>
+                      <template v-if="column.key === 'lead_email'">
+                        {{ record.lead_email }}
                       </template>
                       <template v-if="column.key === 'status'">
-                        <div v-if="record.status == 'not_answered'">
+                        <div v-if="record.status == 'sent'">
                           <span
-                            class="inline-flex items-center py-1 px-2 rounded text-xs leading-none font-semibold bg-danger-100 text-danger"
-                            >Belum Terisi</span
+                            class="inline-flex items-center py-1 px-2 rounded text-xs leading-none font-semibold bg-success-100 text-success"
+                            >Terkirim</span
                           >
                         </div>
                         <div v-else>
-                          <span
-                            class="inline-flex items-center py-1 px-2 rounded text-xs leading-none font-semibold bg-success-100 text-success"
-                            >Sudah Terisi</span
+                            <span
+                            class="inline-flex items-center py-1 px-2 rounded text-xs leading-none font-semibold bg-danger-100 text-danger"
+                            >Belum terkirim</span
                           >
                         </div>
                       </template>
-                      <template v-if="column.key === 'project_title'">
-                        {{ record.project_title }}
+
+                      <template v-if="column.key === 'attachments'">
+                        <div v-if="record.attachments && record.attachments.length > 0">
+                          <a v-if="record.attachments.length === 1" 
+                            :href="`http://192.168.100.59:8000/storage/offers/attachments/${record.attachments[0].filename}`"
+                             target="_blank"
+                             class="btn btn-success">
+                            <i class="ti ti-paperclip me-1 text-sm"></i> 
+                            <span class="max-w-[100px] truncate">{{ record.attachments[0].name || 'Lampiran' }}</span>
+                          </a>
+
+                          <div v-else class="dropdown relative">
+                            <a href="javascript:void(0);"
+                               @click="toggleAttachmentDropdown(record.id, $event)"
+                               class="btn btn-success"
+                               :class="{ 'btn btn-success': openAttachmentDropdown === record.id }">
+                              <i class="ti ti-paperclip me-1 text-sm"></i> 
+                              {{ record.attachments.length }} Lampiran
+                              <i class="ti ti-chevron-down ms-1 text-[10px]"></i>
+                            </a>
+                            
+                            <div class="dropdown-menu absolute mt-1 w-[200px] z-[10] p-2 border border-borderColor rounded bg-white shadow-lg"
+                                 :class="{
+                                   hidden: openAttachmentDropdown !== record.id,
+                                   block: openAttachmentDropdown === record.id,
+                                 }">
+                              <a v-for="(file, idx) in record.attachments" :key="idx"
+                                 :href="`http://192.168.100.59:8000/storage/offers/attachments/${file.filename}`" 
+                                 target="_blank"
+                                 class="rounded p-2 flex items-center hover:bg-primary-transparent hover:text-primary text-gray-900 text-xs mb-1 last:mb-0 transition">
+                                <i class="ti ti-file text-gray-400 me-2"></i> 
+                                <span class="truncate">{{ file.filename || `File lampiran ${idx + 1}` }}</span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div v-else class="text-gray-400">-</div>
                       </template>
 
                       <template v-if="column.key === 'date_issued'">
                         {{
                           Intl.DateTimeFormat('id-ID', {
                             dateStyle: 'long',
-                          }).format(new Date(record.date_issued))
+                          }).format(new Date(record.created_at))
                         }}
                       </template>
                       <template v-if="column.key === 'valid_until'">
-                        {{
-                          Intl.DateTimeFormat('id-ID', {
-                            dateStyle: 'long',
-                          }).format(new Date(record.valid_until))
-                        }}
+                      -
                       </template>
                       <template v-if="column.key === 'action'">
-                        <div v-if="canAnswerQuestion && record.status == 'not_answered'">
-                          <router-link
-                            class="inline-flex items-center gap-1 px-4 py-2 bg-primary hover:bg-primary-900 text-white hover:text-white rounded-md transition"
-                            :to="{ path: `answer/${record.id}` }"
-                          >
-                            Jawab Survey
-                          </router-link>
-                        </div>
-                        <div v-else class="dropdown relative table-action">
+                       <div class="dropdown relative table-action">
                           <a
                             href="javascript:void(0);"
                             class="dropdown-toggle w-6 h-6 flex items-center border border-borderColor rounded shadow btn-icon btn-outline-light"
@@ -234,15 +234,12 @@
             @page-change="onPageChange"
             @page-size-change="onPageSizeChange"
           />
-          <!-- /Contact List -->
-        </div>
+          </div>
       </div>
     </div>
 
-    <!-- Start Footer -->
     <layouts-footer></layouts-footer>
-    <!-- End Footer -->
-  </div>
+    </div>
   <component
     v-if="CreateModal && showCreateModal"
     :is="CreateModal"
@@ -250,15 +247,9 @@
     @close="closeCreateModal"
     @refresh-list="fetchData"
   />
-  <component
-    v-if="EditModal && showEditModal"
-    :is="EditModal"
-    :survey="selectedSurvey"
-    :isOpen="showEditModal"
-    @close="closeEditModal"
-    @refresh-list="fetchData"
-  />
+  
 </template>
+
 <script>
 const columns = [
   {
@@ -271,27 +262,35 @@ const columns = [
     },
   },
   {
-    title: 'ID Survey',
-    dataIndex: 'survey_number',
-    key: 'survey_number',
-    sorter: {
-      compare: (a, b) => (a.survey_number.toLowerCase() > b.survey_number.toLowerCase() ? -1 : 1),
-    },
-  },
-  {
-    title: 'Nama Projek',
-    dataIndex: 'project_title',
-    key: 'project_title',
-    sorter: {
-      compare: (a, b) => (a.project_title.toLowerCase() > b.project_title.toLowerCase() ? -1 : 1),
-    },
-  },
-  {
-    title: 'Judul Survey',
+    title: 'Judul Pesan',
     dataIndex: 'title',
     key: 'title',
     sorter: {
       compare: (a, b) => (a.title.toLowerCase() > b.title.toLowerCase() ? -1 : 1),
+    },
+  },
+  {
+    title: 'Pesan',
+    dataIndex: 'message',
+    key: 'message',
+    sorter: {
+      compare: (a, b) => (a.message.toLowerCase() > b.message.toLowerCase() ? -1 : 1),
+    },
+  },
+  {
+    title: 'Nama Lead',
+    dataIndex: 'lead_name',
+    key: 'lead_name',
+    sorter: {
+      compare: (a, b) => (a.lead_name.toLowerCase() > b.lead_name.toLowerCase() ? -1 : 1),
+    },
+  },
+  {
+    title: 'Email Lead',
+    dataIndex: 'lead_email',
+    key: 'lead_email',
+    sorter: {
+      compare: (a, b) => (a.lead_email.toLowerCase() > b.lead_email.toLowerCase() ? -1 : 1),
     },
   },
   {
@@ -300,19 +299,16 @@ const columns = [
     key: 'status',
   },
   {
+    title: 'Lampiran',
+    dataIndex: 'attachments',
+    key: 'attachments',
+  },
+  {
     title: 'Tanggal Dibuat',
     dataIndex: 'date_issued',
     key: 'date_issued',
     sorter: {
       compare: (a, b) => (a.date_issued.toLowerCase() > b.date_issued.toLowerCase() ? -1 : 1),
-    },
-  },
-  {
-    title: 'Tanggal Berlaku',
-    dataIndex: 'valid_until',
-    key: 'valid_until',
-    sorter: {
-      compare: (a, b) => (a.valid_until.toLowerCase() > b.valid_until.toLowerCase() ? -1 : 1),
     },
   },
   {
@@ -338,6 +334,7 @@ import dayjs from 'dayjs'
 import { markRaw } from 'vue'
 const valueOne = ref()
 var isLoading
+
 export default {
   components: {
     BasePagination,
@@ -347,6 +344,7 @@ export default {
       valueOne,
       searchQuery: '',
       survey_data: [],
+      offers_data: [],
       columns,
       isLoading,
       rowSelection,
@@ -358,7 +356,6 @@ export default {
       showEditModal: false,
       EditModal: null,
       pageSizeOptions: [5, 10, 20, 50],
-      openDropdown: null,
       dateFormat: 'dd-MM-yyyy',
       sort: {
         key: null,
@@ -369,11 +366,12 @@ export default {
   computed: {
     filteredPages() {
       const query = this.searchQuery.toLowerCase()
-      return this.survey_data.filter((record) => {
+      return this.offers_data.filter((record) => {
         return (
           (record.title && record.title.toLowerCase().includes(query)) ||
-          (record.survey_number && record.survey_number.toLowerCase().includes(query)) ||
-          (record.created_at && record.created_at.toLowerCase().includes(query))
+          (record.message && record.message.toLowerCase().includes(query)) ||
+          (record.lead_name && record.lead_name.toLowerCase().includes(query)) ||
+          (record.lead_email && record.lead_email.toLowerCase().includes(query))
         )
       })
     },
@@ -434,39 +432,23 @@ export default {
       this.showCreateModal = false
     },
 
-    async openEditModal(record) {
-      this.selectedSurvey = record
-      console.log(record)
-
-      if (!this.EditModal) {
-        const module = await import('./components/edit-modal.vue')
-        this.EditModal = markRaw(module.default)
-      }
-
-      document.body.classList.add('overflow-hidden')
-      this.showEditModal = true
-    },
-    closeEditModal() {
-      document.body.classList.remove('overflow-hidden')
-      this.showEditModal = false
-    },
-
     async fetchData() {
       this.isLoading = true
       try {
-        const response = await api.get('/survey')
-        const projects = response.data.data
-        console.log(projects)
+        const response = await api.get('/offers')
+        const offers = response.data.data
+        console.log(offers)
 
-        this.survey_data = projects.map((item) => {
+        this.offers_data = offers.map((item) => {
           return {
             id: item.id,
             title: item.title,
             status: item.status,
-            project_title: item.project.bukukas.item.title,
-            survey_number: item.survey_number,
-            date_issued: item.date_issued,
-            valid_until: item.valid_until,
+            message: item.message,
+            lead_name: item.lead.name,
+            lead_email: item.lead.email,
+            created_at: item.created_at,
+            attachments: item.attachment || [], 
           }
         })
       } catch (error) {
@@ -501,10 +483,6 @@ export default {
         console.error('Gagal menghapus data lead:', error)
       }
     },
-    toggleDropdown(id, event) {
-      event.stopPropagation()
-      this.openDropdown = this.openDropdown === id ? null : id
-    },
     onPageChange(page) {
       this.currentPage = page
     },
@@ -525,9 +503,11 @@ export default {
   },
   setup() {
     const openDropdown = ref(null)
+    const openAttachmentDropdown = ref(null) 
 
     const toggleDropdown = (id, event) => {
       event.stopPropagation()
+      openAttachmentDropdown.value = null 
       if (openDropdown.value === id) {
         openDropdown.value = null
       } else {
@@ -535,18 +515,27 @@ export default {
       }
     }
 
+    const toggleAttachmentDropdown = (id, event) => {
+      event.stopPropagation()
+      openDropdown.value = null 
+      if (openAttachmentDropdown.value === id) {
+        openAttachmentDropdown.value = null
+      } else {
+        openAttachmentDropdown.value = id
+      }
+    }
+
     const closeAllDropdowns = () => {
       openDropdown.value = null
+      openAttachmentDropdown.value = null 
     }
 
     const handleClickOutside = (event) => {
-      // Close dropdown when clicking outside
       closeAllDropdowns()
     }
 
     const dateRangeInput = ref(null)
 
-    // Move the function declaration outside of the onMounted callback
     function booking_range(start, end) {
       return start.format('M/D/YYYY') + ' - ' + end.format('M/D/YYYY')
     }
@@ -584,7 +573,9 @@ export default {
     return {
       dateRangeInput,
       openDropdown,
+      openAttachmentDropdown, 
       toggleDropdown,
+      toggleAttachmentDropdown, 
       closeAllDropdowns,
     }
   },
